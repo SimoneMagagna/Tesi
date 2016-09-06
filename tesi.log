@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  6 SEP 2016 14:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  6 SEP 2016 18:00
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1535,26 +1535,46 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ] (capitoli/capitolo-1.tex
 Capitolo 1.
-) (capitoli/capitolo-2.tex [1
 
-] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+) (capitoli/capitolo-2.tex [2] [3] [4
+
+]
 Capitolo 2.
-[3
-
-]) (capitoli/capitolo-3.tex [4]
+[5]) (capitoli/capitolo-3.tex [6]
 Capitolo 3.
-[5
+[7
 
-] [6]) (capitoli/capitolo-4.tex [7] [8
+] [8]) (capitoli/capitolo-4.tex [9] [10
 
 ]
 Capitolo 4.
-) [9] [10] (glossario.tex) (inizio-fine/bibliografia.tex [11
+) [11] [12] (glossario.tex) (inizio-fine/bibliografia.tex [13
 
 
-] [12
+] [14
 
-]) [13
+]) [15
 
 ]
 
@@ -1572,30 +1592,27 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23731 strings out of 493634
- 381665 string characters out of 3141317
- 970693 words of memory out of 3000000
- 26409 multiletter control sequences out of 15000+200000
- 79264 words of font info for 88 fonts, out of 3000000 for 9000
+ 23759 strings out of 493634
+ 381979 string characters out of 3141317
+ 970700 words of memory out of 3000000
+ 26411 multiletter control sequences out of 15000+200000
+ 80459 words of font info for 99 fonts, out of 3000000 for 9000
  1027 hyphenation exceptions out of 8191
  61i,6n,122p,1920b,1440s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section.3.8} has been referenced but does not exi
-st, replaced by a fixed one
-
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
-mr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/lm/lmsy10.pfb>
-Output written on tesi.pdf (27 pages, 408572 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/lm/lmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
+/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/lm/lmsy10.pfb>
+Output written on tesi.pdf (29 pages, 417418 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 90 named destinations out of 1000 (max. 500000)
+ 434 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
  25462 words of extra memory for PDF output out of 29859 (max. 10000000)
 

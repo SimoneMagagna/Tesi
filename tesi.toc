@@ -12,80 +12,86 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Processi interni}{1}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Strumenti e tecnologie}{1}{section.1.4}
+\contentsline {subsubsection}{DevOps}{2}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Ricerca e innovazione}{2}{section.1.5}
+\contentsline {subsubsection}{Extreme Programming}{2}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Il quadro strategico}{3}{chapter.2}
+\contentsline {subsubsection}{Kanban}{2}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Strategie aziendali di stage}{3}{section.2.1}
+\contentsline {section}{\numberline {1.4}Strumenti e tecnologie}{2}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Il progetto di stage proposto}{3}{section.2.2}
+\contentsline {section}{\numberline {1.5}Ricerca e innovazione}{3}{section.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Piano di lavoro proposto}{3}{subsection.2.2.1}
+\contentsline {chapter}{\numberline {2}Il quadro strategico}{5}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Piano temporale}{3}{section*.13}
+\contentsline {section}{\numberline {2.1}Strategie aziendali di stage}{5}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Piano metodologico}{3}{section*.14}
+\contentsline {section}{\numberline {2.2}Il progetto di stage proposto}{5}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Piano tecnologico}{3}{section*.15}
+\contentsline {subsection}{\numberline {2.2.1}Piano di lavoro proposto}{5}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Obiettivi aziendali}{4}{subsection.2.2.2}
+\contentsline {subsubsection}{Piano temporale}{5}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Obiettivi personali}{4}{subsection.2.2.3}
+\contentsline {subsubsection}{Piano metodologico}{5}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Il progetto di e-commerce VR}{5}{chapter.3}
+\contentsline {subsubsection}{Piano tecnologico}{5}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Pianificazione del lavoro}{5}{section.3.1}
+\contentsline {subsection}{\numberline {2.2.2}Obiettivi aziendali}{6}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Ricerca e sperimentazione}{5}{section.3.2}
+\contentsline {subsection}{\numberline {2.2.3}Obiettivi personali}{6}{subsection.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Tecnologie adottate}{5}{section.3.3}
+\contentsline {chapter}{\numberline {3}Il progetto di e-commerce VR}{7}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Analisi dei requisiti}{5}{section.3.4}
+\contentsline {section}{\numberline {3.1}Pianificazione del lavoro}{7}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Caratteristiche degli utenti}{5}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.2}Ricerca e sperimentazione}{7}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Casi d'uso}{5}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.3}Tecnologie adottate}{7}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Requisiti}{6}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.4}Analisi dei requisiti}{7}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Progettazione}{6}{section.3.5}
+\contentsline {subsection}{\numberline {3.4.1}Caratteristiche degli utenti}{7}{subsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}Portabilit\IeC {\`a} dell'applicazione}{6}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.4.2}Casi d'uso}{7}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Usabilit\IeC {\`a} dell'applicazione}{6}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.4.3}Requisiti}{8}{subsection.3.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.3}Costruzione della scena 3D}{6}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.5}Progettazione}{8}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.4}Interazione con gli oggetti all'interno della scena}{6}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.1}Portabilit\IeC {\`a} dell'applicazione}{8}{subsection.3.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.5}Progettazione e integrazione con AWS API Gateway}{6}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.2}Usabilit\IeC {\`a} dell'applicazione}{8}{subsection.3.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Sviluppo}{6}{section.3.6}
+\contentsline {subsection}{\numberline {3.5.3}Costruzione della scena 3D}{8}{subsection.3.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}Sviluppo degli oggetti interattivi}{6}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.5.4}Interazione con gli oggetti all'interno della scena}{8}{subsection.3.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}Creazione a runtime di oggetti interattivi}{6}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.5.5}Progettazione e integrazione con AWS API Gateway}{8}{subsection.3.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.3}Dati persistenti attraverso le scene}{7}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.6}Sviluppo}{8}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.4}Unity e il protocollo HTTP}{7}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.1}Sviluppo degli oggetti interattivi}{8}{subsection.3.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.5}Creazione e parsing di oggetti JSON in Unity}{7}{subsection.3.6.5}
+\contentsline {subsection}{\numberline {3.6.2}Creazione a runtime di oggetti interattivi}{8}{subsection.3.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Verifica e validazione}{7}{section.3.7}
+\contentsline {subsection}{\numberline {3.6.3}Dati persistenti attraverso le scene}{9}{subsection.3.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Analisi retrospettiva}{9}{chapter.4}
+\contentsline {subsection}{\numberline {3.6.4}Unity e il protocollo HTTP}{9}{subsection.3.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Bilancio dei risultati rispetto agli obiettivi prefissati}{9}{section.4.1}
+\contentsline {subsection}{\numberline {3.6.5}Creazione e parsing di oggetti JSON in Unity}{9}{subsection.3.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Bilancio formativo}{9}{section.4.2}
+\contentsline {section}{\numberline {3.7}Verifica e validazione}{9}{section.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Analisi critica del rapporto formativo tra stage e corso di laurea}{9}{section.4.3}
+\contentsline {chapter}{\numberline {4}Analisi retrospettiva}{11}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Valutazioni personali}{9}{section.4.4}
+\contentsline {section}{\numberline {4.1}Bilancio dei risultati rispetto agli obiettivi prefissati}{11}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Glossario}{11}{appendix*.16}
+\contentsline {section}{\numberline {4.2}Bilancio formativo}{11}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{13}{appendix*.17}
+\contentsline {section}{\numberline {4.3}Analisi critica del rapporto formativo tra stage e corso di laurea}{11}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Valutazioni personali}{11}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Glossario}{13}{appendix*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{15}{appendix*.20}
