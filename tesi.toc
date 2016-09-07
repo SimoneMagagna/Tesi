@@ -16,7 +16,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Extreme Programming}{3}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Kanban}{4}{section*.20}
+\contentsline {subsubsection}{Scrum}{4}{section*.20}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Strumenti e tecnologie}{5}{section.1.4}
 \defcounter {refsection}{0}\relax 
