@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  8 SEP 2016 18:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  8 SEP 2016 22:18
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1581,29 +1581,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--52
 
  []
 
-<immagini/devops-diagram.png, id=225, 351.3125pt x 351.3125pt>
+[3 <./immagini/agile_development.png>]
+<immagini/devops-diagram.png, id=233, 351.3125pt x 351.3125pt>
 File: immagini/devops-diagram.png Graphic file (type png)
 
 <use immagini/devops-diagram.png>
-Package pdftex.def Info: immagini/devops-diagram.png used on input line 62.
+Package pdftex.def Info: immagini/devops-diagram.png used on input line 63.
 (pdftex.def)             Requested size: 175.6558pt x 175.6558pt.
- [3 <./immagini/agile_development.png>]
+
 <immagini/extremeprogramming.png, id=236, 2007.5pt x 1843.88875pt>
 File: immagini/extremeprogramming.png Graphic file (type png)
 
 <use immagini/extremeprogramming.png>
-Package pdftex.def Info: immagini/extremeprogramming.png used on input line 77.
+Package pdftex.def Info: immagini/extremeprogramming.png used on input line 79.
 
 (pdftex.def)             Requested size: 220.82568pt x 202.82838pt.
  [4 <./immagini/devops-diagram.png>]
-<immagini/scrumboard.png, id=246, 1184.425pt x 742.775pt>
+<immagini/scrumboard.png, id=248, 1184.425pt x 742.775pt>
 File: immagini/scrumboard.png Graphic file (type png)
 
 <use immagini/scrumboard.png>
-Package pdftex.def Info: immagini/scrumboard.png used on input line 92.
+Package pdftex.def Info: immagini/scrumboard.png used on input line 95.
 (pdftex.def)             Requested size: 414.55496pt x 259.97514pt.
 
-Overfull \hbox (42.55496pt too wide) in paragraph at lines 92--93
+Overfull \hbox (42.55496pt too wide) in paragraph at lines 95--96
  [] 
  []
 
@@ -1612,7 +1613,7 @@ Overfull \hbox (42.55496pt too wide) in paragraph at lines 92--93
 
 ]
 Capitolo 2.
-<immagini/omni-channel.png, id=291, 360.34625pt x 140.525pt>
+<immagini/omni-channel.png, id=312, 360.34625pt x 140.525pt>
 File: immagini/omni-channel.png Graphic file (type png)
 
 <use immagini/omni-channel.png>
@@ -1651,11 +1652,11 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24041 strings out of 493634
- 386079 string characters out of 3141317
+ 24049 strings out of 493634
+ 386172 string characters out of 3141317
  971098 words of memory out of 3000000
  26543 multiletter control sequences out of 15000+200000
- 111050 words of font info for 146 fonts, out of 3000000 for 9000
+ 111180 words of font info for 147 fonts, out of 3000000 for 9000
  1027 hyphenation exceptions out of 8191
  61i,8n,122p,1920b,1424s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{oc} has been referenced but does not exist, repla
@@ -1677,9 +1678,9 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmtt8.pfb>
-Output written on tesi.pdf (37 pages, 935460 bytes).
+Output written on tesi.pdf (37 pages, 945484 bytes).
 PDF statistics:
- 629 PDF objects out of 1000 (max. 8388607)
- 157 named destinations out of 1000 (max. 500000)
+ 651 PDF objects out of 1000 (max. 8388607)
+ 163 named destinations out of 1000 (max. 500000)
  36276 words of extra memory for PDF output out of 42996 (max. 10000000)
 
