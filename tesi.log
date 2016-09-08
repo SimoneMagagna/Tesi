@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  7 SEP 2016 19:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  8 SEP 2016 10:38
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1565,21 +1565,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--24
 [1
 
  <./immagini/twd_logo.png>]
-<immagini/agile_development.png, id=211, 120.45pt x 106.2369pt>
+<immagini/agile_development.png, id=213, 120.45pt x 106.2369pt>
 File: immagini/agile_development.png Graphic file (type png)
 
 <use immagini/agile_development.png>
 Package pdftex.def Info: immagini/agile_development.png used on input line 32.
 (pdftex.def)             Requested size: 258.08022pt x 227.62204pt.
 
-<immagini/devops-diagram.png, id=214, 351.3125pt x 351.3125pt>
+<immagini/devops-diagram.png, id=216, 351.3125pt x 351.3125pt>
 File: immagini/devops-diagram.png Graphic file (type png)
 
 <use immagini/devops-diagram.png>
 Package pdftex.def Info: immagini/devops-diagram.png used on input line 47.
 (pdftex.def)             Requested size: 175.6558pt x 175.6558pt.
  [2 <./immagini/agile_development.png>]
-<immagini/extremeprogramming.png, id=226, 2007.5pt x 1843.88875pt>
+<immagini/extremeprogramming.png, id=228, 2007.5pt x 1843.88875pt>
 File: immagini/extremeprogramming.png Graphic file (type png)
 
 <use immagini/extremeprogramming.png>
@@ -1587,7 +1587,7 @@ Package pdftex.def Info: immagini/extremeprogramming.png used on input line 62.
 
 (pdftex.def)             Requested size: 220.82568pt x 202.82838pt.
  [3 <./immagini/devops-diagram.png>]
-<immagini/scrumboard.png, id=236, 1184.425pt x 742.775pt>
+<immagini/scrumboard.png, id=239, 1184.425pt x 742.775pt>
 File: immagini/scrumboard.png Graphic file (type png)
 
 <use immagini/scrumboard.png>
@@ -1611,12 +1611,13 @@ Capitolo 3.
 
 ]
 Capitolo 4.
-) [13] [14] (glossario.tex) (inizio-fine/bibliografia.tex [15
+) [13] [14] (glossario.tex [15
 
 
-] [16
+] [16]) (inizio-fine/bibliografia.tex [17]
+[18
 
-]) [17
+]) [19
 
 ]
 
@@ -1634,62 +1635,32 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23961 strings out of 493634
- 385149 string characters out of 3141317
- 971023 words of memory out of 3000000
- 26532 multiletter control sequences out of 15000+200000
- 109387 words of font info for 130 fonts, out of 3000000 for 9000
+ 24005 strings out of 493634
+ 385619 string characters out of 3141317
+ 971029 words of memory out of 3000000
+ 26534 multiletter control sequences out of 15000+200000
+ 110026 words of font info for 136 fonts, out of 3000000 for 9000
  1027 hyphenation exceptions out of 8191
  61i,8n,122p,1920b,1424s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{vr} has been referenced but does not exist, repla
-ced by a fixed one
-
-pdfTeX warning (dest): name{ar} has been referenced but does not exist, replace
-d by a fixed one
-
-pdfTeX warning (dest): name{rep} has been referenced but does not exist, replac
-ed by a fixed one
-
-pdfTeX warning (dest): name{bg} has been referenced but does not exist, replace
-d by a fixed one
-
-pdfTeX warning (dest): name{it} has been referenced but does not exist, replace
-d by a fixed one
-
-pdfTeX warning (dest): name{cac} has been referenced but does not exist, replac
-ed by a fixed one
-
-pdfTeX warning (dest): name{ref} has been referenced but does not exist, replac
-ed by a fixed one
-
-pdfTeX warning (dest): name{ut} has been referenced but does not exist, replace
-d by a fixed one
-
-pdfTeX warning (dest): name{ops} has been referenced but does not exist, replac
-ed by a fixed one
-
-pdfTeX warning (dest): name{sms} has been referenced but does not exist, replac
-ed by a fixed one
-
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmbx9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmc
-sc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri9.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmtt8.pfb>
-Output written on tesi.pdf (31 pages, 901833 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/lm/lmbx9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
+mcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri9.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/lm/lmtt8.pfb>
+Output written on tesi.pdf (33 pages, 915648 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
- 121 named destinations out of 1000 (max. 500000)
+ 598 PDF objects out of 1000 (max. 8388607)
+ 151 named destinations out of 1000 (max. 500000)
  36271 words of extra memory for PDF output out of 42996 (max. 10000000)
 
