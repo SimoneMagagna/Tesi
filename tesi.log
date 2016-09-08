@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  8 SEP 2016 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  8 SEP 2016 17:00
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1551,7 +1551,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<immagini/twd_logo.png, id=194, 200.06744pt x 75.1608pt>
+<immagini/twd_logo.png, id=196, 200.06744pt x 75.1608pt>
 File: immagini/twd_logo.png Graphic file (type png)
 
 <use immagini/twd_logo.png>
@@ -1565,21 +1565,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--24
 [1
 
  <./immagini/twd_logo.png>]
-<immagini/agile_development.png, id=213, 120.45pt x 106.2369pt>
+<immagini/agile_development.png, id=215, 120.45pt x 106.2369pt>
 File: immagini/agile_development.png Graphic file (type png)
 
 <use immagini/agile_development.png>
 Package pdftex.def Info: immagini/agile_development.png used on input line 32.
 (pdftex.def)             Requested size: 258.08022pt x 227.62204pt.
 
-<immagini/devops-diagram.png, id=216, 351.3125pt x 351.3125pt>
+<immagini/devops-diagram.png, id=218, 351.3125pt x 351.3125pt>
 File: immagini/devops-diagram.png Graphic file (type png)
 
 <use immagini/devops-diagram.png>
 Package pdftex.def Info: immagini/devops-diagram.png used on input line 47.
 (pdftex.def)             Requested size: 175.6558pt x 175.6558pt.
  [2 <./immagini/agile_development.png>]
-<immagini/extremeprogramming.png, id=228, 2007.5pt x 1843.88875pt>
+<immagini/extremeprogramming.png, id=230, 2007.5pt x 1843.88875pt>
 File: immagini/extremeprogramming.png Graphic file (type png)
 
 <use immagini/extremeprogramming.png>
@@ -1587,7 +1587,7 @@ Package pdftex.def Info: immagini/extremeprogramming.png used on input line 62.
 
 (pdftex.def)             Requested size: 220.82568pt x 202.82838pt.
  [3 <./immagini/devops-diagram.png>]
-<immagini/scrumboard.png, id=239, 1184.425pt x 742.775pt>
+<immagini/scrumboard.png, id=241, 1184.425pt x 742.775pt>
 File: immagini/scrumboard.png Graphic file (type png)
 
 <use immagini/scrumboard.png>
@@ -1601,23 +1601,30 @@ Overfull \hbox (42.55496pt too wide) in paragraph at lines 77--78
 [4 <./immagini/extremeprogramming.png>] [5 <./immagini/scrumboard.png (PNG copy
 )>]) (capitoli/capitolo-2.tex [6]
 Capitolo 2.
-[7
+<immagini/omni-channel.png, id=282, 360.34625pt x 140.525pt>
+File: immagini/omni-channel.png Graphic file (type png)
 
-]) (capitoli/capitolo-3.tex [8]
+<use immagini/omni-channel.png>
+Package pdftex.def Info: immagini/omni-channel.png used on input line 24.
+(pdftex.def)             Requested size: 360.34537pt x 140.52464pt.
+ [7
+
+] [8 <./immagini/omni-channel.png>])
+(capitoli/capitolo-3.tex [9] [10
+
+]
 Capitolo 3.
-[9
-
-] [10]) (capitoli/capitolo-4.tex [11] [12
+[11] [12]) (capitoli/capitolo-4.tex [13] [14
 
 ]
 Capitolo 4.
-) [13] [14] (glossario.tex [15
+) [15] [16] (glossario.tex [17
 
 
-] [16]) (inizio-fine/bibliografia.tex [17]
-[18
+] [18]) (inizio-fine/bibliografia.tex [19]
+[20
 
-]) [19
+]) [21
 
 ]
 
@@ -1635,32 +1642,35 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24005 strings out of 493634
- 385619 string characters out of 3141317
- 971029 words of memory out of 3000000
- 26534 multiletter control sequences out of 15000+200000
- 110026 words of font info for 136 fonts, out of 3000000 for 9000
+ 24033 strings out of 493634
+ 385995 string characters out of 3141317
+ 971092 words of memory out of 3000000
+ 26541 multiletter control sequences out of 15000+200000
+ 110884 words of font info for 144 fonts, out of 3000000 for 9000
  1027 hyphenation exceptions out of 8191
  61i,8n,122p,1920b,1424s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/lm/lmbx9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
-mcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri9.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/lm/lmtt8.pfb>
-Output written on tesi.pdf (33 pages, 915648 bytes).
+pdfTeX warning (dest): name{oc} has been referenced but does not exist, repla
+ced by a fixed one
+
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmbx9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmc
+sc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri12.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri9.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmtt8.pfb>
+Output written on tesi.pdf (35 pages, 931669 bytes).
 PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 151 named destinations out of 1000 (max. 500000)
- 36271 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 616 PDF objects out of 1000 (max. 8388607)
+ 155 named destinations out of 1000 (max. 500000)
+ 36276 words of extra memory for PDF output out of 42996 (max. 10000000)
 
