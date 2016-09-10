@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  10 SEP 2016 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  10 SEP 2016 15:30
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1551,7 +1551,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<immagini/twd_logo.png, id=210, 200.06744pt x 75.1608pt>
+<immagini/twd_logo.png, id=214, 200.06744pt x 75.1608pt>
 File: immagini/twd_logo.png Graphic file (type png)
 
 <use immagini/twd_logo.png>
@@ -1560,20 +1560,20 @@ Package pdftex.def Info: immagini/twd_logo.png used on input line 16.
  [1
 
  <./immagini/twd_logo.png>]
-<immagini/erp.png, id=226, 364.36125pt x 407.5225pt>
+<immagini/erp.png, id=230, 364.36125pt x 407.5225pt>
 File: immagini/erp.png Graphic file (type png)
  <use immagini/erp.png>
 Package pdftex.def Info: immagini/erp.png used on input line 50.
 (pdftex.def)             Requested size: 182.18018pt x 203.76074pt.
 
-[2] <immagini/wall.png, id=234, 936.49875pt x 534.49687pt>
+[2] <immagini/wall.png, id=238, 936.49875pt x 534.49687pt>
 File: immagini/wall.png Graphic file (type png)
 
 <use immagini/wall.png>
 Package pdftex.def Info: immagini/wall.png used on input line 70.
 (pdftex.def)             Requested size: 365.23305pt x 208.45294pt.
  [3 <./immagini/erp.png>]
-<immagini/agile_development.png, id=243, 120.45pt x 106.2369pt>
+<immagini/agile_development.png, id=247, 120.45pt x 106.2369pt>
 File: immagini/agile_development.png Graphic file (type png)
 
 <use immagini/agile_development.png>
@@ -1590,14 +1590,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--103
  []
 
 [5 <./immagini/agile_development.png>]
-<immagini/devops-diagram.png, id=262, 351.3125pt x 351.3125pt>
+<immagini/devops-diagram.png, id=266, 351.3125pt x 351.3125pt>
 File: immagini/devops-diagram.png Graphic file (type png)
 
 <use immagini/devops-diagram.png>
 Package pdftex.def Info: immagini/devops-diagram.png used on input line 114.
 (pdftex.def)             Requested size: 175.6558pt x 175.6558pt.
 
-<immagini/extremeprogramming.png, id=265, 2007.5pt x 1843.88875pt>
+<immagini/extremeprogramming.png, id=269, 2007.5pt x 1843.88875pt>
 File: immagini/extremeprogramming.png Graphic file (type png)
 
 <use immagini/extremeprogramming.png>
@@ -1605,7 +1605,7 @@ Package pdftex.def Info: immagini/extremeprogramming.png used on input line 130
 .
 (pdftex.def)             Requested size: 220.82568pt x 202.82838pt.
  [6 <./immagini/devops-diagram.png>]
-<immagini/scrumboard.png, id=277, 1204.5pt x 878.28125pt>
+<immagini/scrumboard.png, id=281, 1204.5pt x 878.28125pt>
 File: immagini/scrumboard.png Graphic file (type png)
 
 <use immagini/scrumboard.png>
@@ -1616,42 +1616,54 @@ toli/capitolo-2.tex [9] [10]
 Capitolo 2.
 [11
 
-] <immagini/omni-channel.png, id=354, 780.516pt x 306.4248pt>
+] <immagini/omni-channel.png, id=358, 780.516pt x 306.4248pt>
 File: immagini/omni-channel.png Graphic file (type png)
 
 <use immagini/omni-channel.png>
 Package pdftex.def Info: immagini/omni-channel.png used on input line 38.
 (pdftex.def)             Requested size: 366.84258pt x 144.01967pt.
  [12 <./immagini/omni-channel.png>] [13]
-[14] <immagini/unity.png, id=387, 678.535pt x 246.9225pt>
+<immagini/gearvr.jpg, id=382, 1606.0pt x 903.375pt>
+File: immagini/gearvr.jpg Graphic file (type jpg)
+ <use immagini/gearvr.jpg>
+Package pdftex.def Info: immagini/gearvr.jpg used on input line 112.
+(pdftex.def)             Requested size: 240.8896pt x 135.5004pt.
+
+[14] <immagini/unity.png, id=392, 678.535pt x 246.9225pt>
 File: immagini/unity.png Graphic file (type png)
 
 <use immagini/unity.png>
-Package pdftex.def Info: immagini/unity.png used on input line 131.
-(pdftex.def)             Requested size: 237.4908pt x 86.42415pt.
-
-<immagini/stack-gearvr.jpg, id=391, 1280.785pt x 1180.41pt>
+Package pdftex.def Info: immagini/unity.png used on input line 140.
+(pdftex.def)             Requested size: 203.56207pt x 74.0773pt.
+ [15 <./immagini/gearvr.jpg>]
+<immagini/stack-gearvr.jpg, id=400, 1280.785pt x 1180.41pt>
 File: immagini/stack-gearvr.jpg Graphic file (type jpg)
 
 <use immagini/stack-gearvr.jpg>
-Package pdftex.def Info: immagini/stack-gearvr.jpg used on input line 143.
+Package pdftex.def Info: immagini/stack-gearvr.jpg used on input line 152.
 (pdftex.def)             Requested size: 358.61736pt x 330.51254pt.
- [15 <./immagini/unity.png>])
-(capitoli/capitolo-3.tex [16 <./immagini/stack-gearvr.jpg>]
-Capitolo 3.
-[17
+ [16 <./immagini/unity.png>] [17 <./immagini/stack-gearvr.jpg>] <immagini/stage
+it.jpg, id=419, 552.0625pt x 320.19624pt>
+File: immagini/stageit.jpg Graphic file (type jpg)
 
-] [18]) (capitoli/capitolo-4.tex [19] [20
+<use immagini/stageit.jpg>
+Package pdftex.def Info: immagini/stageit.jpg used on input line 182.
+(pdftex.def)             Requested size: 248.42583pt x 144.08698pt.
+) (capitoli/capitolo-3.tex [18 <./immagini/stageit.jpg>]
+Capitolo 3.
+[19
+
+] [20]) (capitoli/capitolo-4.tex [21] [22
 
 ]
 Capitolo 4.
-) [21] [22] (glossario.tex [23
+) [23] [24] (glossario.tex [25
 
 
-] [24]) (inizio-fine/bibliografia.tex [25]
-[26
+] [26]) (inizio-fine/bibliografia.tex [27]
+[28
 
-]) [27
+]) [29
 
 ]
 
@@ -1669,10 +1681,10 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24121 strings out of 493634
- 387131 string characters out of 3141317
- 971334 words of memory out of 3000000
- 26570 multiletter control sequences out of 15000+200000
+ 24148 strings out of 493634
+ 387510 string characters out of 3141317
+ 971447 words of memory out of 3000000
+ 26583 multiletter control sequences out of 15000+200000
  112480 words of font info for 157 fonts, out of 3000000 for 9000
  1027 hyphenation exceptions out of 8191
  61i,8n,122p,1920b,1440s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1704,9 +1716,9 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmtt8.pfb>
-Output written on tesi.pdf (41 pages, 2203591 bytes).
+Output written on tesi.pdf (43 pages, 2340511 bytes).
 PDF statistics:
- 728 PDF objects out of 1000 (max. 8388607)
- 183 named destinations out of 1000 (max. 500000)
- 36320 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 755 PDF objects out of 1000 (max. 8388607)
+ 195 named destinations out of 1000 (max. 500000)
+ 36330 words of extra memory for PDF output out of 42996 (max. 10000000)
 

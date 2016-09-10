@@ -85,7 +85,7 @@ Le revisioni di progetto sono avvenute secondo la seguente metodologia:
 	\item Riunione di 1 ora alla fine di ogni settimana come analisi retrospettiva.
 \end{itemize}
 
-Alle revisioni oltre a me, hanno partecipato:
+Alle revisioni, oltre a me, hanno partecipato:
 
 \begin{itemize}
 	\item Valentino Baraldo, \textit{cloud engineer} e tutor aziendale. Oltre a svolgere il compito di tutor aziendale, mi ha supportato sulla progettazione architetturale del progetto e sull'utilizzo del servizio \textit{API Gateway} di \textit{Amazon Web Services}\footnote[1]{\url{https://aws.amazon.com/it/}};
@@ -94,10 +94,10 @@ Alle revisioni oltre a me, hanno partecipato:
 
 \subsubsection{Piano tecnologico}
 
-Inizialmente lo \textit{stack} tecnologico propostomi riguardava solamente l'hardware che l'azienda aveva acquistato per questo progetto, senza alcun vincolo software. I dispositivi che permettevano lo sviluppo \textit{VR}\ped{\hyperlink{vr}{G}} erano:
+Inizialmente lo \textit{stack} tecnologico propostomi riguardava solamente l'hardware che l'azienda aveva acquistato per questo progetto, senza alcun vincolo software. I dispositivi che permettevano la sperimentazione \textit{VR}\ped{\hyperlink{vr}{G}} erano:
 
 \begin{itemize}
-	\item \textbf{Oculus Rift Development kit 2:} visore per la realtà virtuale per uso desktop. Possiede uno schermo Samsung OLED 2160x1200 pixel (1080x1200 per occhio). con un refresh rate a 90 HZ e un ampio angolo di visione a 110 gradi. Dotato di accelerometro, giroscopio, magnetometro e tracking posizionale a 360 gradi. Viene accoppiato ad una telecamera infrarossi per il rilevamento di profondità, assieme a 40 emettitori infrarossi all'interno dell'\textit{headset}. Monta due lenti in alta definizione possedendo 6 gradi di libertà di rotazione;
+	\item \textbf{Oculus Rift Development kit 2:} visore per la realtà virtuale per uso desktop. Possiede uno schermo Samsung OLED 2160x1200 pixel (1080x1200 per occhio), con un \textir{refresh rate} a 90 Hz e un ampio angolo di visione a 110 gradi. Dotato di accelerometro, giroscopio, magnetometro e \textit{tracking} posizionale a 360 gradi. Viene accoppiato ad una telecamera infrarossi per il rilevamento di profondità, assieme a 40 emettitori infrarossi all'interno dell'\textit{headset}. Monta due lenti in alta definizione possedendo 6 gradi di libertà di rotazione;
 	
 	\item \textbf{Samsung Gear VR:} visore per la realtà virtuale per \textit{mobile}. Possiede: accelerometro, giroscopio e sensore di prossimità, permettendo un campo visivo di 96 gradi. Il visore incorpora inoltre un'interfaccia utente fisica: \textit{touch pad}, tasto indietro e tasto per il volume. Necessita l'inserimento di uno \textit{smartphone} Samsung a partire dalla versione \textit{Galaxy S6};
 	
@@ -105,6 +105,15 @@ Inizialmente lo \textit{stack} tecnologico propostomi riguardava solamente l'har
 	
 	\item \textbf{Leap Motion:} piccola periferica USB  progettata per essere posta su una scrivania reale rivolta verso l'alto. Usando 2 telecamere e 3 LED infrarossi essa osserva un'area approssimativamente a forma di semisfera di circa un metro. E' progettata per identificare dita (o oggetti simili come una penna) con una precisione di 0,01 mm. 
 \end{itemize}
+
+\label{Gear VR}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.15]{gearvr}
+		\caption{Samsung Gear VR}
+	\end{center}
+\end{figure}
+\FloatBarrier
 
 Dopo un periodo di ricerca e \textit{testing} su queste tecnologie, abbiamo deciso di intraprendere la strada \textit{mobile}, a discapito di quella desktop. Questa decisione è stata dettata principalmente da due fattori:
 
@@ -119,16 +128,16 @@ Dopo un periodo di ricerca e \textit{testing} su queste tecnologie, abbiamo deci
 		\item \textbf{OS:} Windows 7 SP1 64 bit o superiore.
 	\end{itemize}
 	
-	\item \textbf{Obiettivi aziendali:} anche se fin da subito mi era stato chiarito che non veniva preteso alcun prodotto finale utilizzabile, l'azienda sperava però di riuscire con questo stage di avere un primo prototipo di \textit{virtual showroom} da poter mostrare alle fiere tecnologiche alla quale partecipa. In quest'ottica, l'utilizzo di \textit{Oculus Rift Development kit 2} sarebbe risultato troppo scomodo sia per il trasporto e installazione, che per l'utilizzatore finale.
+	\item \textbf{Obiettivi aziendali:} anche se fin da subito mi era stato chiarito che non veniva preteso alcun prodotto finale utilizzabile, l'azienda sperava però di riuscire con questo stage di avere un primo prototipo di \textit{virtual showroom} da poter mostrare alle fiere tecnologiche alle quali partecipa. In quest'ottica, l'utilizzo di \textit{Oculus Rift Development kit 2} sarebbe risultato troppo scomodo sia per il trasporto e l'installazione, che per l'utilizzatore finale.
 \end{itemize}
 
-Si è deciso dunque di sviluppare sia per \textit{Samsung Gear VR} che per \textit{Google Cardboard}., entrambi dispositivi mobile a costo contenuto. \\
+Si è deciso dunque di sviluppare sia per \textit{Samsung Gear VR} che per \textit{Google Cardboard}, entrambi dispositivi \textit{mobile} a costo contenuto. \\
 Lo stack software che si è andato a formare poi, presa questa decisione, ha avuto un tempo decisionale assai breve. Dopo alcune ricerca da me effettuate, ho potuto riscontrare come \textit{Unity} fosse l'unico \textit{framework}\ped{\hyperlink{fw}{G}} per lo sviluppo \textit{VR}\ped{\hyperlink{vr}{G}} gratuito e ricco di documentazione, cosa estremamente fondamentale data la mia iniziale totale ignoranza sull'argomento.
 
 \label{Unity}
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[scale=0.35]{unity}
+		\includegraphics[scale=0.3]{unity}
 		\caption{Logo Unity}
 	\end{center}
 \end{figure}
@@ -137,7 +146,7 @@ Lo stack software che si è andato a formare poi, presa questa decisione, ha avu
 \textit{Unity} è uno strumento di \textit{authoring}\ped{\hyperlink{auth}{G}} integrato e multipiattaforma per la creazione di videogiochi 3D o altri contenuti interattivi, quali visualizzazioni architettoniche o animazioni 3D in tempo reale. Esso, tramite gli \textit{SDK}\ped{\hyperlink{sdk}{G}} forniti da Samsung, per il dispositivo Gear VR, da Google, per il dispositivo Cardboard, e da Andriod, per l'interfacciamento con lo smartphone, permette lo sviluppo di applicazioni \textit{VR}\ped{\hyperlink{vr}{G}} fornendo un interfaccia per modellare "a mano" gli oggetti e i linguaggi JavaScript e C\# per sviluppare il loro comportamento. \\
 Il linguaggio di \textit{scripting} da me scelto per modellare il comportamento degli oggetti nello spazio tridimensionale è C\# poiché è risultato essere il linguaggio più utilizzato nella \textit{community} \textit{Unity}.
 
-\label{Gear VR}
+\label{Stack Gear VR}
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.28]{stack-gearvr}
@@ -148,11 +157,45 @@ Il linguaggio di \textit{scripting} da me scelto per modellare il comportamento 
 
 \subsection{Obiettivi aziendali}
 
-In questa sottosezione elencherò gli obiettivi che l'azienda si pone di raggiungere con il mio stage.
+Nel \textit{Piano di Lavoro} presentatomi, l'azienda espone gli obbiettivi minimi e massimi che si aspetta di veder raggiunti alla fine delle 320 ore si stage:
+
+\begin{itemize}
+	\item \textbf{Obbiettivi minimi:}
+	\begin{enumerate}
+		\item Studio delle tecnologie disponibili in ambito \textit{VR}\ped{\hyperlink{vr}{G}} e stesura di un documento riassuntivo che offra un \textit{overview} dello stato attuale della realtà aumentata;
+		\item Progettazione e sviluppo di un ambiente virtuale con: una scena e oggetti definiti, un comportamento associato agli oggetti, un prototipo di \textit{user interaction} e scambio di informazioni di base con un sistema di \textit{e-commerce}.
+	\end{enumerate}
+	\item \textbf{Obbiettivi massimi:}
+	\begin{enumerate}
+		\item Studio e prototipazione di diversi modelli di \textit{user interaction} con l'ambiente e con gli oggetti finalizzati alla presentazione di un bene vendibile;
+		\item Studio e implementazione di possibili nuovi processi di acquisto in ambito \textit{VR}\ped{\hyperlink{vr}{G}}. 
+	\end{enumerate}
+\end{itemize}
 
 \subsection{Obiettivi personali}
 
-In questa sottosezione tratterò degli obbiettivi personali e delle motivazioni che mi hanno spinto a scegliere questo stage e questo progetto.
+Sono venuto a conoscenza di questo progetto durante l'evento di Stage IT 2016, organizzato da Confindustria Padova in collaborazione con l'Università di Padova e Venezia. Mi ha fin da subito colpito e appassionato per le tecnologie che mi avrebbe permesso di studiare, come ad esempio \textit{Unity}. La computer grafica è da sempre un mio personale interesse e la realtà aumentata è un ambito per me molto affascinante e ricco di opportunità.
 
+\label{Stage IT 2016}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.45]{stageit}
+		\caption{Logo dell'evento Stage IT 2016}
+	\end{center}
+\end{figure}
+\FloatBarrier
 
+Le tecnologie proposte dall'azienda purtroppo non rientrano nel percorso di studi, dunque gli obbiettivi formativi personali che mi sono posto riguardano lo studio e la sperimentazione delle tecnologie, senza pretendere di arrivare ad un risultato non prototipale:
 
+\begin{itemize}
+	\item \textbf{Obiettivi minimi:}
+	\begin{enumerate}
+		\item Conoscenza ad alto livello delle tecnologie (hardware e software) attualmente disponibili nel mercato atte a creare ambienti virtuali;
+		\item Conoscenza ad alto livello dei concetti principali di \textit{e-commerce} e relative tecnologie di riferimento usate per la vendita online.
+	\end{enumerate}
+	\item \textbf{Obiettivi massimi:}
+	\begin{enumerate}
+		\item Capacità di identificare, progettare e sviluppare ambienti virtuali, selezionando le tecnologie attualmente disponibili più appropriate per il caso d'uso;
+		\item Presa di coscienza dei concetti multi-channel e omni-channel e come le nuove modalità di vendita si integrino con questi modelli emergenti.
+	\end{enumerate}
+\end{itemize}
