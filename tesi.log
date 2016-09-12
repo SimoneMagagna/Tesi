@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  10 SEP 2016 15:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  12 SEP 2016 01:59
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1620,34 +1620,34 @@ Capitolo 2.
 File: immagini/omni-channel.png Graphic file (type png)
 
 <use immagini/omni-channel.png>
-Package pdftex.def Info: immagini/omni-channel.png used on input line 38.
+Package pdftex.def Info: immagini/omni-channel.png used on input line 40.
 (pdftex.def)             Requested size: 366.84258pt x 144.01967pt.
  [12 <./immagini/omni-channel.png>] [13]
-<immagini/gearvr.jpg, id=382, 1606.0pt x 903.375pt>
+<immagini/gearvr.jpg, id=381, 1606.0pt x 903.375pt>
 File: immagini/gearvr.jpg Graphic file (type jpg)
  <use immagini/gearvr.jpg>
-Package pdftex.def Info: immagini/gearvr.jpg used on input line 112.
+Package pdftex.def Info: immagini/gearvr.jpg used on input line 114.
 (pdftex.def)             Requested size: 240.8896pt x 135.5004pt.
 
 [14] <immagini/unity.png, id=392, 678.535pt x 246.9225pt>
 File: immagini/unity.png Graphic file (type png)
 
 <use immagini/unity.png>
-Package pdftex.def Info: immagini/unity.png used on input line 140.
+Package pdftex.def Info: immagini/unity.png used on input line 142.
 (pdftex.def)             Requested size: 203.56207pt x 74.0773pt.
  [15 <./immagini/gearvr.jpg>]
 <immagini/stack-gearvr.jpg, id=400, 1280.785pt x 1180.41pt>
 File: immagini/stack-gearvr.jpg Graphic file (type jpg)
 
 <use immagini/stack-gearvr.jpg>
-Package pdftex.def Info: immagini/stack-gearvr.jpg used on input line 152.
+Package pdftex.def Info: immagini/stack-gearvr.jpg used on input line 154.
 (pdftex.def)             Requested size: 358.61736pt x 330.51254pt.
  [16 <./immagini/unity.png>] [17 <./immagini/stack-gearvr.jpg>] <immagini/stage
 it.jpg, id=419, 552.0625pt x 320.19624pt>
 File: immagini/stageit.jpg Graphic file (type jpg)
 
 <use immagini/stageit.jpg>
-Package pdftex.def Info: immagini/stageit.jpg used on input line 182.
+Package pdftex.def Info: immagini/stageit.jpg used on input line 184.
 (pdftex.def)             Requested size: 248.42583pt x 144.08698pt.
 ) (capitoli/capitolo-3.tex [18 <./immagini/stageit.jpg>]
 Capitolo 3.
@@ -1681,24 +1681,15 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24148 strings out of 493634
- 387510 string characters out of 3141317
+ 24152 strings out of 493634
+ 387552 string characters out of 3141317
  971447 words of memory out of 3000000
  26583 multiletter control sequences out of 15000+200000
- 112480 words of font info for 157 fonts, out of 3000000 for 9000
+ 112693 words of font info for 159 fonts, out of 3000000 for 9000
  1027 hyphenation exceptions out of 8191
  61i,8n,122p,1920b,1440s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{sdk} has been referenced but does not exist, repl
-aced by a fixed one
-
-pdfTeX warning (dest): name{auth} has been referenced but does not exist, repla
+pdfTeX warning (dest): name{oc} has been referenced but does not exist, repla
 ced by a fixed one
-
-pdfTeX warning (dest): name{oc} has been referenced but does not exist, replace
-d by a fixed one
-
-pdfTeX warning (dest): name{ret} has been referenced but does not exist, replac
-ed by a fixed one
 
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/Mi
@@ -1716,7 +1707,7 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmtt8.pfb>
-Output written on tesi.pdf (43 pages, 2340511 bytes).
+Output written on tesi.pdf (43 pages, 2341899 bytes).
 PDF statistics:
  755 PDF objects out of 1000 (max. 8388607)
  195 named destinations out of 1000 (max. 500000)
