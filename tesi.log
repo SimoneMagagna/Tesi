@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  12 SEP 2016 01:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  12 SEP 2016 17:41
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1522,7 +1522,35 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 \openout8 = `tesi.toc'.
 
 
-[10] (tesi.lof)
+[10] (tesi.lof
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 11.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (325.43121pt too wide) in paragraph at lines 17--17
+ \T1/lmr/m/n/10 (-20) ma-ti-vo Quo-ra: [][]$\T1/lmtt/m/n/10 https : / / www . q
+uora . com / What-[]are-[]the-[]pros-[]and-[]cons-[]of-[]the-[]waterfall-[]and-
+[]agile-[]scrum-[]project-[]management-[]approach$[][] [][]  
+ []
+
+
+Overfull \hbox (105.47134pt too wide) in paragraph at lines 27--27
+ \T1/lmr/m/n/10 (-20) THE MARK: [][]$\T1/lmtt/m/n/10 http : / / on-[]the-[]mark
+ . com / omnichannel-[]organization-[]designs-[]biggest-[]test/$[][] [][]  
+ []
+
+
+Overfull \hbox (14.32411pt too wide) in paragraph at lines 31--31
+ $\T1/lmtt/m/n/10 com / us / samsungdeveloperconnection / developer-[]resources
+ / gear-[]vr .$ 
+ []
+
+)
 \tf@lof=\write9
 \openout9 = `tesi.lof'.
 
@@ -1542,16 +1570,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 10.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 10.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-<immagini/twd_logo.png, id=214, 200.06744pt x 75.1608pt>
+<immagini/twd_logo.png, id=227, 200.06744pt x 75.1608pt>
 File: immagini/twd_logo.png Graphic file (type png)
 
 <use immagini/twd_logo.png>
@@ -1560,110 +1579,154 @@ Package pdftex.def Info: immagini/twd_logo.png used on input line 16.
  [1
 
  <./immagini/twd_logo.png>]
-<immagini/erp.png, id=230, 364.36125pt x 407.5225pt>
+<immagini/ecommerce.jpg, id=241, 958.58125pt x 887.315pt>
+File: immagini/ecommerce.jpg Graphic file (type jpg)
+
+<use immagini/ecommerce.jpg>
+Package pdftex.def Info: immagini/ecommerce.jpg used on input line 34.
+(pdftex.def)             Requested size: 383.4257pt x 354.91971pt.
+
+Overfull \hbox (11.4257pt too wide) in paragraph at lines 34--35
+ [] 
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 35.
+[2 <./immagini/ecommerce.jpg>]
+<immagini/erp.png, id=257, 364.36125pt x 407.5225pt>
 File: immagini/erp.png Graphic file (type png)
  <use immagini/erp.png>
-Package pdftex.def Info: immagini/erp.png used on input line 50.
+Package pdftex.def Info: immagini/erp.png used on input line 57.
 (pdftex.def)             Requested size: 182.18018pt x 203.76074pt.
 
-[2] <immagini/wall.png, id=238, 936.49875pt x 534.49687pt>
+[3] <immagini/wall.png, id=269, 936.49875pt x 534.49687pt>
 File: immagini/wall.png Graphic file (type png)
 
 <use immagini/wall.png>
-Package pdftex.def Info: immagini/wall.png used on input line 70.
+Package pdftex.def Info: immagini/wall.png used on input line 79.
 (pdftex.def)             Requested size: 365.23305pt x 208.45294pt.
- [3 <./immagini/erp.png>]
-<immagini/agile_development.png, id=247, 120.45pt x 106.2369pt>
+ [4 <./immagini/erp.png>]
+<immagini/agile_development.png, id=281, 120.45pt x 106.2369pt>
 File: immagini/agile_development.png Graphic file (type png)
 
 <use immagini/agile_development.png>
-Package pdftex.def Info: immagini/agile_development.png used on input line 93.
+Package pdftex.def Info: immagini/agile_development.png used on input line 102.
+
 (pdftex.def)             Requested size: 301.12422pt x 265.59154pt.
- [4 <./immagini/wall.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 99--103
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
+[][]|\T1/lmr/m/n/9 (+20) Ci-clo di svi-lup-po del-la Me-to-do-lo-gia Agi-le. Im
+-ma-gi-ne trat-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
+\T1/lmr/m/n/9 (+20) ta dal si-to in-for-ma-ti-vo Quo-ra: [][]$\T1/lmtt/m/n/9 ht
+tps : / / www . quora . com /$
+ []
+
+
+Overfull \hbox (97.41574pt too wide) in paragraph at lines 103--103
+$\T1/lmtt/m/n/9 What-[]are-[]the-[]pros-[]and-[]cons-[]of-[]the-[]waterfall-[]a
+nd-[]agile-[]scrum-[]project-[]management-[]approach$[][]| 
+ []
+
+[5 <./immagini/wall.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 108--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--103
+Underfull \hbox (badness 10000) in paragraph at lines 108--112
 
  []
 
-[5 <./immagini/agile_development.png>]
-<immagini/devops-diagram.png, id=266, 351.3125pt x 351.3125pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./immagini/agile_development.png>]
+<immagini/devops-diagram.png, id=300, 351.3125pt x 351.3125pt>
 File: immagini/devops-diagram.png Graphic file (type png)
 
 <use immagini/devops-diagram.png>
-Package pdftex.def Info: immagini/devops-diagram.png used on input line 114.
+Package pdftex.def Info: immagini/devops-diagram.png used on input line 123.
 (pdftex.def)             Requested size: 175.6558pt x 175.6558pt.
 
-<immagini/extremeprogramming.png, id=269, 2007.5pt x 1843.88875pt>
+<immagini/extremeprogramming.png, id=305, 2007.5pt x 1843.88875pt>
 File: immagini/extremeprogramming.png Graphic file (type png)
 
 <use immagini/extremeprogramming.png>
-Package pdftex.def Info: immagini/extremeprogramming.png used on input line 130
+Package pdftex.def Info: immagini/extremeprogramming.png used on input line 139
 .
 (pdftex.def)             Requested size: 220.82568pt x 202.82838pt.
- [6 <./immagini/devops-diagram.png>]
-<immagini/scrumboard.png, id=281, 1204.5pt x 878.28125pt>
+ [7 <./immagini/devops-diagram.png>]
+<immagini/scrumboard.png, id=322, 1204.5pt x 878.28125pt>
 File: immagini/scrumboard.png Graphic file (type png)
 
 <use immagini/scrumboard.png>
-Package pdftex.def Info: immagini/scrumboard.png used on input line 146.
+Package pdftex.def Info: immagini/scrumboard.png used on input line 155.
 (pdftex.def)             Requested size: 361.35278pt x 263.4864pt.
- [7 <./immagini/extremeprogramming.png>] [8 <./immagini/scrumboard.png>]) (capi
-toli/capitolo-2.tex [9] [10]
-Capitolo 2.
-[11
+ [8 <./immagini/extremeprogramming.png>] [9 <./immagini/scrumboard.png>]) (capi
+toli/capitolo-2.tex [10] [11] [12
 
-] <immagini/omni-channel.png, id=358, 780.516pt x 306.4248pt>
+]
+Capitolo 2.
+[13] <immagini/omni-channel.png, id=405, 780.516pt x 306.4248pt>
 File: immagini/omni-channel.png Graphic file (type png)
 
 <use immagini/omni-channel.png>
-Package pdftex.def Info: immagini/omni-channel.png used on input line 40.
+Package pdftex.def Info: immagini/omni-channel.png used on input line 39.
 (pdftex.def)             Requested size: 366.84258pt x 144.01967pt.
- [12 <./immagini/omni-channel.png>] [13]
-<immagini/gearvr.jpg, id=381, 1606.0pt x 903.375pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[][]|\T1/lmr/m/n/9 (+20) Sche-ma rap-pre-sen-ta-ti-vo del-la dif-fe-ren-ze tra 
+\T1/lmr/m/it/9 (+20) single-channel\T1/lmr/m/n/9 (+20) , \T1/lmr/m/it/9 (+20) m
+ulti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\T1/lmr/m/it/9 (+20) channel\T1/lmr/m/n/9 (+20) , \T1/lmr/m/it/9 (+20) cross-ch
+annel \T1/lmr/m/n/9 (+20) e \T1/lmr/m/it/9 (+20) omni-channel\T1/lmr/m/n/9 (+20
+) . Im-ma-gi-ne trat-ta dal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+\T1/lmr/m/n/9 (+20) si-to del-l'a-zien-da ON THE MARK: [][]$\T1/lmtt/m/n/9 http
+ : / / on-[]the-[]mark . com /$
+ []
+
+[14 <./immagini/omni-channel.png>] [15]
+<immagini/gearvr.jpg, id=431, 1606.0pt x 903.375pt>
 File: immagini/gearvr.jpg Graphic file (type jpg)
  <use immagini/gearvr.jpg>
-Package pdftex.def Info: immagini/gearvr.jpg used on input line 114.
+Package pdftex.def Info: immagini/gearvr.jpg used on input line 113.
 (pdftex.def)             Requested size: 240.8896pt x 135.5004pt.
 
-[14] <immagini/unity.png, id=392, 678.535pt x 246.9225pt>
-File: immagini/unity.png Graphic file (type png)
-
-<use immagini/unity.png>
-Package pdftex.def Info: immagini/unity.png used on input line 142.
-(pdftex.def)             Requested size: 203.56207pt x 74.0773pt.
- [15 <./immagini/gearvr.jpg>]
-<immagini/stack-gearvr.jpg, id=400, 1280.785pt x 1180.41pt>
+[16] [17 <./immagini/gearvr.jpg>]
+<immagini/stack-gearvr.jpg, id=452, 1280.785pt x 1180.41pt>
 File: immagini/stack-gearvr.jpg Graphic file (type jpg)
 
 <use immagini/stack-gearvr.jpg>
-Package pdftex.def Info: immagini/stack-gearvr.jpg used on input line 154.
+Package pdftex.def Info: immagini/stack-gearvr.jpg used on input line 143.
 (pdftex.def)             Requested size: 358.61736pt x 330.51254pt.
- [16 <./immagini/unity.png>] [17 <./immagini/stack-gearvr.jpg>] <immagini/stage
-it.jpg, id=419, 552.0625pt x 320.19624pt>
-File: immagini/stageit.jpg Graphic file (type jpg)
+ [18 <./immagini/stack-gearvr.jpg>])
+(capitoli/capitolo-3.tex [19] [20
 
-<use immagini/stageit.jpg>
-Package pdftex.def Info: immagini/stageit.jpg used on input line 184.
-(pdftex.def)             Requested size: 248.42583pt x 144.08698pt.
-) (capitoli/capitolo-3.tex [18 <./immagini/stageit.jpg>]
+]
 Capitolo 3.
-[19
-
-] [20]) (capitoli/capitolo-4.tex [21] [22
+[21] [22]) (capitoli/capitolo-4.tex [23] [24
 
 ]
 Capitolo 4.
-) [23] [24] (glossario.tex [25
+) [25] [26] (glossario.tex [27
 
 
-] [26]) (inizio-fine/bibliografia.tex [27]
-[28
+] [28]) (inizio-fine/bibliografia.tex [29]
+[30
 
-]) [29
+]) [31
 
 ]
 
@@ -1681,11 +1744,11 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24152 strings out of 493634
- 387552 string characters out of 3141317
- 971447 words of memory out of 3000000
- 26583 multiletter control sequences out of 15000+200000
- 112693 words of font info for 159 fonts, out of 3000000 for 9000
+ 24194 strings out of 493634
+ 388049 string characters out of 3141317
+ 974413 words of memory out of 3000000
+ 26596 multiletter control sequences out of 15000+200000
+ 118517 words of font info for 177 fonts, out of 3000000 for 9000
  1027 hyphenation exceptions out of 8191
  61i,8n,122p,1920b,1440s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{oc} has been referenced but does not exist, repla
@@ -1706,10 +1769,12 @@ fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri9.pfb><C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmtt8.pfb>
-Output written on tesi.pdf (43 pages, 2341899 bytes).
+ype1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/lm/lmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pf
+b>
+Output written on tesi.pdf (45 pages, 2448193 bytes).
 PDF statistics:
- 755 PDF objects out of 1000 (max. 8388607)
- 195 named destinations out of 1000 (max. 500000)
- 36330 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 811 PDF objects out of 1000 (max. 8388607)
+ 198 named destinations out of 1000 (max. 500000)
+ 39397 words of extra memory for PDF output out of 42996 (max. 10000000)
 
