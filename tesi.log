@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  13 SEP 2016 00:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  13 SEP 2016 01:02
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1605,7 +1605,7 @@ File: immagini/agile_development.png Graphic file (type png)
 <use immagini/agile_development.png>
 Package pdftex.def Info: immagini/agile_development.png used on input line 109.
 
-(pdftex.def)             Requested size: 301.12422pt x 265.59154pt.
+(pdftex.def)             Requested size: 271.0118pt x 239.03238pt.
  [5 <./immagini/wall.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 115--119
 
@@ -1616,18 +1616,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--119
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./immagini/agile_development.png>]
-<immagini/devops-diagram.png, id=305, 351.3125pt x 351.3125pt>
+[6 <./immagini/agile_development.png>]
+<immagini/devops-diagram.png, id=307, 351.3125pt x 351.3125pt>
 File: immagini/devops-diagram.png Graphic file (type png)
 
 <use immagini/devops-diagram.png>
 Package pdftex.def Info: immagini/devops-diagram.png used on input line 130.
 (pdftex.def)             Requested size: 175.6558pt x 175.6558pt.
 
-<immagini/extremeprogramming.png, id=310, 2007.5pt x 1843.88875pt>
+<immagini/extremeprogramming.png, id=312, 2007.5pt x 1843.88875pt>
 File: immagini/extremeprogramming.png Graphic file (type png)
 
 <use immagini/extremeprogramming.png>
@@ -1753,7 +1750,7 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x
 ype1/public/lm/lmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /lm/lmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pf
 b>
-Output written on tesi.pdf (45 pages, 2944147 bytes).
+Output written on tesi.pdf (45 pages, 2944153 bytes).
 PDF statistics:
  818 PDF objects out of 1000 (max. 8388607)
  201 named destinations out of 1000 (max. 500000)
