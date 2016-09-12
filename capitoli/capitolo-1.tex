@@ -43,7 +43,14 @@ The White Dog s.r.l., inoltre, interviene direttamente nel codice dei servizi Di
 Infine, offre consulenza a Diana Corp. per l'utilizzo delle seguenti piattaforme di \textit{management}:
 
 \begin{itemize}
-	\item \textbf{SAP:} sistema informativo aziendale per la gestione di tutti i processi dell’azienda: vendite, acquisti, gestione magazzino, contabilità eccetera. SAP supporta il sistema di gestione ERP, acronimo di \textit{Enterprise resource planning}, il quale integra tutti i processi di \textit{business} rilevanti in un'azienda come vendite, acquisti, gestione magazzino, contabilità eccetera.
+	\item \textbf{SAP:} sistema informativo per la gestione di tutti i processi aziendali. SAP supporta il sistema di gestione ERP, acronimo di \textit{Enterprise Resource Planning}, il quale, come è visibile nella \hyperlink{f1.3}{figura 1.3}, integra e gestisce tutti i processi di \textit{business} rilevanti di un'azienda: vendite, acquisti, gestione magazzino, contabilità, produzione e salvataggio dei dati. ERP fornisce una visione dei processi di business, spesso in tempo reale, utilizzando \textit{database} comunemente gestiti da un \textit{database management system}. Esso traccia risorse come contanti, materie prime, capacità di produzione e lo stato degli impegni lavorativi come ordini, ordini d'acquisto e libro paga. Facilita il flusso di informazioni tra tutte le funzioni aziendali e gestisce le connessioni agli \textit{stakeholder}\hyperlink{sh}{\ped{G}} esterni. \\
+	Nel caso dell'azienda Diana Corp. il sistema ERP contiene le informazioni riguardanti i prodotti e lo stato del magazzino. Alcune delle informazioni, come la descrizione e la disponibilità del prodotto, vengono sincronizzate con la piattaforma di vendita. \\
+	Al termine di ogni ordine, il portale \textit{e-commerce} notifica il sistema ERP le seguenti operazioni:
+	\begin{itemize}
+		\item Contabilizzazione del pagamento;
+		\item Aggiornamento dello stato del magazzino, decrementando la quantità disponibile della merce appena ordinata;
+		\item Generazione della fattura.
+	\end{itemize}
 	
 	\item \textbf{Magento:} è una piattaforma \textit{e-commerce} \textit{open source} che offre la possibilità di avviare una attività online di commercio elettronico con ampia flessibilità sia nella grafica, sia nelle funzionalità che nei contenuti. \\
 	L’interfaccia di amministrazione fornisce strumenti di marketing, SEO e gestione del catalogo, in modo da offrire ai commercianti la possibilità di creare siti a misura delle proprie esigenze di business. Progettato per essere completamente scalabile e per essere ripristinato facilmente.
@@ -55,7 +62,7 @@ Infine, offre consulenza a Diana Corp. per l'utilizzo delle seguenti piattaforme
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.5]{erp}
-		\caption{Ambiti aziendali gestiti dal sistema ERP. Immagine tratta dal sito della compagnia di sviluppo software KNOWART: \url{http://www.knowarth.com/enterprise-resource-planning/}}
+		\hypertarget{f1.3}{\caption{Ambiti aziendali gestiti dal sistema ERP. Immagine tratta dal sito della compagnia di sviluppo software KNOWART: \url{http://www.knowarth.com/enterprise-resource-planning/}}}
 	\end{center}
 \end{figure}
 \FloatBarrier
@@ -192,3 +199,12 @@ R\&D rappresenta il reparto di ricerca e sviluppo dell'azienda The White Dog s.r
 Ha a disposizione diversi dispositivi per la ricerca come \textit{smartphone} di ultima generazione, \textit{smart TV}, \textit{smartwatch} e numerosi dispositivi per lo sviluppo \textit{AR}\ped{\hyperlink{ar}{G}} e \textit{VR}\ped{\hyperlink{vr}{G}} come \textit{Google Glass}\footnote[11]{\url{https://www.google.com/glass/start/}}, \textit{Oculus Rift Development Kit 2}\footnote[12]{\url{https://www3.oculus.com/en-us/rift/}}, \textit{Gear VR}\footnote[13]{\url{https://www3.oculus.com/en-us/gear-vr/}}, \textit{Google Cardboard}\footnote[14]{\url{https://vr.google.com/cardboard/}} e \textit{Leap Motion}\footnote[15]{\url{https://www.leapmotion.com/}}. Attraverso questi dispositivi l'azienda studia e sviluppa nuove modalità di interazione che l'utente finale può utilizzare nell'acquisto nei propri \textit{stores} digitali. \\
 Un esempio di progetto R\&D è rappresentato proprio dal mio progetto di stage. Attraverso le tecnologie \textit{VR}\ped{\hyperlink{vr}{G}} sopracitate, il reparto R\&D mira a creare un ambiente virtuale dove sia possibile la visualizzazione e l'acquisto di alcuni prodotti. L'utente che indosserà il visore si ritroverà ad ammirare l'interno di un negozio fisico, creato con una foto a 360 gradi o tramite modellazione 3D. Girando la testa, potrà comprendere l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}} accorgendosi di visualizzare diversi angoli del negozio. Verrà data la possibilità di interagire, attraverso i dispositivi fisici del visore, con alcuni prodotti esposti nel negozio che, alla selezione, attiveranno un pannello informativo 3D. Il pannello stesso sarà interattivo, permettendo la consultazione delle informazioni e delle foto relative al prodotto. Infine, ogni prodotto sarà acquistabile aggiungendolo ad un carrello virtuale.
 Questo progetto rientra completamente nelle competenze di R\&D in quanto le tecnologie che dovranno essere utilizzate sono in larga parte embrionali e incomplete, perciò molto dovrà essere sviluppato "in casa".
+
+\label{Google Cardboard}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.8]{cardboard}
+		\caption{Visore per la realtà virtuale \textit{Google Cardboard}}
+	\end{center}
+\end{figure}
+\FloatBarrier
