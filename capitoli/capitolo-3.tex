@@ -196,23 +196,49 @@ La seconda importante differenza è l'implementazione degli \textbf{oggetti inte
 
 \begin{itemize}
 	\item \textbf{Mesh Collider:} è necessario aggiungere tale proprietà all'oggetto che si vuole rendere interattivo. Tale proprietà rende un oggetto "tangibile", ovvero può essere colliso da un altro oggetto presente nella scena. Questo permette alla \textit{Camera VR} di interagire con l'oggetto inviando un "raggio virtuale" verso quest'ultimo che, scontrandovisi, potrà attivare gli eventi che si desidera;
-	\item \textbf{Interactive Script:} script, da agganciare all'oggetto, che cattura l'evento della selezione attraverso i metodi esposti dall'\textit{api} della particolare tecnologia. All'interno di questo metodo si può implementare il vero comportamento dell'oggetto interattivo.  
+	\item \textbf{InteractiveScriptVR:} script, da agganciare all'oggetto, che cattura l'evento di selezione attraverso i metodi esposti dall'\textit{api} della particolare piattaforma. All'interno di questi metodi si può implementare il vero comportamento dell'oggetto interattivo.  
 \end{itemize}
 
-L'\textit{Interactive Script} differisce profondamente da una piattaforma all'altra. \\
+L'\texttt{InteractiveScriptVR} differisce profondamente da una piattaforma all'altra. \\
 Per quanto riguarda \textit{Google Cardboard}, lo script implementa la classe \texttt{IGvrGazeResponder}, la quale espone i metodi per la cattura della selezione tramite lo spostamento del magnete posto lateralmente nel visore. \\
-Per quanto riguarda \textit{Samsung Gear VR} invece, l'\textit{Interactive Script} non implementa alcuna interfaccia ma necessita l'utilizzo del namespace \texttt{VRStandardAsset.Utils} per richiamare i metodi esposti dallo script \texttt{VRInteractiveItem}, script che va agganciato all'oggetto come l'\textit{Interactive Script}. \\
+Per quanto riguarda \textit{Samsung Gear VR} invece, l'\textit{InteractiveScriptVR} non implementa alcuna interfaccia ma necessita l'utilizzo del namespace \texttt{VRStandardAsset.Utils} per richiamare i metodi esposti dallo script \texttt{VRInteractiveItem}, script che va agganciato all'oggetto come l'\textit{InteractiveScriptVR}. \\
 Questa differenza di implementazione degli oggetti interattivi, rende davvero difficoltosa la loro portabilità da una piattaforma all'altra. Dunque, dopo una lunga discussione avvenuta nell'ufficio R\&D, abbiamo deciso di abbandonare la totale portabilità dell'applicazione, raggiungendo però un compromesso: la separazione della cattura dell'evento di selezione dall'effettivo comportamento dell'oggetto, implementandoli in due script differenti. In questo modo è stato possibile creare dei \textit{prefabs} (oggetti portabili all'interno dell'ambiente \textit{Unity} contenenti le informazioni di forma, colore, script agganciati eccetera) che contenessero solo le informazioni del comportamento dell'oggetto dopo la cattura della selezione, caratteristica assolutamente indipendente dalla piattaforma.    
 
 \subsection{Usabilità dell'applicazione}
 
-In questa sottosezione descriverò gli studi effettuati riguardo l'usabilità dell'applicazione VR e delle scelte di progettazione che hanno portato tali studi.
+La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login attraverso la normale tastiera del telefono, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}}. \\
+Questa soluzione però ha mostrato al \textit{team} la profonda differenza tra le piattaforme \textit{Samsung Gear VR} e \textit{Google Cardboard}. Ogni applicazione \textit{Samsung Gear VR}, una volta avviata, richiede all'utente di inserire lo \textit{smartphone} all'interno del visore prima di poter effettivamente essere utilizzata. Questo obbliga lo sviluppatore a prevedere tutte scene di tipo \textit{VR}\ped{\hyperlink{vr}{G}} durante lo sviluppo dell'applicazione, contrariamente a \textit{Google Cardboard} che permette la coesistenza di tutte le tipologie scenografiche: 2D, 3D e \textit{VR}\ped{\hyperlink{vr}{G}}. Dunque, non è stato possibile inserire una scena 2D iniziale di login per la piattaforma Samsung e, a causa dei tempi ridotti di stage, non è stato possibile sviluppare una soluzione a tale problema.
 
-La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}}.
+\label{Login}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{login}
+		\caption{Schermata 2D di login}
+	\end{center}
+\end{figure}
+\FloatBarrier
 
 \subsection{Costruzione della scena 3D}
 
-In questa sezione andrò a descrivere le fasi di progettazione della scena 3D presente nell'applicazione e visibile tramite dispositivo VR.
+Dopo un'attenta fase di ricerca iniziale sulla tecnologia \textit{Unity} e \textit{VR}\ped{\hyperlink{vr}{G}}, ho potuto constatare che vi sono due modi principali per costruire una scena 3D:
+
+\begin{itemize}
+	\item \textbf{Tramite modellazione 3D dell'intero ambiente virtuale};
+	\item \textbf{Tramite l'applicazione di una foto a 360 gradi di una stanza ad una sfera o cubo inversi}.
+\end{itemize}
+
+La prima soluzione permette una vera esperienza 3D, dando la possibilità all'utente di spostarsi nelle tre dimensioni, prevedendo l'utilizzo di un gamepad. Ogni oggetto è ben definito in un punto nello spazio tridimensionale e osservabile da tutte le angolazioni. Purtroppo però per costruire un ambiente 3D di qualità accettabile sono necessarie profonde conoscenze di modellazione, conoscenze che fuoriescono dall'obbiettivo di questo stage. \\
+La seconda soluzione non permette una totale esperienza 3D, poiché applica una foto 2D a 360 gradi ad una sfera o un cubo inversi creati in \textit{Unity}. L'effetto così creato simula la tridimensionalità, non permettendo all'utente lo spostamento tra gli oggetti ma solo una visione stereoscopica della stanza. Il livello qualitativo raggiunto però è ottimo, se la foto viene realizzata con le giuste apparecchiature. Abbiamo deciso dunque di utilizzare la seconda metodologia per la creazione dell'ambiente. \\
+Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotografica di alta qualità presente nell'azienda seguendo la guida presente nel sito \url{...}. Posizionata la macchinetta fotografica al centro di una stanza appositamente arredata allo scopo nell'azienda Diana Corp., abbiamo effettuato 3 foto, una sovraesposta, una sottoesposta e una ad esposizione normale, ogni 45 gradi orizzontalmente. Abbiamo poi ripetuto l'operazione inclinando la macchinetta 45 verso il basso e infine 45 gradi verso l'alto. Le foto così ottenute, ci hanno permesso di creare la foto a 360 gradi tramite il software ..., che l'ha creata automaticamente a meno di qualche punto di agganciamento inserito manualmente. Infine abbiamo applicato la foto come texture di una sfera inversa creata tramite l'editor di \textit{Unity}.
+
+\label{Sfera}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{sfera}
+		\caption{Sfera inversa a cui è stata applicata la foto 360 della stanza come texture}
+	\end{center}
+\end{figure}
+\FloatBarrier  
 
 \subsection{Interazione con gli oggetti all'interno della scena} 
 

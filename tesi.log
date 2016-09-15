@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  15 SEP 2016 18:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  15 SEP 2016 22:39
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1548,7 +1548,7 @@ Overfull \hbox (14.32411pt too wide) in paragraph at lines 33--33
 \openout9 = `tesi.lof'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1515) has occurred while \output is active []
 
  [11
 
@@ -1568,7 +1568,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 10.
-<immagini/twd_logo.png, id=251, 200.06744pt x 75.1608pt>
+<immagini/twd_logo.png, id=255, 200.06744pt x 75.1608pt>
 File: immagini/twd_logo.png Graphic file (type png)
 
 <use immagini/twd_logo.png>
@@ -1577,7 +1577,7 @@ Package pdftex.def Info: immagini/twd_logo.png used on input line 16.
  [1
 
  <./immagini/twd_logo.png>]
-<immagini/ecommerce.jpg, id=265, 958.58125pt x 887.315pt>
+<immagini/ecommerce.jpg, id=269, 958.58125pt x 887.315pt>
 File: immagini/ecommerce.jpg Graphic file (type jpg)
 
 <use immagini/ecommerce.jpg>
@@ -1593,7 +1593,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 Underfull \vbox (badness 5245) has occurred while \output is active []
 
- [2 <./immagini/ecommerce.jpg>] <immagini/erp.png, id=283, 364.36125pt x 407.52
+ [2 <./immagini/ecommerce.jpg>] <immagini/erp.png, id=287, 364.36125pt x 407.52
 25pt>
 File: immagini/erp.png Graphic file (type png)
 
@@ -1601,14 +1601,14 @@ File: immagini/erp.png Graphic file (type png)
 Package pdftex.def Info: immagini/erp.png used on input line 64.
 (pdftex.def)             Requested size: 182.18018pt x 203.76074pt.
  [3]
-<immagini/wall.png, id=298, 936.49875pt x 534.49687pt>
+<immagini/wall.png, id=302, 936.49875pt x 534.49687pt>
 File: immagini/wall.png Graphic file (type png)
  <use immagini/wall.png>
 Package pdftex.def Info: immagini/wall.png used on input line 86.
 (pdftex.def)             Requested size: 365.23305pt x 208.45294pt.
 
 [4 <./immagini/erp.png>]
-<immagini/agile_development.png, id=310, 120.45pt x 106.2369pt>
+<immagini/agile_development.png, id=314, 120.45pt x 106.2369pt>
 File: immagini/agile_development.png Graphic file (type png)
 
 <use immagini/agile_development.png>
@@ -1626,14 +1626,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--119
  []
 
 [6 <./immagini/agile_development.png>]
-<immagini/devops-diagram.png, id=329, 351.3125pt x 351.3125pt>
+<immagini/devops-diagram.png, id=333, 351.3125pt x 351.3125pt>
 File: immagini/devops-diagram.png Graphic file (type png)
 
 <use immagini/devops-diagram.png>
 Package pdftex.def Info: immagini/devops-diagram.png used on input line 130.
 (pdftex.def)             Requested size: 175.6558pt x 175.6558pt.
 
-<immagini/extremeprogramming.png, id=334, 2007.5pt x 1843.88875pt>
+<immagini/extremeprogramming.png, id=338, 2007.5pt x 1843.88875pt>
 File: immagini/extremeprogramming.png Graphic file (type png)
 
 <use immagini/extremeprogramming.png>
@@ -1641,14 +1641,14 @@ Package pdftex.def Info: immagini/extremeprogramming.png used on input line 146
 .
 (pdftex.def)             Requested size: 220.82568pt x 202.82838pt.
  [7 <./immagini/devops-diagram.png>]
-<immagini/scrumboard.png, id=349, 1204.5pt x 878.28125pt>
+<immagini/scrumboard.png, id=353, 1204.5pt x 878.28125pt>
 File: immagini/scrumboard.png Graphic file (type png)
 
 <use immagini/scrumboard.png>
 Package pdftex.def Info: immagini/scrumboard.png used on input line 162.
 (pdftex.def)             Requested size: 361.35278pt x 263.4864pt.
  [8 <./immagini/extremeprogramming.png>] [9 <./immagini/scrumboard.png>] [10]
-<immagini/cardboard.jpg, id=412, 335.5737pt x 216.81pt>
+<immagini/cardboard.jpg, id=416, 335.5737pt x 216.81pt>
 File: immagini/cardboard.jpg Graphic file (type jpg)
 
 <use immagini/cardboard.jpg>
@@ -1658,7 +1658,7 @@ Package pdftex.def Info: immagini/cardboard.jpg used on input line 206.
 
 ]
 Capitolo 2.
-[13] <immagini/omni-channel.png, id=434, 780.516pt x 306.4248pt>
+[13] <immagini/omni-channel.png, id=438, 780.516pt x 306.4248pt>
 File: immagini/omni-channel.png Graphic file (type png)
 
 <use immagini/omni-channel.png>
@@ -1685,14 +1685,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--40
  []
 
 [14 <./immagini/omni-channel.png>] [15] [16]
-<immagini/gearvr.jpg, id=470, 1606.0pt x 903.375pt>
+<immagini/gearvr.jpg, id=474, 1606.0pt x 903.375pt>
 File: immagini/gearvr.jpg Graphic file (type jpg)
  <use immagini/gearvr.jpg>
 Package pdftex.def Info: immagini/gearvr.jpg used on input line 114.
 (pdftex.def)             Requested size: 240.8896pt x 135.5004pt.
 
 [17 <./immagini/gearvr.jpg>] [18]
-<immagini/stack-gearvr.jpg, id=493, 1280.785pt x 1180.41pt>
+<immagini/stack-gearvr.jpg, id=497, 1280.785pt x 1180.41pt>
 File: immagini/stack-gearvr.jpg Graphic file (type jpg)
 
 <use immagini/stack-gearvr.jpg>
@@ -1707,14 +1707,14 @@ Underfull \vbox (badness 3601) has occurred while \output is active []
  [21
 
 ]
-<immagini/utenti.png, id=521, 188.20313pt x 355.3275pt>
+<immagini/utenti.png, id=525, 188.20313pt x 355.3275pt>
 File: immagini/utenti.png Graphic file (type png)
 
 <use immagini/utenti.png>
 Package pdftex.def Info: immagini/utenti.png used on input line 38.
 (pdftex.def)             Requested size: 150.56268pt x 284.26237pt.
  [22 <./immagini/utenti.png>]
-<immagini/usecase/uc1.png, id=530, 750.55406pt x 371.13657pt>
+<immagini/usecase/uc1.png, id=534, 750.55406pt x 371.13657pt>
 File: immagini/usecase/uc1.png Graphic file (type png)
 
 <use immagini/usecase/uc1.png>
@@ -1726,21 +1726,21 @@ Overfull \hbox (40.80602pt too wide) in paragraph at lines 67--68
  []
 
 [23 <./immagini/usecase/uc1.png>]
-<immagini/usecase/uc2.png, id=540, 478.78876pt x 313.17pt>
+<immagini/usecase/uc2.png, id=544, 478.78876pt x 313.17pt>
 File: immagini/usecase/uc2.png Graphic file (type png)
 
 <use immagini/usecase/uc2.png>
 Package pdftex.def Info: immagini/usecase/uc2.png used on input line 91.
 (pdftex.def)             Requested size: 335.14984pt x 219.21748pt.
  [24 <./immagini/usecase/uc2.png>]
-<immagini/usecase/uc2_1.png, id=551, 480.29437pt x 298.11375pt>
+<immagini/usecase/uc2_1.png, id=555, 480.29437pt x 298.11375pt>
 File: immagini/usecase/uc2_1.png Graphic file (type png)
 
 <use immagini/usecase/uc2_1.png>
 Package pdftex.def Info: immagini/usecase/uc2_1.png used on input line 115.
 (pdftex.def)             Requested size: 336.20375pt x 208.67819pt.
  [25 <./immagini/usecase/uc2_1.png>]
-<immagini/usecase/uc2_2.png, id=562, 518.6878pt x 383.18156pt>
+<immagini/usecase/uc2_2.png, id=566, 518.6878pt x 383.18156pt>
 File: immagini/usecase/uc2_2.png Graphic file (type png)
 
 <use immagini/usecase/uc2_2.png>
@@ -1757,24 +1757,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--185
 
  []
 
-<immagini/maincamera.png, id=585, 1028.34187pt x 558.58687pt>
+<immagini/maincamera.png, id=589, 1028.34187pt x 558.58687pt>
 File: immagini/maincamera.png Graphic file (type png)
 
 <use immagini/maincamera.png>
 Package pdftex.def Info: immagini/maincamera.png used on input line 189.
 (pdftex.def)             Requested size: 359.92505pt x 195.50833pt.
- [28] [29 <./immagini/maincamera.png>] [30])
-(capitoli/capitolo-4.tex [31] [32
+ [28]
+Overfull \hbox (8.08783pt too wide) in paragraph at lines 202--206
+\T1/lmr/m/n/10 (-20) Per quan-to ri-guar-da \T1/lmr/m/it/10 (-20) Goo-gle Card-
+board\T1/lmr/m/n/10 (-20) , lo script im-ple-men-ta la clas-se \T1/lmtt/m/n/10 
+IGvrGazeResponder\T1/lmr/m/n/10 (-20) ,
+ []
+
+[29 <./immagini/maincamera.png>]
+<immagini/login.png, id=607, 1028.34187pt x 543.53062pt>
+File: immagini/login.png Graphic file (type png)
+
+<use immagini/login.png>
+Package pdftex.def Info: immagini/login.png used on input line 215.
+(pdftex.def)             Requested size: 359.92505pt x 190.23856pt.
+
+Underfull \vbox (badness 5217) has occurred while \output is active []
+
+ [30 <./immagini/login.png>] <immagini/sfera.png, id=614, 1028.34187pt x 543.53
+062pt>
+File: immagini/sfera.png Graphic file (type png)
+
+<use immagini/sfera.png>
+Package pdftex.def Info: immagini/sfera.png used on input line 237.
+(pdftex.def)             Requested size: 359.92505pt x 190.23856pt.
+ [31] [32 <./immagini/sfera.png>])
+(capitoli/capitolo-4.tex [33] [34
 
 ]
 Capitolo 4.
-) [33] [34] (glossario.tex [35
+) [35] [36] (glossario.tex [37
 
 
-] [36]) (inizio-fine/bibliografia.tex [37]
-[38
+] [38]) (inizio-fine/bibliografia.tex [39]
+[40
 
-]) [39
+]) [41
 
 ]
 
@@ -1792,11 +1816,11 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24305 strings out of 493634
- 389739 string characters out of 3141317
- 972964 words of memory out of 3000000
- 26649 multiletter control sequences out of 15000+200000
- 130397 words of font info for 183 fonts, out of 3000000 for 9000
+ 24327 strings out of 493634
+ 390077 string characters out of 3141317
+ 973094 words of memory out of 3000000
+ 26661 multiletter control sequences out of 15000+200000
+ 130657 words of font info for 185 fonts, out of 3000000 for 9000
  1027 hyphenation exceptions out of 8191
  61i,10n,122p,1920b,1440s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{uml} has been referenced but does not exist, repl
@@ -1825,9 +1849,9 @@ lm/lmro12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.p
 fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pfb>
-Output written on tesi.pdf (55 pages, 4426669 bytes).
+Output written on tesi.pdf (57 pages, 4992367 bytes).
 PDF statistics:
- 949 PDF objects out of 1000 (max. 8388607)
- 238 named destinations out of 1000 (max. 500000)
- 42504 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 968 PDF objects out of 1000 (max. 8388607)
+ 242 named destinations out of 1000 (max. 500000)
+ 42514 words of extra memory for PDF output out of 42996 (max. 10000000)
 
