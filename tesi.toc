@@ -66,7 +66,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4.1}Caratteristiche degli utenti}{22}{subsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Casi d'uso}{23}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Casi d'uso}{22}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Caso d'uso UC1: Autenticazione}{23}{section*.32}
 \defcounter {refsection}{0}\relax 
@@ -82,38 +82,38 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5.1}Portabilit\IeC {\`a} dell'applicazione}{28}{subsection.3.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Usabilit\IeC {\`a} dell'applicazione}{28}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.2}Usabilit\IeC {\`a} dell'applicazione}{30}{subsection.3.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.3}Costruzione della scena 3D}{28}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.3}Costruzione della scena 3D}{30}{subsection.3.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.4}Interazione con gli oggetti all'interno della scena}{28}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.4}Interazione con gli oggetti all'interno della scena}{30}{subsection.3.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.5}Progettazione e integrazione con AWS API Gateway}{28}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.5}Progettazione e integrazione con AWS API Gateway}{30}{subsection.3.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Sviluppo}{28}{section.3.6}
+\contentsline {section}{\numberline {3.6}Sviluppo}{30}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}Sviluppo degli oggetti interattivi}{28}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.1}Sviluppo degli oggetti interattivi}{30}{subsection.3.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}Creazione a runtime di oggetti interattivi}{28}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.2}Creazione a runtime di oggetti interattivi}{30}{subsection.3.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.3}Dati persistenti attraverso le scene}{28}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.3}Dati persistenti attraverso le scene}{31}{subsection.3.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.4}Unity e il protocollo HTTP}{29}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.4}Unity e il protocollo HTTP}{31}{subsection.3.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.5}Creazione e parsing di oggetti JSON in Unity}{29}{subsection.3.6.5}
+\contentsline {subsection}{\numberline {3.6.5}Creazione e parsing di oggetti JSON in Unity}{31}{subsection.3.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Verifica e validazione}{29}{section.3.7}
+\contentsline {section}{\numberline {3.7}Verifica e validazione}{31}{section.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Analisi retrospettiva}{31}{chapter.4}
+\contentsline {chapter}{\numberline {4}Analisi retrospettiva}{33}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Bilancio dei risultati rispetto agli obiettivi prefissati}{31}{section.4.1}
+\contentsline {section}{\numberline {4.1}Bilancio dei risultati rispetto agli obiettivi prefissati}{33}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Bilancio formativo}{31}{section.4.2}
+\contentsline {section}{\numberline {4.2}Bilancio formativo}{33}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Analisi critica del rapporto formativo tra stage e corso di laurea}{31}{section.4.3}
+\contentsline {section}{\numberline {4.3}Analisi critica del rapporto formativo tra stage e corso di laurea}{33}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Valutazioni personali}{31}{section.4.4}
+\contentsline {section}{\numberline {4.4}Valutazioni personali}{33}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Glossario}{33}{appendix*.41}
+\contentsline {chapter}{Glossario}{35}{appendix*.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{37}{appendix*.68}
+\contentsline {chapter}{Bibliografia}{39}{appendix*.69}

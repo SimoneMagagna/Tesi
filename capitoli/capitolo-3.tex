@@ -20,8 +20,8 @@ In questa sezione descriverò come le ricerche e le sperimentazioni effettuate m
 
 \section{Analisi dei requisiti}
 
-Questa sezione tratta dei casi d'uso e dei requisiti che il \textit{team} ha ricavato durante la discussione nella prima riunione di stage. Tale analisi ha subito un sostanzioso cambiamento durante la settimana 6, settimana dedicata alla prototipazione del possibile processo d'acquisto all'interno dell'ambiente virtuale. \\
-La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}}.
+Questa sezione tratta dei casi d'uso e dei requisiti che il \textit{team} ha ricavato durante la discussione nella prima riunione di stage. Tale analisi ha subito un sostanzioso cambiamento durante la settimana 6, settimana dedicata alla prototipazione del possibile processo d'acquisto all'interno dell'ambiente virtuale. A causa della sua scarsa usabilità, abbiamo deciso di non utilizzare una tastiera virtuale all'interno dell'ambiente tridimensionale per dare la possibilità all'utente di immettere i propri dati e gli estremi di pagamento. Ciò ha portato il \textit{team} a prevedere una registrazione al normale sito di \textit{e-commerce} prima dell'utilizzo dell'app, dove dar la possibilità all'utente di immettere i dati di pagamento. La sezione 3.5.2 spiega in maniera approfondita le sperimentazioni e le discussioni effettuate che hanno portato a questa importante decisione. 
+
 
 \subsection{Caratteristiche degli utenti}
 
@@ -176,15 +176,39 @@ Ogni requisito funzionale è rappresentato da un codice identificativo RFx e da 
 
 \section{Progettazione}
 
-In questa sezione andrò a descrivere le più importanti fasi di progettazione.
+Questa sezione descrive le più importanti e peculiari fasi di progettazione dell'applicazione. Molte delle decisioni prese sono state discusse da me assieme al \textit{team} di The White Dog s.r.l., cercando il più possibile di accontentare gli \textit{stakeholder}\hyperlink{sh}{\ped{G}}, ovvero il signor Stefano Mocellini, fondatore dell'azienda, attraverso l'ancora giovane e incompleta tecnologia \textit{VR}\ped{\hyperlink{vr}{G}}.
 
 \subsection{Portabilità dell'applicazione}
 
-In questa sottosezione tratterò di come la progettazione del software sia stata ampiamente influenzata dalla volontà di portabilità dell'applicazione su tutti i dispositivi VR Android.
+Una delle sfide più impegnative di questo progetto era riuscire a sviluppare l'applicazione per entrambi i dispositivi: \textit{Samsung Gear VR} e \textit{Google Cardboard}. Prima di conoscere a basso livello tali tecnologie, avevamo progettato l'implementazione di un'interfaccia che riconoscesse la tecnologia in uso e che ne richiamasse così i metodi specifici. Purtroppo, dopo aver sperimentato gli \textit{SDK}\ped{\hyperlink{sdk}{G}} forniti da entrambe le piattaforme e seguito i due principali tutorial\footnote[1]{\textit{Samsung Gear VR:} \url{http://www.samsung.com/us/samsungdeveloperconnection/developer-resources/gear-vr.html} \\ \textit{Google Cardboard:} \url{https://developers.google.com/vr/unity/}}, mi sono reso conto che una totale portabilità non era possibile a causa delle forti differenze tra le due piattaforme. \\ \\
+La prima differenza, e la più importante, è la \textbf{MainCamera} o Camera Principale. In un progetto \textit{Unity}, ogni scena possiede una o più camere che rappresentano il punto di vista dell'utente. Una camera normale non permette l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}} poiché non è collegata ai sensori di movimento e rotazione del dispositivo. All'interno dei pacchetti \textit{Unity} offerti agli sviluppatori dalle due case, sono presenti le rispettive camere \textit{VR}\ped{\hyperlink{vr}{G}} che, tramite script ad esse agganciati, permettono l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}} una volta posizionate a piacimento all'interno della scena. Tali script si collegano direttamente ai sensori del dispositivo che è diverso per le due piattaforme. Il visore \textit{Samsung Gear VR} possiede al suo interno tutti i sensori di movimento e rotazione necessari e lo script, agganciato alla \textit{MainCamera}, legge i dati derivanti da essi. Invece, i dispositivi \textit{Google Cardboard} non possiedono alcun sensore e la \textit{MainCamera} legge i dati di rotazione e movimento dai sensori all'interno dello \textit{smartphone}. Questa profonda differenza hardware causa una forte differenza tra i due script della \textit{MainCamera}, obbligando ad inserire due camere diverse all'interno della stessa scena.
+
+\label{MainCamera}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{maincamera}
+		\caption{Camera VR posizionata all'interno dell'ambiente tridimensionale creato in Unity}
+	\end{center}
+\end{figure}
+\FloatBarrier
+
+La seconda importante differenza è l'implementazione degli \textbf{oggetti interattivi} all'interno della scena \textit{Unity}. Di base, sia per \textit{Samsung Gear VR} sia per \textit{Google Cardboard}, un oggetto per essere interattivo necessità di due caratteristiche:
+
+\begin{itemize}
+	\item \textbf{Mesh Collider:} è necessario aggiungere tale proprietà all'oggetto che si vuole rendere interattivo. Tale proprietà rende un oggetto "tangibile", ovvero può essere colliso da un altro oggetto presente nella scena. Questo permette alla \textit{Camera VR} di interagire con l'oggetto inviando un "raggio virtuale" verso quest'ultimo che, scontrandovisi, potrà attivare gli eventi che si desidera;
+	\item \textbf{Interactive Script:} script, da agganciare all'oggetto, che cattura l'evento della selezione attraverso i metodi esposti dall'\textit{api} della particolare tecnologia. All'interno di questo metodo si può implementare il vero comportamento dell'oggetto interattivo.  
+\end{itemize}
+
+L'\textit{Interactive Script} differisce profondamente da una piattaforma all'altra. \\
+Per quanto riguarda \textit{Google Cardboard}, lo script implementa la classe \texttt{IGvrGazeResponder}, la quale espone i metodi per la cattura della selezione tramite lo spostamento del magnete posto lateralmente nel visore. \\
+Per quanto riguarda \textit{Samsung Gear VR} invece, l'\textit{Interactive Script} non implementa alcuna interfaccia ma necessita l'utilizzo del namespace \texttt{VRStandardAsset.Utils} per richiamare i metodi esposti dallo script \texttt{VRInteractiveItem}, script che va agganciato all'oggetto come l'\textit{Interactive Script}. \\
+Questa differenza di implementazione degli oggetti interattivi, rende davvero difficoltosa la loro portabilità da una piattaforma all'altra. Dunque, dopo una lunga discussione avvenuta nell'ufficio R\&D, abbiamo deciso di abbandonare la totale portabilità dell'applicazione, raggiungendo però un compromesso: la separazione della cattura dell'evento di selezione dall'effettivo comportamento dell'oggetto, implementandoli in due script differenti. In questo modo è stato possibile creare dei \textit{prefabs} (oggetti portabili all'interno dell'ambiente \textit{Unity} contenenti le informazioni di forma, colore, script agganciati eccetera) che contenessero solo le informazioni del comportamento dell'oggetto dopo la cattura della selezione, caratteristica assolutamente indipendente dalla piattaforma.    
 
 \subsection{Usabilità dell'applicazione}
 
 In questa sottosezione descriverò gli studi effettuati riguardo l'usabilità dell'applicazione VR e delle scelte di progettazione che hanno portato tali studi.
+
+La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}}.
 
 \subsection{Costruzione della scena 3D}
 
