@@ -1,9 +1,10 @@
 \newpage
 %**************************************************************
+% CAPITOLO 3
+%**************************************************************
+
 \chapter{Il progetto di e-commerce VR}
 \label{cap:ilprogettoe-commercevr}
-
-In questo capitolo andrò a trattare nel dettaglio tutte le fasi dello stage che hanno portato allo sviluppo del progetto.
 
 \section{Pianificazione del lavoro}
 
@@ -19,19 +20,159 @@ In questa sezione descriverò come le ricerche e le sperimentazioni effettuate m
 
 \section{Analisi dei requisiti}
 
-All'interno di questa sezione tratterò dell'attività di analisi dei requisiti che il team ha effettuato prima della progettazione e dello sviluppo del progetto.
+Questa sezione tratta dei casi d'uso e dei requisiti che il \textit{team} ha ricavato durante la discussione nella prima riunione di stage. Tale analisi ha subito un sostanzioso cambiamento durante la settimana 6, settimana dedicata alla prototipazione del possibile processo d'acquisto all'interno dell'ambiente virtuale. \\
+La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}}.
 
 \subsection{Caratteristiche degli utenti}
 
-In questa sottosezione descriverò le tipologie di utenti previsti per l'applicazione.
+Obbligare l'utente ad immettere dati sensibili e strettamente personali, come gli estremi di pagamento, prima dell'effettivo utilizzo del servizio non è una buona prassi. L'utente che si appresta per la prima volta ad utilizzare l'applicazione, potrebbe non conoscere l'azienda di produzione e potrebbe non fidarsi. Dunque sono stati delineati due principali tipologie d'utente:
+
+\begin{itemize}
+	\item \textbf{Utente registrato visitatore:} utente che ha effettuato la registrazione ma che ha deciso di non immettere i propri dati della carta di credito. Ad esso è permesso visualizzare l'ambiente \textit{VR}\ped{\hyperlink{vr}{G}}, selezionare i prodotti e conoscerne le caratteristiche, aggiungerli al carrello, che sarà reso persistente, ma non di concluderne l'acquisto;
+	\item \textbf{Utente registrato acquirente:} utente che ha effettuato la registrazione immettendo anche i dati della carta di credito. Ad esso è permessa la totale esperienza incluso l'acquisto dei prodotti presenti nel carrello.
+\end{itemize}
+
+\label{Gerarchia utenti}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.8]{utenti}
+		\caption{Gerarchia degli utenti}
+	\end{center}
+\end{figure}
+\FloatBarrier
 
 \subsection{Casi d'uso}
 
-In questa sottosezione elencherò tutti i casi d'uso previsti per l'applicazione.
+Verranno di seguito elencati tutti i casi d'uso individuati dal \textit{team} per l'applicazione, che spiegano in che modo un utente possa interagire con l'applicazione. Per ogni caso d'uso viene mostrato uno schema \hyperlink{uml}{UML} che ne rappresenta il flusso operativo. \\ Non vengono considerati i casi d'uso relativi alla registrazione al sito/e-commerce poiché tale funzionalità non è stata da me implementata non essendo di mia competenza.
+
+\subsubsection{Caso d'uso UC1: Autenticazione}
+
+\begin{itemize}
+	\item \textbf{Attori:} utente registrato visitatore, utente registrato acquirente;
+	\item \textbf{Descrizione:} l'utente viene invitato ad immettere l'\textit{username} e la \textit{passowrd} scelti in fase di registrazione;
+	\item \textbf{Precondizione:} l'applicazione è avviata e mostra la pagina di login;
+	\item \textbf{Postcondizione:} l'autenticazione è andata a buon fine e l'applicazione passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}.
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'utente può inserire l'\textit{username} (UC1.1);
+		\item L'utente può inserire la \textit{passowrd} (UC1.2);
+		\item L'utente può confermare i dati inseriti premendo sul pulsante di login (UC1.3).
+	\end{enumerate}
+	\item \textbf{Estensioni:} L'utente può visualizzare un messaggio di errore se i dati immessi non corrispondono a quelli di registrazione o se il campo \textit{username} e \textit{passowrd} sono vuoti (UC1.4).
+\end{itemize}
+
+\label{UC1}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.55]{usecase/uc1}
+		\caption{UC1: Autenticazione}
+	\end{center}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Caso d'uso UC2: Interazione con l'ambiente virtuale}
+
+\begin{itemize}
+	\item \textbf{Attori:} utente registrato visitatore, utente registrato acquirente;
+	\item \textbf{Descrizione:} l'utente, collegato il telefono al visore e indossato quest'ultimo, si ritrova ad osservare un ambiente virtuale con il quale può interagire;
+	\item \textbf{Precondizione:} l'utente ha effettuato con successo l'autenticazione;
+	\item \textbf{Postcondizione:} l'utente interagisce con l'ambiente virtuale e se è acquirente può comprare gli oggetti presenti nel carrello;
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'utente può interagire con un oggetto, segnalato da un apposito simbolo, presente nell'ambiente virtuale (UC2.1);
+		\item L'utente può interagire con il carrello presente nell'ambiente e segnalato da un'apposita scritta (UC2.2);
+		\item L'utente può uscire dall'applicazione effettuando così il logout (UC2.3).
+	\end{enumerate}
+\end{itemize}
+
+\label{UC2}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.7]{usecase/uc2}
+		\caption{UC2: Interazione con l'ambiente virtuale}
+	\end{center}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Caso d'uso UC2.1: Interazione con un oggetto}
+
+\begin{itemize}
+	\item \textbf{Attori:} utente registrato visitatore, utente registrato acquirente;
+	\item \textbf{Descrizione:} l'utente interagisce con un oggetto presente nell'ambiente tramite l'interfaccia fisica del visore, attivando il pannello informativo. All'interno di questo sono riportate tutte le informazioni del prodotto e le sue foto. Da pannello è possibile aggiungere l'oggetto al carrello;
+	\item \textbf{Precondizione:} l'utente ha effettuato con successo l'autenticazione;
+	\item \textbf{Postcondizione:} l'utente interagisce con l'oggetto attivando il pannello informativo.
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item Visualizzazione informazioni dell'oggetto sul pannello informativo (UC2.1.1);
+		\item Scorrimento foto dell'oggetto sul pannello informativo (UC2.1.2);
+		\item Aggiunta oggetto al carrello selezionando l'apposito pulsante (UC2.1.3).
+	\end{enumerate}
+\end{itemize}
+
+\label{UC2.1}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.7]{usecase/uc2_1}
+		\caption{UC2.1: Interazione con un oggetto}
+	\end{center}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Caso d'uso UC2.2: Interazione con il carrello}
+
+\begin{itemize}
+	\item \textbf{Attori:} utente registrato visitatore, utente registrato acquirente;
+	\item \textbf{Descrizione:} entrambe le tipologie possono interagire con il carrello segnalato nell'ambiente da un'apposita scritta. All'interno di esso sono visibili gli oggetti precedentemente inseriti. E' possibile, attraverso l'interfaccia fisica del visore, eliminarli uno ad uno o svuotare completamente il carrello. Se l'utente registrati è acquirente allora può procedere al pagamento;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'autenticazione;
+	\item \textbf{Postcondizione:} l'utente visualizza i prodotti presenti nel carrello, potendoli acquistare se è acquirente;
+	\item \textbf{Scenario principale:}
+	\begin{enumerate}
+		\item L'utente visualizza il pannello tridimensionale che rappresenta il carrello dove sono elencati i prodotti aggiunti precedentemente (UC2.2.1);
+		\item L'utente può eliminare singolarmente un oggetto dal carrello (UC2.2.2);
+		\item L'utente può svuotare completamente il carrello (UC2.2.3);
+		\item Se l'utente è acquirente allora può procedere con l'acquisto dei prodotti (UC2.2.4);
+	\end{enumerate}
+\end{itemize}
+
+\label{UC2.2}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.7]{usecase/uc2_2}
+		\caption{UC2.2: Interazione con il carrello}
+	\end{center}
+\end{figure}
+\FloatBarrier
 
 \subsection{Requisiti}
 
-In questa sottosezione elencherò tutti i requisiti estratti che l'applicazione soddisfa.
+Vengono di seguito elencati tutti i requisiti funzionali che l'applicazione deve soddisfare in base ai casi d'uso trovati. Un requisito funzionale rappresenta una \textit{feature} che l'applicazione deve mettere a disposizione all'utente per garantirgli un'esperienza completa. \\
+Ogni requisito funzionale è rappresentato da un codice identificativo RFx e da una descrizione che ne illustra lo scopo.
+
+\begin{table}
+	\centering
+	\label{my-label}
+	\begin{tabular}{| l | p{10cm} |}
+		\hline
+		Requisito & Descrizione \\ \hline
+		RF1 & L'applicazione deve permettere all'utente di potersi autenticare utilizzando \textit{username} e \textit{password} specificati in fase di registrazione \\ \hline
+		RF1.1 & L'applicazione deve permettere all'utente di inserire l'\textit{username} \\ \hline
+		RF1.2 & L'applicazione deve permettere all'utente di inserire la \textit{password} \\ \hline
+		RF1.3 & L'applicazione deve permettere all'utente di confermare i dati di autenticazione ed effettuare così il login \\ \hline
+		RF2 & L'applicazione deve permettere all'utente di visualizzare l'ambiente virtuale una volta indossato il visore e di interagire con esso \\ \hline
+		RF2.1 & L'applicazione deve permettere all'utente di interagire con un oggetto presente nella scena attraverso l'interfaccia fisica offerta dal visore \\ \hline
+		RF2.1.1 & L'applicazione deve visualizzare le informazioni relative all'oggetto selezionato all'interno di un panello informativo posto davanti all'utente \\ \hline
+		RF2.1.2 & L'applicazione deve permettere la visualizzazione e lo scorrimento delle foto dell'oggetto selezionato all'interno del pannello informativo \\ \hline
+		RF2.1.3 & L'applicazione deve permettere l'aggiunta al carrello dell'oggetto selezionato \\ \hline
+		RF2.2 & L'applicazione deve permettere l'interazione col carrello segnalato da un'apposita scritta all'interno dell'ambiente virtuale \\ \hline
+		RF2.2.1 & L'applicazione deve visualizzare tutti gli oggetti presenti nel carrello precedentemente aggiunti \\ \hline
+		RF2.2.2 & L'applicazione deve permettere all'utente di eliminare un singolo oggetto dal carrello \\ \hline
+		RF2.2.3 & L'applicazione deve permettere di svuotare completamente il carrello \\ \hline
+		RF2.2.4 & L'applicazione deve permettere l'acquisto dei prodotti se l'utente è registrato acquirente \\ 
+		\hline
+	\end{tabular}
+	\caption{Tabella dei requisiti funzionali che l'applicazione deve soddisfare}
+\end{table}
+\FloatBarrier
 
 \section{Progettazione}
 
