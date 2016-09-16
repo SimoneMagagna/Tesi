@@ -88,21 +88,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5.4}Interazione con gli oggetti all'interno della scena}{32}{subsection.3.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.5}Progettazione e integrazione con AWS API Gateway}{32}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.5}Progettazione e integrazione con AWS API Gateway}{33}{subsection.3.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Sviluppo}{32}{section.3.6}
+\contentsline {section}{\numberline {3.6}Sviluppo}{34}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}Sviluppo degli oggetti interattivi}{32}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.1}Sviluppo degli oggetti interattivi}{34}{subsection.3.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}Creazione a runtime di oggetti interattivi}{32}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.2}Creazione a runtime di oggetti interattivi}{34}{subsection.3.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.3}Dati persistenti attraverso le scene}{32}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.3}Dati persistenti attraverso le scene}{34}{subsection.3.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.4}Unity e il protocollo HTTP}{33}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.4}Unity e il protocollo HTTP}{34}{subsection.3.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.5}Creazione e parsing di oggetti JSON in Unity}{33}{subsection.3.6.5}
+\contentsline {subsection}{\numberline {3.6.5}Creazione e parsing di oggetti JSON in Unity}{34}{subsection.3.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Verifica e validazione}{33}{section.3.7}
+\contentsline {section}{\numberline {3.7}Verifica e validazione}{34}{section.3.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Analisi retrospettiva}{35}{chapter.4}
 \defcounter {refsection}{0}\relax 
@@ -114,6 +114,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Valutazioni personali}{35}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Glossario}{37}{appendix*.44}
+\contentsline {chapter}{Glossario}{37}{appendix*.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{41}{appendix*.71}
+\contentsline {chapter}{Bibliografia}{41}{appendix*.72}

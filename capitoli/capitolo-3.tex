@@ -229,7 +229,7 @@ Dopo un'attenta fase di ricerca iniziale sulla tecnologia \textit{Unity} e \text
 
 La prima soluzione permette una vera esperienza 3D, dando la possibilità all'utente di spostarsi nelle tre dimensioni, prevedendo l'utilizzo di un gamepad. Ogni oggetto è ben definito in un punto nello spazio tridimensionale e osservabile da tutte le angolazioni. Purtroppo però per costruire un ambiente 3D di qualità accettabile sono necessarie profonde conoscenze di modellazione, conoscenze che fuoriescono dall'obbiettivo di questo stage. \\
 La seconda soluzione non permette una totale esperienza 3D, poiché applica una foto 2D a 360 gradi ad una sfera o un cubo inversi creati in \textit{Unity}. L'effetto così creato simula la tridimensionalità, non permettendo all'utente lo spostamento tra gli oggetti ma solo una visione stereoscopica della stanza. Il livello qualitativo raggiunto però è ottimo, se la foto viene realizzata con le giuste apparecchiature. Abbiamo deciso dunque di utilizzare la seconda metodologia per la creazione dell'ambiente. \\
-Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotografica di alta qualità presente nell'azienda seguendo la guida presente nel sito \url{...}. Posizionata la macchinetta fotografica al centro di una stanza appositamente arredata allo scopo nell'azienda Diana Corp., abbiamo effettuato 3 foto, una sovraesposta, una sottoesposta e una ad esposizione normale, ogni 45 gradi orizzontalmente. Abbiamo poi ripetuto l'operazione inclinando la macchinetta 45 verso il basso e infine 45 gradi verso l'alto. Le foto così ottenute, ci hanno permesso di creare la foto a 360 gradi tramite il software ..., che l'ha creata automaticamente a meno di qualche punto di agganciamento inserito manualmente. Infine abbiamo applicato la foto come texture di una sfera inversa creata tramite l'editor di \textit{Unity}.
+Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotografica di alta qualità presente nell'azienda seguendo la guida presente nel sito: \url{http://www.lightspacewater.net/Tutorials/PhotoPano2/paper/}. Posizionata la macchinetta fotografica sul cavalletto al centro di una stanza, appositamente arredata allo scopo, dell'azienda Diana Corp., abbiamo effettuato 3 foto, una sovraesposta, una sottoesposta e una ad esposizione normale, ogni 45 gradi orizzontalmente. Abbiamo poi ripetuto l'operazione inclinando la macchinetta 45 verso il basso e infine 45 gradi verso l'alto. Le foto così ottenute, ci hanno permesso di creare la foto a 360 gradi tramite il software Autopano\footnote[2]{\url{http://www.kolor.com/autopano/}}, che l'ha creata automaticamente a meno di qualche punto di agganciamento inserito manualmente. Infine abbiamo applicato la foto come texture di una sfera inversa creata tramite l'editor di \textit{Unity}.
 
 \label{Sfera}
 \begin{figure}[ht]
@@ -242,11 +242,47 @@ Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotogra
 
 \subsection{Interazione con gli oggetti all'interno della scena} 
 
-All'interno di questa sottosezione parlerò della progettazione riguardante le modalità di interazione tra il visore VR e gli oggetti presenti all'interno della scena.
+All'interno della scena creata tramite la foto a 360 gradi, gli oggetti presenti nella stanza non sono veri oggetti tridimensionali modellati in \textit{Unity}. A quest'ultimi, come descritto nella sezione 3.5.1, è possibile applicare la proprietà \textit{Mesh Collider}, per renderli tangibili, e lo script che cattura l'evento di selezione. Purtroppo nella soluzione da noi adottata gli oggetti fanno parte della foto che crea lo sfondo, perciò non è possibile applicargli queste due proprietà. \\
+Abbiamo così deciso di porre davanti ad ogni oggetto un pannello tridimensionale creato tramite l'editor di \textit{Unity} e ad esso agganciargli le caratteristiche citate. In più al pannello viene disabilitata la proprietà \textit{Mesh Renderer}, proprietà che lo rende visibile. \\ 
+In questo modo viene simulata l'interattività dell'oggetto, che alla selezione tramite l'interfaccia fisica del visore, attiva il pannello informativo relativo all'oggetto selezionato.
+
+\label{Oggetto Interattivo}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{pannello}
+		\caption{Pannello tridimensionale posto davanti ad un oggetto presente nella stanza per renderlo interattivo}
+	\end{center}
+\end{figure}
+\FloatBarrier  
 
 \subsection{Progettazione e integrazione con AWS API Gateway}
 
-All'interno di questa sezione tratterò della progettazione riguardante l'API Mock creata tramite AWS API Gateway e della sua integrazione con l'applicazione.
+Uno degli obiettivi dello stage era sperimentare la comunicazione tra l'applicazione creata con \textit{Unity} e sistemi esterni tramite protocollo HTTP, come ad esempio un \textit{e-commerce}. Per testare tali funzionalità in sicurezza, senza dover creare o modificare gli \textit{e-commerce} aziendali, il tutor mi ha suggerito di utilizzare il servizio \textit{API Gateway} di \textit{Amazon Web Service}. Amazon API Gateway è un servizio completamente gestito che semplifica agli sviluppatori la creazione, la pubblicazione, la manutenzione, il monitoraggio e la protezione delle API su qualsiasi scala. Essa agisce come porta d'entrata attraverso la quale le applicazioni possono accedere a dati, logica di business o funzionalità dei servizi di back-end. Gestisce tutte le attività di accettazione ed elaborazione relative alle chiamate API simultanee, inclusi gestione del traffico, controllo di accessi e autorizzazioni, monitoraggio e gestione delle versioni delle API. Infine permette la creazione di API Mock, ovvero API che non si agganciano ad alcun back-end ma che rispondono messaggi prefissati ad ogni chiamata HTTP. Quest'ultima funzionalità ci ha spinto ad utilizzare questo servizio, dato che lo sviluppo di un vero back-end non rientrava all'interno degli obiettivi di stage. \\
+Per quanto riguarda \textit{Unity}, invece, ho sfruttato la classe \texttt{WWW} che consente di effettuare chiamate GET per recuperare dati JSON o foto
+
+\begin{lstlisting}[firstnumber=1]
+string url = "https://tta4e2q8b3.execute-api.eu-west-1.amazonaws.com/prod/products";
+
+WWW www = new WWW(url);
+\end{lstlisting}
+
+e chiamate POST, potendo inviare \textit{headers} e corpo:
+
+\begin{lstlisting}[firstnumber=1]
+string url = "https://tta4e2q8b3.execute-api.eu-west-1.amazonaws.com/prod/login";
+
+string JSON = "{\"username\" : " + "\"" + Username + "\", " + "\"password\" : " + "\"" + Password + "\"}";
+	
+byte[] body = System.Text.Encoding.UTF8.GetBytes(JSON);    
+	
+Dictionary<string, string> headers = new Dictionary<string, string>();
+	
+headers.Add( "Content-Type", "application/json" );
+	
+headers.Add( "X-HTTP-Method-Override", "POST" );
+	
+WWW www = new WWW(url, body, headers);
+\end{lstlisting}
 
 \section{Sviluppo}
 
