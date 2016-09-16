@@ -56,64 +56,54 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Il progetto di e-commerce VR}{21}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Pianificazione del lavoro}{21}{section.3.1}
+\contentsline {section}{\numberline {3.1}Analisi dei requisiti}{21}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Ricerca e sperimentazione}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.1.1}Caratteristiche degli utenti}{21}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Tecnologie adottate}{21}{section.3.3}
+\contentsline {subsection}{\numberline {3.1.2}Casi d'uso}{22}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Analisi dei requisiti}{21}{section.3.4}
+\contentsline {subsubsection}{Caso d'uso UC1: Autenticazione}{22}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Caratteristiche degli utenti}{22}{subsection.3.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Casi d'uso}{22}{subsection.3.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso d'uso UC1: Autenticazione}{23}{section*.32}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Caso d'uso UC2: Interazione con l'ambiente virtuale}{24}{section*.34}
+\contentsline {subsubsection}{Caso d'uso UC2: Interazione con l'ambiente virtuale}{23}{section*.34}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Caso d'uso UC2.1: Interazione con un oggetto}{24}{section*.36}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Caso d'uso UC2.2: Interazione con il carrello}{25}{section*.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Requisiti}{26}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.1.3}Requisiti}{26}{subsection.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Progettazione}{28}{section.3.5}
+\contentsline {section}{\numberline {3.2}Progettazione}{28}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}Portabilit\IeC {\`a} dell'applicazione}{28}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.2.1}Portabilit\IeC {\`a} dell'applicazione}{28}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Usabilit\IeC {\`a} dell'applicazione}{30}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.2.2}Usabilit\IeC {\`a} dell'applicazione}{30}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.3}Costruzione della scena 3D}{31}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.2.3}Costruzione della scena 3D}{31}{subsection.3.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.4}Interazione con gli oggetti all'interno della scena}{32}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.2.4}Interazione con gli oggetti all'interno della scena}{32}{subsection.3.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.5}Progettazione e integrazione con AWS API Gateway}{33}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.2.5}Progettazione e integrazione con AWS API Gateway}{33}{subsection.3.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Sviluppo}{34}{section.3.6}
+\contentsline {section}{\numberline {3.3}Sviluppo}{35}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}Sviluppo degli oggetti interattivi}{34}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.3.1}Spostamento degli oggetti all'interno dell'ambiente tridimensionale}{35}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}Creazione a runtime di oggetti interattivi}{34}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.3.2}Creazione a runtime di oggetti interattivi}{35}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.3}Dati persistenti attraverso le scene}{34}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.3.3}Dati persistenti attraverso le scene}{35}{subsection.3.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.4}Unity e il protocollo HTTP}{34}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.3.4}Creazione e parsing di oggetti JSON in Unity}{35}{subsection.3.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.5}Creazione e parsing di oggetti JSON in Unity}{34}{subsection.3.6.5}
+\contentsline {chapter}{\numberline {4}Analisi retrospettiva}{37}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Verifica e validazione}{34}{section.3.7}
+\contentsline {section}{\numberline {4.1}Bilancio dei risultati rispetto agli obiettivi prefissati}{37}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Analisi retrospettiva}{35}{chapter.4}
+\contentsline {section}{\numberline {4.2}Bilancio formativo}{37}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Bilancio dei risultati rispetto agli obiettivi prefissati}{35}{section.4.1}
+\contentsline {section}{\numberline {4.3}Analisi critica del rapporto formativo tra stage e corso di laurea}{37}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Bilancio formativo}{35}{section.4.2}
+\contentsline {section}{\numberline {4.4}Valutazioni personali}{37}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Analisi critica del rapporto formativo tra stage e corso di laurea}{35}{section.4.3}
+\contentsline {chapter}{Glossario}{39}{appendix*.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Valutazioni personali}{35}{section.4.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Glossario}{37}{appendix*.45}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{41}{appendix*.72}
+\contentsline {chapter}{Bibliografia}{43}{appendix*.73}

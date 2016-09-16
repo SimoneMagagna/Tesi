@@ -34,7 +34,7 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Gerarchia degli utenti\relax }}{22}{figure.caption.31}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Gerarchia degli utenti. L'utente autenticato acquirente pu\IeC {\`o} effettuare tutte le operazioni dell'utente registrato visitatore ma in pi\IeC {\`u} ha la possibilit\IeC {\`a} di acquistare gli oggetti presenti nel carrello\relax }}{22}{figure.caption.31}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.2}{\ignorespaces UC1: Autenticazione\relax }}{23}{figure.caption.33}
 \defcounter {refsection}{0}\relax 
@@ -51,6 +51,8 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Sfera inversa a cui \IeC {\`e} stata applicata la foto 360 della stanza come texture\relax }}{32}{figure.caption.43}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Pannello tridimensionale posto davanti ad un oggetto presente nella stanza per renderlo interattivo\relax }}{33}{figure.caption.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Flusso della chiamata GET all'interno della risorsa \textit {/products} in AWS API Gateway\relax }}{34}{figure.caption.45}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

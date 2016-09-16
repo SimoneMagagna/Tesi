@@ -6,26 +6,14 @@
 \chapter{Il progetto di e-commerce VR}
 \label{cap:ilprogettoe-commercevr}
 
-\section{Pianificazione del lavoro}
-
-In questa sezione tratterò della pianificazione del lavoro effettuata assieme al mio tutor, delle fasi che l'hanno caratterizzata e del ciclo di vita adottato. 
-
-\section{Ricerca e sperimentazione}
-
-In questa sezione descriverò la fase di ricerca e sperimentazione delle tecnologie utilizzate, inizialmente a me sconosciute. Ho deciso di dedicare una sezione a questa fase perché ha avuto una rilevante importanza all'interno del mio stage e rappresenta uno dei principali obbiettivi aziendali.
-
-\section{Tecnologie adottate}
-
-In questa sezione descriverò come le ricerche e le sperimentazioni effettuate mi hanno portato a scegliere un particolare stack tecnologico.
-
 \section{Analisi dei requisiti}
 
-Questa sezione tratta dei casi d'uso e dei requisiti che il \textit{team} ha ricavato durante la discussione nella prima riunione di stage. Tale analisi ha subito un sostanzioso cambiamento durante la settimana 6, settimana dedicata alla prototipazione del possibile processo d'acquisto all'interno dell'ambiente virtuale. A causa della sua scarsa usabilità, abbiamo deciso di non utilizzare una tastiera virtuale all'interno dell'ambiente tridimensionale per dare la possibilità all'utente di immettere i propri dati e gli estremi di pagamento. Ciò ha portato il \textit{team} a prevedere una registrazione al normale sito di \textit{e-commerce} prima dell'utilizzo dell'app, dove dar la possibilità all'utente di immettere i dati di pagamento. La sezione 3.5.2 spiega in maniera approfondita le sperimentazioni e le discussioni effettuate che hanno portato a questa importante decisione. 
+Questa sezione tratta dei casi d'uso e dei requisiti che il \textit{team} ha ricavato durante la discussione nella prima riunione di stage. Tale analisi ha subito un sostanzioso cambiamento durante la settimana 6, settimana dedicata alla prototipazione del possibile processo d'acquisto all'interno dell'ambiente virtuale. A causa della sua scarsa usabilità, abbiamo deciso di non utilizzare una tastiera virtuale all'interno dell'ambiente tridimensionale per dare la possibilità all'utente di immettere i propri dati e gli estremi di pagamento. Ciò ha portato il \textit{team} a prevedere una registrazione ad un normale sito di \textit{e-commerce} prima di effettuare l'autenticazione all'app, dove dar la possibilità all'utente di immettere i propri dati di pagamento. La sezione 3.2.2 spiega in maniera approfondita le sperimentazioni e le discussioni effettuate che hanno portato a questa importante decisione. 
 
 
 \subsection{Caratteristiche degli utenti}
 
-Obbligare l'utente ad immettere dati sensibili e strettamente personali, come gli estremi di pagamento, prima dell'effettivo utilizzo del servizio non è una buona prassi. L'utente che si appresta per la prima volta ad utilizzare l'applicazione, potrebbe non conoscere l'azienda di produzione e potrebbe non fidarsi. Dunque sono stati delineati due principali tipologie d'utente:
+Obbligare l'utente ad immettere dati sensibili e strettamente personali, come gli estremi di pagamento, prima dell'effettivo utilizzo del servizio non è una buona prassi. L'utente, che si appresta per la prima volta ad utilizzare l'applicazione, potrebbe non conoscere l'azienda di produzione e potrebbe non fidarsi. Dunque sono stati delineati due principali tipologie d'utente:
 
 \begin{itemize}
 	\item \textbf{Utente registrato visitatore:} utente che ha effettuato la registrazione ma che ha deciso di non immettere i propri dati della carta di credito. Ad esso è permesso visualizzare l'ambiente \textit{VR}\ped{\hyperlink{vr}{G}}, selezionare i prodotti e conoscerne le caratteristiche, aggiungerli al carrello, che sarà reso persistente, ma non di concluderne l'acquisto;
@@ -36,20 +24,21 @@ Obbligare l'utente ad immettere dati sensibili e strettamente personali, come gl
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.8]{utenti}
-		\caption{Gerarchia degli utenti}
+		\caption{Gerarchia degli utenti. L'utente autenticato acquirente può effettuare tutte le operazioni dell'utente registrato visitatore ma in più ha la possibilità di acquistare gli oggetti presenti nel carrello}
 	\end{center}
 \end{figure}
 \FloatBarrier
 
 \subsection{Casi d'uso}
 
-Verranno di seguito elencati tutti i casi d'uso individuati dal \textit{team} per l'applicazione, che spiegano in che modo un utente possa interagire con l'applicazione. Per ogni caso d'uso viene mostrato uno schema \hyperlink{uml}{UML} che ne rappresenta il flusso operativo. \\ Non vengono considerati i casi d'uso relativi alla registrazione al sito/e-commerce poiché tale funzionalità non è stata da me implementata non essendo di mia competenza.
+Verranno di seguito elencati tutti i casi d'uso individuati dal \textit{team} per l'applicazione, che spiegano in che modo un utente possa interagire con l'applicazione. Per ogni caso d'uso viene mostrato uno schema \textit{UML}\hyperlink{uml}{G} che ne rappresenta il flusso operativo. \\ 
+Non vengono considerati i casi d'uso relativi alla registrazione al sito/e-commerce poiché tale funzionalità non è stata da me implementata non essendo di mia competenza.
 
 \subsubsection{Caso d'uso UC1: Autenticazione}
 
 \begin{itemize}
 	\item \textbf{Attori:} utente registrato visitatore, utente registrato acquirente;
-	\item \textbf{Descrizione:} l'utente viene invitato ad immettere l'\textit{username} e la \textit{passowrd} scelti in fase di registrazione;
+	\item \textbf{Descrizione:} prima dell'ambiente virtuale, l'utente viene invitato ad immettere l'\textit{username} e la \textit{passowrd} scelti in fase di registrazione all'interno di una scena 2D. Potrà immettere tali dati manualmente utilizzando la normale tastiera del proprio telefono;
 	\item \textbf{Precondizione:} l'applicazione è avviata e mostra la pagina di login;
 	\item \textbf{Postcondizione:} l'autenticazione è andata a buon fine e l'applicazione passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}.
 	\item \textbf{Scenario principale:}
@@ -74,9 +63,9 @@ Verranno di seguito elencati tutti i casi d'uso individuati dal \textit{team} pe
 
 \begin{itemize}
 	\item \textbf{Attori:} utente registrato visitatore, utente registrato acquirente;
-	\item \textbf{Descrizione:} l'utente, collegato il telefono al visore e indossato quest'ultimo, si ritrova ad osservare un ambiente virtuale con il quale può interagire;
+	\item \textbf{Descrizione:} l'utente, dopo l'autenticazione e collegato il telefono al visore, si ritrova ad osservare un ambiente virtuale con il quale può interagire;
 	\item \textbf{Precondizione:} l'utente ha effettuato con successo l'autenticazione;
-	\item \textbf{Postcondizione:} l'utente interagisce con l'ambiente virtuale e se è acquirente può comprare gli oggetti presenti nel carrello;
+	\item \textbf{Postcondizione:} l'utente interagisce con gli oggetti presenti nell'ambiente virtuale e se è acquirente può comprare gli oggetti presenti nel carrello;
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
 		\item L'utente può interagire con un oggetto, segnalato da un apposito simbolo, presente nell'ambiente virtuale (UC2.1);
@@ -98,7 +87,7 @@ Verranno di seguito elencati tutti i casi d'uso individuati dal \textit{team} pe
 
 \begin{itemize}
 	\item \textbf{Attori:} utente registrato visitatore, utente registrato acquirente;
-	\item \textbf{Descrizione:} l'utente interagisce con un oggetto presente nell'ambiente tramite l'interfaccia fisica del visore, attivando il pannello informativo. All'interno di questo sono riportate tutte le informazioni del prodotto e le sue foto. Da pannello è possibile aggiungere l'oggetto al carrello;
+	\item \textbf{Descrizione:} l'utente interagisce con un oggetto presente nell'ambiente tramite l'interfaccia fisica del visore, attivando il pannello informativo. All'interno di questo sono riportate tutte le informazioni del prodotto e le sue foto. Dal pannello è possibile aggiungere l'oggetto al carrello;
 	\item \textbf{Precondizione:} l'utente ha effettuato con successo l'autenticazione;
 	\item \textbf{Postcondizione:} l'utente interagisce con l'oggetto attivando il pannello informativo.
 	\item \textbf{Scenario principale:}
@@ -122,7 +111,7 @@ Verranno di seguito elencati tutti i casi d'uso individuati dal \textit{team} pe
 
 \begin{itemize}
 	\item \textbf{Attori:} utente registrato visitatore, utente registrato acquirente;
-	\item \textbf{Descrizione:} entrambe le tipologie possono interagire con il carrello segnalato nell'ambiente da un'apposita scritta. All'interno di esso sono visibili gli oggetti precedentemente inseriti. E' possibile, attraverso l'interfaccia fisica del visore, eliminarli uno ad uno o svuotare completamente il carrello. Se l'utente registrati è acquirente allora può procedere al pagamento;
+	\item \textbf{Descrizione:} entrambe le tipologie possono interagire con il carrello segnalato nell'ambiente da un'apposita scritta. All'interno di esso sono visibili gli oggetti precedentemente inseriti. E' possibile, attraverso l'interfaccia fisica del visore, eliminarli uno ad uno o svuotare completamente il carrello. Se l'utente registrato è acquirente allora può procedere al pagamento;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'autenticazione;
 	\item \textbf{Postcondizione:} l'utente visualizza i prodotti presenti nel carrello, potendoli acquistare se è acquirente;
 	\item \textbf{Scenario principale:}
@@ -153,21 +142,21 @@ Ogni requisito funzionale è rappresentato da un codice identificativo RFx e da 
 	\label{my-label}
 	\begin{tabular}{| l | p{10cm} |}
 		\hline
-		Requisito & Descrizione \\ \hline
-		RF1 & L'applicazione deve permettere all'utente di potersi autenticare utilizzando \textit{username} e \textit{password} specificati in fase di registrazione \\ \hline
-		RF1.1 & L'applicazione deve permettere all'utente di inserire l'\textit{username} \\ \hline
-		RF1.2 & L'applicazione deve permettere all'utente di inserire la \textit{password} \\ \hline
-		RF1.3 & L'applicazione deve permettere all'utente di confermare i dati di autenticazione ed effettuare così il login \\ \hline
-		RF2 & L'applicazione deve permettere all'utente di visualizzare l'ambiente virtuale una volta indossato il visore e di interagire con esso \\ \hline
-		RF2.1 & L'applicazione deve permettere all'utente di interagire con un oggetto presente nella scena attraverso l'interfaccia fisica offerta dal visore \\ \hline
-		RF2.1.1 & L'applicazione deve visualizzare le informazioni relative all'oggetto selezionato all'interno di un panello informativo posto davanti all'utente \\ \hline
-		RF2.1.2 & L'applicazione deve permettere la visualizzazione e lo scorrimento delle foto dell'oggetto selezionato all'interno del pannello informativo \\ \hline
-		RF2.1.3 & L'applicazione deve permettere l'aggiunta al carrello dell'oggetto selezionato \\ \hline
-		RF2.2 & L'applicazione deve permettere l'interazione col carrello segnalato da un'apposita scritta all'interno dell'ambiente virtuale \\ \hline
-		RF2.2.1 & L'applicazione deve visualizzare tutti gli oggetti presenti nel carrello precedentemente aggiunti \\ \hline
-		RF2.2.2 & L'applicazione deve permettere all'utente di eliminare un singolo oggetto dal carrello \\ \hline
-		RF2.2.3 & L'applicazione deve permettere di svuotare completamente il carrello \\ \hline
-		RF2.2.4 & L'applicazione deve permettere l'acquisto dei prodotti se l'utente è registrato acquirente \\ 
+		\textbf{Requisito} & \textbf{Descrizione} \\ \hline
+		RF1 & L'applicazione deve permettere all'utente di potersi autenticare utilizzando \textit{username} e \textit{password} specificati in fase di registrazione. \\ \hline
+		RF1.1 & L'applicazione deve permettere all'utente di inserire l'\textit{username}. \\ \hline
+		RF1.2 & L'applicazione deve permettere all'utente di inserire la \textit{password}. \\ \hline
+		RF1.3 & L'applicazione deve permettere all'utente di confermare i dati di autenticazione ed effettuare così il login. \\ \hline
+		RF2 & L'applicazione deve permettere all'utente di visualizzare l'ambiente virtuale una volta indossato il visore e di interagire con esso. \\ \hline
+		RF2.1 & L'applicazione deve permettere all'utente di interagire con un oggetto presente nella scena attraverso l'interfaccia fisica presente nel visore. \\ \hline
+		RF2.1.1 & L'applicazione deve visualizzare le informazioni relative all'oggetto selezionato all'interno di un panello informativo posto davanti all'utente. \\ \hline
+		RF2.1.2 & L'applicazione deve permettere la visualizzazione e lo scorrimento delle foto dell'oggetto selezionato all'interno del pannello informativo. \\ \hline
+		RF2.1.3 & L'applicazione deve permettere l'aggiunta al carrello dell'oggetto selezionato. \\ \hline
+		RF2.2 & L'applicazione deve permettere l'interazione col carrello segnalato da un'apposita scritta all'interno dell'ambiente virtuale. \\ \hline
+		RF2.2.1 & L'applicazione deve visualizzare tutti gli oggetti presenti nel carrello precedentemente aggiunti. \\ \hline
+		RF2.2.2 & L'applicazione deve permettere all'utente di eliminare un singolo oggetto dal carrello. \\ \hline
+		RF2.2.3 & L'applicazione deve permettere di svuotare completamente il carrello. \\ \hline
+		RF2.2.4 & L'applicazione deve permettere l'acquisto dei prodotti se l'utente è registrato acquirente. \\ 
 		\hline
 	\end{tabular}
 	\caption{Tabella dei requisiti funzionali che l'applicazione deve soddisfare}
@@ -181,7 +170,7 @@ Questa sezione descrive le più importanti e peculiari fasi di progettazione del
 \subsection{Portabilità dell'applicazione}
 
 Una delle sfide più impegnative di questo progetto era riuscire a sviluppare l'applicazione per entrambi i dispositivi: \textit{Samsung Gear VR} e \textit{Google Cardboard}. Prima di conoscere a basso livello tali tecnologie, avevamo progettato l'implementazione di un'interfaccia che riconoscesse la tecnologia in uso e che ne richiamasse così i metodi specifici. Purtroppo, dopo aver sperimentato gli \textit{SDK}\ped{\hyperlink{sdk}{G}} forniti da entrambe le piattaforme e seguito i due principali tutorial\footnote[1]{\textit{Samsung Gear VR:} \url{http://www.samsung.com/us/samsungdeveloperconnection/developer-resources/gear-vr.html} \\ \textit{Google Cardboard:} \url{https://developers.google.com/vr/unity/}}, mi sono reso conto che una totale portabilità non era possibile a causa delle forti differenze tra le due piattaforme. \\ \\
-La prima differenza, e la più importante, è la \textbf{MainCamera} o Camera Principale. In un progetto \textit{Unity}, ogni scena possiede una o più camere che rappresentano il punto di vista dell'utente. Una camera normale non permette l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}} poiché non è collegata ai sensori di movimento e rotazione del dispositivo. All'interno dei pacchetti \textit{Unity} offerti agli sviluppatori dalle due case, sono presenti le rispettive camere \textit{VR}\ped{\hyperlink{vr}{G}} che, tramite script ad esse agganciati, permettono l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}} una volta posizionate a piacimento all'interno della scena. Tali script si collegano direttamente ai sensori del dispositivo che è diverso per le due piattaforme. Il visore \textit{Samsung Gear VR} possiede al suo interno tutti i sensori di movimento e rotazione necessari e lo script, agganciato alla \textit{MainCamera}, legge i dati derivanti da essi. Invece, i dispositivi \textit{Google Cardboard} non possiedono alcun sensore e la \textit{MainCamera} legge i dati di rotazione e movimento dai sensori all'interno dello \textit{smartphone}. Questa profonda differenza hardware causa una forte differenza tra i due script della \textit{MainCamera}, obbligando ad inserire due camere diverse all'interno della stessa scena.
+La prima differenza, e la più importante, è la \textbf{MainCamera} o Camera Principale. In un progetto \textit{Unity}, ogni scena possiede una o più camere che rappresentano il punto di vista dell'utente. Una camera normale non permette l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}} poiché non è collegata ai sensori di movimento e rotazione del dispositivo. All'interno dei pacchetti \textit{Unity} offerti agli sviluppatori dalle due case, sono presenti le rispettive camere \textit{VR}\ped{\hyperlink{vr}{G}} che, tramite script ad esse agganciati, permettono l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}} una volta posizionate a piacimento all'interno della scena. Tali script si collegano direttamente ai sensori del dispositivo che è diverso per le due piattaforme. Il visore \textit{Samsung Gear VR} possiede al suo interno tutti i sensori di movimento e rotazione necessari e lo script, agganciato alla \textit{MainCamera}, legge i dati derivanti da essi. Invece, i dispositivi \textit{Google Cardboard} non possiedono alcun sensore e la \textit{MainCamera} legge i dati di rotazione e movimento dai sensori all'interno dello \textit{smartphone}. Questa profonda differenza hardware causa una forte differenza tra i due script della \textit{MainCamera}, obbligando ad inserire una camera specifica per ogni piattaforma all'interno della stessa scena.
 
 \label{MainCamera}
 \begin{figure}[ht]
@@ -201,12 +190,12 @@ La seconda importante differenza è l'implementazione degli \textbf{oggetti inte
 
 L'\texttt{InteractiveScriptVR} differisce profondamente da una piattaforma all'altra. \\
 Per quanto riguarda \textit{Google Cardboard}, lo script implementa la classe \texttt{IGvrGazeResponder}, la quale espone i metodi per la cattura della selezione tramite lo spostamento del magnete posto lateralmente nel visore. \\
-Per quanto riguarda \textit{Samsung Gear VR} invece, l'\textit{InteractiveScriptVR} non implementa alcuna interfaccia ma necessita l'utilizzo del namespace \texttt{VRStandardAsset.Utils} per richiamare i metodi esposti dallo script \texttt{VRInteractiveItem}, script che va agganciato all'oggetto come l'\textit{InteractiveScriptVR}. \\
-Questa differenza di implementazione degli oggetti interattivi, rende davvero difficoltosa la loro portabilità da una piattaforma all'altra. Dunque, dopo una lunga discussione avvenuta nell'ufficio R\&D, abbiamo deciso di abbandonare la totale portabilità dell'applicazione, raggiungendo però un compromesso: la separazione della cattura dell'evento di selezione dall'effettivo comportamento dell'oggetto, implementandoli in due script differenti. In questo modo è stato possibile creare dei \textit{prefabs} (oggetti portabili all'interno dell'ambiente \textit{Unity} contenenti le informazioni di forma, colore, script agganciati eccetera) che contenessero solo le informazioni del comportamento dell'oggetto dopo la cattura della selezione, caratteristica assolutamente indipendente dalla piattaforma.    
+Per quanto riguarda \textit{Samsung Gear VR} invece, l'\texttt{InteractiveScriptVR} non implementa alcuna interfaccia ma necessita l'utilizzo del namespace \texttt{VRStandardAsset.Utils} per richiamare i metodi esposti dallo script \texttt{VRInteractiveItem}, script che va agganciato all'oggetto assieme all'\texttt{InteractiveScriptVR}. \\
+Questa differenza di implementazione degli oggetti interattivi rende davvero difficoltosa la loro portabilità da una piattaforma all'altra. Dunque, dopo una lunga discussione avvenuta nell'ufficio R\&D, abbiamo deciso di abbandonare la totale portabilità dell'applicazione, raggiungendo però un compromesso: la separazione della cattura dell'evento di selezione dall'effettivo comportamento dell'oggetto, implementandoli in due script differenti. Il primo, che cambia da piattaforma a piattaforma, richiama il secondo dopo aver catturato l'evento di selezione, il quale rappresenta il vero comportamento dell'oggetto ed è indipendente dalla piattaforma in uso. In questo modo è stato possibile creare dei \textit{prefabs} (oggetti portabili all'interno dell'ambiente \textit{Unity} contenenti le informazioni di forma, colore, script agganciati eccetera) che contenessero solo le informazioni del comportamento dell'oggetto dopo la cattura della selezione.    
 
 \subsection{Usabilità dell'applicazione}
 
-La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login attraverso la normale tastiera del telefono, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}}. \\
+La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login attraverso la normale tastiera del telefono, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. L'implementazione di tale sito esce dagli obbiettivi di questo progetto, dunque non mi sono occupato dello sviluppo di quest'ultimo. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza \textit{VR}\ped{\hyperlink{vr}{G}}. \\
 Questa soluzione però ha mostrato al \textit{team} la profonda differenza tra le piattaforme \textit{Samsung Gear VR} e \textit{Google Cardboard}. Ogni applicazione \textit{Samsung Gear VR}, una volta avviata, richiede all'utente di inserire lo \textit{smartphone} all'interno del visore prima di poter effettivamente essere utilizzata. Questo obbliga lo sviluppatore a prevedere tutte scene di tipo \textit{VR}\ped{\hyperlink{vr}{G}} durante lo sviluppo dell'applicazione, contrariamente a \textit{Google Cardboard} che permette la coesistenza di tutte le tipologie scenografiche: 2D, 3D e \textit{VR}\ped{\hyperlink{vr}{G}}. Dunque, non è stato possibile inserire una scena 2D iniziale di login per la piattaforma Samsung e, a causa dei tempi ridotti di stage, non è stato possibile sviluppare una soluzione a tale problema.
 
 \label{Login}
@@ -227,9 +216,11 @@ Dopo un'attenta fase di ricerca iniziale sulla tecnologia \textit{Unity} e \text
 	\item \textbf{Tramite l'applicazione di una foto a 360 gradi di una stanza ad una sfera o cubo inversi}.
 \end{itemize}
 
-La prima soluzione permette una vera esperienza 3D, dando la possibilità all'utente di spostarsi nelle tre dimensioni, prevedendo l'utilizzo di un gamepad. Ogni oggetto è ben definito in un punto nello spazio tridimensionale e osservabile da tutte le angolazioni. Purtroppo però per costruire un ambiente 3D di qualità accettabile sono necessarie profonde conoscenze di modellazione, conoscenze che fuoriescono dall'obbiettivo di questo stage. \\
+La prima soluzione permette una vera esperienza 3D, dando la possibilità all'utente di spostarsi nelle tre dimensioni, prevedendo l'utilizzo di un gamepad. Ogni oggetto è ben definito in un punto dello spazio tridimensionale e osservabile da tutte le angolazioni. Purtroppo però per costruire un ambiente 3D di qualità accettabile sono necessarie profonde conoscenze di modellazione, conoscenze che fuoriescono dall'obbiettivo di questo stage. \\
 La seconda soluzione non permette una totale esperienza 3D, poiché applica una foto 2D a 360 gradi ad una sfera o un cubo inversi creati in \textit{Unity}. L'effetto così creato simula la tridimensionalità, non permettendo all'utente lo spostamento tra gli oggetti ma solo una visione stereoscopica della stanza. Il livello qualitativo raggiunto però è ottimo, se la foto viene realizzata con le giuste apparecchiature. Abbiamo deciso dunque di utilizzare la seconda metodologia per la creazione dell'ambiente. \\
-Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotografica di alta qualità presente nell'azienda seguendo la guida presente nel sito: \url{http://www.lightspacewater.net/Tutorials/PhotoPano2/paper/}. Posizionata la macchinetta fotografica sul cavalletto al centro di una stanza, appositamente arredata allo scopo, dell'azienda Diana Corp., abbiamo effettuato 3 foto, una sovraesposta, una sottoesposta e una ad esposizione normale, ogni 45 gradi orizzontalmente. Abbiamo poi ripetuto l'operazione inclinando la macchinetta 45 verso il basso e infine 45 gradi verso l'alto. Le foto così ottenute, ci hanno permesso di creare la foto a 360 gradi tramite il software Autopano\footnote[2]{\url{http://www.kolor.com/autopano/}}, che l'ha creata automaticamente a meno di qualche punto di agganciamento inserito manualmente. Infine abbiamo applicato la foto come texture di una sfera inversa creata tramite l'editor di \textit{Unity}.
+Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotografica di alta qualità presente nell'azienda seguendo la guida presente nel sito: lightspacewater\footnote[2]{\url{http://www.lightspacewater.net/Tutorials/PhotoPano2/paper/}}. \\
+Posizionata la macchinetta fotografica sul cavalletto al centro di una stanza, appositamente arredata allo scopo, dell'azienda Diana Corp., abbiamo effettuato 3 foto, una sovraesposta, una sottoesposta e una ad esposizione normale, ogni 45 gradi orizzontalmente. Abbiamo poi ripetuto l'operazione inclinando la macchinetta 45 gradi verso il basso ed infine 45 gradi verso l'alto. \\ 
+Le foto così ottenute, ci hanno permesso di creare la foto a 360 gradi tramite il software Autopano\footnote[3]{\url{http://www.kolor.com/autopano/}}, che l'ha creata automaticamente a meno di qualche punto di agganciamento inserito manualmente. Infine abbiamo applicato la foto come texture di una sfera inversa creata tramite l'editor di \textit{Unity}.
 
 \label{Sfera}
 \begin{figure}[ht]
@@ -244,7 +235,7 @@ Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotogra
 
 All'interno della scena creata tramite la foto a 360 gradi, gli oggetti presenti nella stanza non sono veri oggetti tridimensionali modellati in \textit{Unity}. A quest'ultimi, come descritto nella sezione 3.5.1, è possibile applicare la proprietà \textit{Mesh Collider}, per renderli tangibili, e lo script che cattura l'evento di selezione. Purtroppo nella soluzione da noi adottata gli oggetti fanno parte della foto che crea lo sfondo, perciò non è possibile applicargli queste due proprietà. \\
 Abbiamo così deciso di porre davanti ad ogni oggetto un pannello tridimensionale creato tramite l'editor di \textit{Unity} e ad esso agganciargli le caratteristiche citate. In più al pannello viene disabilitata la proprietà \textit{Mesh Renderer}, proprietà che lo rende visibile. \\ 
-In questo modo viene simulata l'interattività dell'oggetto, che alla selezione tramite l'interfaccia fisica del visore, attiva il pannello informativo relativo all'oggetto selezionato.
+In questo modo viene simulata l'interattività dell'oggetto che, alla selezione tramite l'interfaccia fisica del visore, attiva il pannello informativo relativo all'oggetto selezionato.
 
 \label{Oggetto Interattivo}
 \begin{figure}[ht]
@@ -257,8 +248,37 @@ In questo modo viene simulata l'interattività dell'oggetto, che alla selezione 
 
 \subsection{Progettazione e integrazione con AWS API Gateway}
 
-Uno degli obiettivi dello stage era sperimentare la comunicazione tra l'applicazione creata con \textit{Unity} e sistemi esterni tramite protocollo HTTP, come ad esempio un \textit{e-commerce}. Per testare tali funzionalità in sicurezza, senza dover creare o modificare gli \textit{e-commerce} aziendali, il tutor mi ha suggerito di utilizzare il servizio \textit{API Gateway} di \textit{Amazon Web Service}. Amazon API Gateway è un servizio completamente gestito che semplifica agli sviluppatori la creazione, la pubblicazione, la manutenzione, il monitoraggio e la protezione delle API su qualsiasi scala. Essa agisce come porta d'entrata attraverso la quale le applicazioni possono accedere a dati, logica di business o funzionalità dei servizi di back-end. Gestisce tutte le attività di accettazione ed elaborazione relative alle chiamate API simultanee, inclusi gestione del traffico, controllo di accessi e autorizzazioni, monitoraggio e gestione delle versioni delle API. Infine permette la creazione di API Mock, ovvero API che non si agganciano ad alcun back-end ma che rispondono messaggi prefissati ad ogni chiamata HTTP. Quest'ultima funzionalità ci ha spinto ad utilizzare questo servizio, dato che lo sviluppo di un vero back-end non rientrava all'interno degli obiettivi di stage. \\
-Per quanto riguarda \textit{Unity}, invece, ho sfruttato la classe \texttt{WWW} che consente di effettuare chiamate GET per recuperare dati JSON o foto
+Uno degli obiettivi dello stage era sperimentare la comunicazione tra l'applicazione creata con \textit{Unity} e sistemi esterni tramite protocollo HTTP, come ad esempio un \textit{e-commerce}. Per testare tali funzionalità in sicurezza, senza dover creare o modificare gli \textit{e-commerce} aziendali, il tutor mi ha suggerito di utilizzare il servizio \textit{API Gateway} di \textit{Amazon Web Service}. Amazon API Gateway è un servizio completamente gestito che semplifica agli sviluppatori la creazione, la pubblicazione, la manutenzione, il monitoraggio e la protezione delle API su qualsiasi scala. Essa agisce come porta d'entrata attraverso la quale le applicazioni possono accedere a dati, logica di business o funzionalità dei servizi di back-end. Gestisce tutte le attività di accettazione ed elaborazione relative alle chiamate API simultanee, inclusi gestione del traffico, controllo di accessi e autorizzazioni, monitoraggio e gestione delle versioni delle API. Infine permette la creazione di \textit{API Mock}, ovvero API che non si agganciano ad alcun back-end ma che rispondono messaggi prefissati ad ogni chiamata HTTP. Quest'ultima funzionalità ci ha spinto ad utilizzare questo servizio, dato che lo sviluppo di un vero back-end non rientrava all'interno degli obiettivi di stage. \\
+Ho creato dunque tre risorse e al loro interno le relative chiamate HTTP:
+\begin{itemize}
+	\item \textbf{/login}: risorsa riguardante le operazioni di autenticazione. Contiene la chiamata:
+	\begin{itemize}
+		\item POST: riceve un file JSON contenente l'username e la password immesse dall'utente e restituisce un \textit{token} di autenticazione.
+	\end{itemize}
+	\item \textbf{/products}: risorsa riguardante le operazione sui prodotti. Contiene la chiamata:
+	\begin{itemize}
+		\item GET: ritorna un file JSON contenente le informazioni riguardanti tutti i prodotti all'interno della scena come nome, descrizione e foto.
+	\end{itemize}
+	\item \textbf{/products/{id}}: risorsa riguardante le operazioni su un singolo prodotto. Contiene la chiamata:
+	\begin{itemize}
+		\item GET: ritorna un file JSON contenente le informazioni su un singolo prodotto in base all'id passato. 
+	\end{itemize}
+	\item \textbf{/cart}: risorsa riguardante le operazioni sul carrello. Contiene le chiamate:
+	\begin{itemize}
+		\item POST: riceve un file JSON contenente i prodotti presenti all'interno del carrello.
+	\end{itemize} 
+\end{itemize}
+
+\label{AWS API Gateway}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.45]{aws}
+		\caption{Flusso della chiamata GET all'interno della risorsa \textit{/products} in AWS API Gateway}
+	\end{center}
+\end{figure}
+\FloatBarrier
+
+Per quanto riguarda \textit{Unity}, invece, ho sfruttato la classe \texttt{WWW} che consente di effettuare chiamate GET per recuperare dati JSON o foto:
 
 \begin{lstlisting}[firstnumber=1]
 string url = "https://tta4e2q8b3.execute-api.eu-west-1.amazonaws.com/prod/products";
@@ -288,9 +308,7 @@ WWW www = new WWW(url, body, headers);
 
 In questa sezione andrò a descrivere in dettaglio lo sviluppo delle più significative e peculiari funzionalità dell'applicazione.
 
-\subsection{Sviluppo degli oggetti interattivi}
-
-In questa sottosezione descriverò come si costruiscono degli oggetti interattivi in Unity per i dispositivi VR.
+\subsection{Spostamento degli oggetti all'interno dell'ambiente tridimensionale}
 
 \subsection{Creazione a runtime di oggetti interattivi}
 
@@ -300,14 +318,6 @@ In questa sottosezione tratterò della creazione a runtime di oggetti interattiv
 
 In questa sezione spiegherò come si costruiscono oggetti persistenti che vivono attraverso le scene.
 
-\subsection{Unity e il protocollo HTTP}
-
-In questa sottosezione parlerò di come Unity si integri con il protocollo HTTP.
-
 \subsection{Creazione e parsing di oggetti JSON in Unity}
 
 In questa sottosezione parlerò di come si creino e si manipolino oggetti JSON in Unity.
-
-\section{Verifica e validazione}
-
-All'interno di questa sezione parlerò della fase di verifica e validazione effettuata per questo progetto.
