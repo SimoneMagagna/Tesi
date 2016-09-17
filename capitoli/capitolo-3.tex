@@ -321,9 +321,38 @@ yield return www;
 
 \section{Sviluppo}
 
-In questa sezione andrò a descrivere in dettaglio lo sviluppo delle più significative e peculiari funzionalità dell'applicazione.
+Questa sezione descrive nel dettaglio il personale sviluppo delle più importanti funzionalità dell'applicazione attraverso l'editor grafico e il linguaggio di scripting C\# offeri dal \textit{framework}\ped{\hyperlink{fw}{G}} \textit{Unity}.
 
-\subsection{Spostamento degli oggetti all'interno dell'ambiente tridimensionale}
+\subsection{Gestione del pannello informativo}
+\textit{Unity} permette la creazione di due principali tipologie di oggetti all'interno di una scena:
+
+\begin{itemize}
+	\item \textbf{3D Object:} oggetti sviluppati nelle tre dimensioni che possono contenere le informazioni di forma, colore, tangibilità, rigidità, comportamento eccetera. \\
+	Un esempio di questi oggetti è rappresentato dal cubo, dalla sfera o dal cilindro. Questi elementi possono essere modificati e assemblati per creare ambienti e oggetti sempre più complessi.
+	\item \textbf{UI:} oggetti 2D che compongono l'interfaccia utente, ovvero pannelli dove è possibile scrivere e scorrere un testo, visualizzare un'immagine, selezionare pulsanti eccetera.
+\end{itemize}
+
+Per la creazione del pannello informativo ho fatto ampio utilizzo di questa seconda tipologia di oggetti, trovandola adatta allo scopo. \\
+Per costruire un'interfaccia utente in \textit{Unity} è necessario innanzitutto la presenza dell'oggetto \textit{EventSystem} all'interno della scena. Tale oggetto permette la gestione degli eventi, catturando i vari input provenienti da qualsiasi terminale come mouse, tastiera, gamepad o, in questo caso, dispositivo VR. Sia Samsung che Google offrono una loro versione di tale oggetto, dato che i possibili input di \textit{Samsung Gear VR} sono più numerosi rispetto a quelli di \textit{Google Cardboard}. \\
+Per poter essere visibili e interattivi, ogni oggetto UI deve essere figlio di un oggetto \textit{Canvas}. Il \textit{Canvas}, di default, è visibile come un pannello trasparente all'interno della scena e serve sostanzialmente a raggruppare gli oggetti UI per farli comunicare con l'\textit{EventSystem}. \\
+Vi sono tre tipologie di \textit{Canvas}:
+
+\begin{itemize}
+	\item \textbf{Screen Space - Overlay:} questa modalità di \textit{rendering} pone gli elementi dell'interfaccia utente fissi all'interno della scena e davanti alla camera dell'utente. Se lo schermo viene ridimensionato o viene cambiata la risoluzione, il \textit{Canavs} cambierà automaticamente dimensioni per adattarsi;
+	\item \textbf{Screen Space - Camera:} questà modalità di \textit{rendering} è molto simile alla \textit{Screen Space - Overlay}, con l'unica differenza che è possibile scegliere la distanza e l'inclinazione degli oggetti UI rispetto alla camera;
+	\item \textbf{World Space:} questa modalità di \textit{rendering} è profondamente differente dalle prime due poiché premette di visualizzare gli oggetti UI in un qualsiasi punto dello spazio tridimensionale, potendoli riposizionare a runtime.
+\end{itemize}
+
+Data la varietà di punti interattivi all'interno della stanza tridimensionale, ho ritenuto necessario l'utilizzo della modalità \textit{World Space}, poiché desideravo che il pannello si potesse posizionare davanti ad ogni oggetto interattivo alla selezione di quest'ultimo.
+
+\label{Pannello informativo}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{pannello-stivali}
+		\caption{Pannello informativo attivato dopo la selezione di un particolare oggetto all'interno della scena}
+	\end{center}
+\end{figure}
+\FloatBarrier
 
 \subsection{Creazione a runtime di oggetti interattivi}
 
@@ -331,7 +360,24 @@ In questa sottosezione tratterò della creazione a runtime di oggetti interattiv
 
 \subsection{Dati persistenti attraverso le scene}
 
-In questa sezione spiegherò come si costruiscono oggetti persistenti che vivono attraverso le scene.
+L'applicazione sviluppata possiede due scene: la prima offre una schermata di login dove l'utente può digitare la propria \textit{username} e \textit{password}; la seconda permette la visualizzazione dell'ambiente virtuale dopo aver indossato il visore. \textit{Unity} prevede la possibilità di creare più scene all'interno dello stesso progetto e il passaggio tra queste è gestibile attraverso script che caricano la scena successiva dopo aver catturato un particolare evento. Nel mio specifico caso, la prima scena è rappresentata dall'interfaccia di login. Dopo che l'utente ha digitato l'\textit{username} e la \textit{password} e selezionato il pulsante di login, viene effettuata la chiamata POST all'API contenete le due informazioni digitate. Se la chiamata va a buon fine, viene restituito un \textit{token} di autenticazione e viene così caricata la scena \textit{VR}\ped{\hyperlink{vr}{G}}. \\
+Il \textit{token} di autenticazione serve all'utente in fase di acquisto dei prodotti, il quale permette al sistema di riconoscere quest'ultimo associandogli i dati di pagamento immessi in fase di registrazione. Purtroppo però, di default, \textit{Unity} distrugge ogni oggetto presente all'interno di una scena prima di passare a quella successiva. Questo comportamento non era accettabile per il \textit{token} di autenticazione, il quale deve vivere fino alla fase di acquisto. Ho creato dunque un oggetto generico all'interno della prima scena di autenticazione e attraverso il metodo \texttt{DontDestroyOnLoad ()}, offerto da \textit{Unity}, l'ho reso persistente:
+
+\begin{lstlisting}[style=MyCStyle]
+using UnityEngine;
+using System.Collections;
+
+public class UserSessionScript : MonoBehaviour {
+
+	public string username;
+
+	void Awake () {
+	DontDestroyOnLoad (this);
+	}
+}
+\end{lstlisting}
+
+
 
 \subsection{Creazione e parsing di oggetti JSON in Unity}
 
