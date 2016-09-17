@@ -279,29 +279,44 @@ Ho creato dunque tre risorse e al loro interno le relative chiamate HTTP:
 \FloatBarrier
 
 Per quanto riguarda \textit{Unity}, invece, ho sfruttato la classe \texttt{WWW} che consente di effettuare chiamate GET per recuperare dati JSON o foto:
+\\
+\begin{lstlisting}[style=MyCStyle]
+// Endpoint GET creato tramite API Gateway che restituisce un file
+// JSON contenente le informazioni sui prodotti
+string url = "https://execute-api.amazonaws.com/prod/products";
 
-\begin{lstlisting}[firstnumber=1]
-string url = "https://tta4e2q8b3.execute-api.eu-west-1.amazonaws.com/prod/products";
-
+// Costruzione dell'oggetto WWW e passaggio dell'endpoint come
+// singolo parametro
 WWW www = new WWW(url);
+yield return www;
+
+// Recupero delle informazioni 
+string info = www.text;
 \end{lstlisting}
-
+ 
 e chiamate POST, potendo inviare \textit{headers} e corpo:
+\\
+\begin{lstlisting}[style=MyCStyle]
+// Endpoint POST creato tramite API Gateway che riceve i dati
+// di login e restituisce un token di autenticazione
+string url = "https://execute-api.amazonaws.com/prod/login";
 
-\begin{lstlisting}[firstnumber=1]
-string url = "https://tta4e2q8b3.execute-api.eu-west-1.amazonaws.com/prod/login";
+// Creazione del file JSON
+string JSON = "{\"username\" : " + "\"" + Username + "\", " 
+	+ "\"password\" : " + "\"" + Password + "\"}";	
+byte[] body = System.Text.Encoding.UTF8.GetBytes(JSON);
 
-string JSON = "{\"username\" : " + "\"" + Username + "\", " + "\"password\" : " + "\"" + Password + "\"}";
-	
-byte[] body = System.Text.Encoding.UTF8.GetBytes(JSON);    
-	
-Dictionary<string, string> headers = new Dictionary<string, string>();
-	
-headers.Add( "Content-Type", "application/json" );
-	
-headers.Add( "X-HTTP-Method-Override", "POST" );
-	
+// Creazione degli headers necessari per il riconoscimento
+// del file JSON
+Dictionary<string, string> headers = 
+	new Dictionary<string, string>();
+headers.Add("Content-Type", "application/json");	
+headers.Add("X-HTTP-Method-Override", "POST");
+
+// Costruzione dell'oggetto WWW e passaggio dell'endpoint come
+// singolo parametro
 WWW www = new WWW(url, body, headers);
+yield return www;
 \end{lstlisting}
 
 \section{Sviluppo}
