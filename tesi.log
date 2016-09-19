@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  19 SEP 2016 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  19 SEP 2016 16:05
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1700,14 +1700,15 @@ Overfull \hbox (40.80602pt too wide) in paragraph at lines 56--57
  [] 
  []
 
-<immagini/usecase/uc2.png, id=536, 478.78876pt x 313.17pt>
+[23 <./immagini/usecase/uc1.png>]
+<immagini/usecase/uc2.png, id=545, 478.78876pt x 313.17pt>
 File: immagini/usecase/uc2.png Graphic file (type png)
 
 <use immagini/usecase/uc2.png>
 Package pdftex.def Info: immagini/usecase/uc2.png used on input line 80.
 (pdftex.def)             Requested size: 335.14984pt x 219.21748pt.
- [23 <./immagini/usecase/uc1.png>]
-<immagini/usecase/uc2_1.png, id=549, 480.29437pt x 298.11375pt>
+
+<immagini/usecase/uc2_1.png, id=546, 480.29437pt x 298.11375pt>
 File: immagini/usecase/uc2_1.png Graphic file (type png)
 
 <use immagini/usecase/uc2_1.png>
@@ -1731,7 +1732,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
-<immagini/maincamera.png, id=589, 1028.34187pt x 558.58687pt>
+<immagini/maincamera.png, id=588, 1028.34187pt x 558.58687pt>
 File: immagini/maincamera.png Graphic file (type png)
 
 <use immagini/maincamera.png>
@@ -1745,103 +1746,107 @@ IGvrGazeResponder\T1/lmr/m/n/10 (-20) ,
  []
 
 [29 <./immagini/maincamera.png>]
-<immagini/login.png, id=607, 1028.34187pt x 543.53062pt>
+<immagini/login.png, id=605, 1028.34187pt x 543.53062pt>
 File: immagini/login.png Graphic file (type png)
 
 <use immagini/login.png>
 Package pdftex.def Info: immagini/login.png used on input line 204.
 (pdftex.def)             Requested size: 359.92505pt x 190.23856pt.
  [30 <./immagini/login.png>]
-<immagini/sfera.png, id=617, 1028.34187pt x 543.53062pt>
+<immagini/sfera.png, id=615, 1028.34187pt x 543.53062pt>
 File: immagini/sfera.png Graphic file (type png)
 
 <use immagini/sfera.png>
 Package pdftex.def Info: immagini/sfera.png used on input line 228.
 (pdftex.def)             Requested size: 359.92505pt x 190.23856pt.
  [31]
-<immagini/pannello.png, id=624, 1028.34187pt x 545.03625pt>
+<immagini/pannello.png, id=622, 1028.34187pt x 545.03625pt>
 File: immagini/pannello.png Graphic file (type png)
 
 <use immagini/pannello.png>
 Package pdftex.def Info: immagini/pannello.png used on input line 243.
 (pdftex.def)             Requested size: 359.92505pt x 190.76555pt.
  [32 <./immagini/sfera.png>] [33 <./immagini/pannello.png>] <immagini/aws.png, 
-id=634, 844.65562pt x 439.6425pt>
+id=632, 844.65562pt x 439.6425pt>
 File: immagini/aws.png Graphic file (type png)
 
 <use immagini/aws.png>
-Package pdftex.def Info: immagini/aws.png used on input line 275.
+Package pdftex.def Info: immagini/aws.png used on input line 276.
 (pdftex.def)             Requested size: 380.09152pt x 197.8373pt.
 
-Overfull \hbox (8.09152pt too wide) in paragraph at lines 275--276
+Overfull \hbox (8.09152pt too wide) in paragraph at lines 276--277
  [] 
  []
 
 
-Overfull \hbox (2.2229pt too wide) in paragraph at lines 284--285
+Overfull \hbox (2.2229pt too wide) in paragraph at lines 285--286
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 291.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 292.
 [34 <./immagini/aws.png>] [35]
-Overfull \hbox (36.24316pt too wide) in paragraph at lines 372--373
+Overfull \hbox (36.24316pt too wide) in paragraph at lines 367--368
 [][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (24.90308pt too wide) in paragraph at lines 377--378
+Overfull \hbox (24.90308pt too wide) in paragraph at lines 372--373
 [][][][][][][][][][][][][][][] 
  []
 
-[36] <immagini/pannello-stivali.png, id=743, 1028.34187pt x 543.53062pt>
+
+Underfull \vbox (badness 3724) has occurred while \output is active []
+
+ [36]
+<immagini/pannello-stivali.png, id=739, 1028.34187pt x 543.53062pt>
 File: immagini/pannello-stivali.png Graphic file (type png)
 
 <use immagini/pannello-stivali.png>
-Package pdftex.def Info: immagini/pannello-stivali.png used on input line 424.
+Package pdftex.def Info: immagini/pannello-stivali.png used on input line 422.
 (pdftex.def)             Requested size: 359.92505pt x 190.23856pt.
  [37]
-<immagini/pannello-sfera.png, id=748, 1026.83624pt x 545.03625pt>
+<immagini/pannello-sfera.png, id=744, 1026.83624pt x 545.03625pt>
 File: immagini/pannello-sfera.png Graphic file (type png)
 
 <use immagini/pannello-sfera.png>
-Package pdftex.def Info: immagini/pannello-sfera.png used on input line 436.
+Package pdftex.def Info: immagini/pannello-sfera.png used on input line 434.
 (pdftex.def)             Requested size: 359.39807pt x 190.76555pt.
  [38 <./immagini/pannello-stivali.png>]
-Overfull \hbox (7.89294pt too wide) in paragraph at lines 454--455
+Overfull \hbox (7.89294pt too wide) in paragraph at lines 452--453
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 [39 <./immagini/pannello-sfera.png>] [40]
-Overfull \hbox (75.93347pt too wide) in paragraph at lines 545--547
+Overfull \hbox (75.93347pt too wide) in paragraph at lines 543--545
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.2229pt too wide) in paragraph at lines 559--560
+Overfull \hbox (2.2229pt too wide) in paragraph at lines 557--558
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (41.91321pt too wide) in paragraph at lines 560--561
+Overfull \hbox (41.91321pt too wide) in paragraph at lines 558--559
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (115.62378pt too wide) in paragraph at lines 561--563
+Overfull \hbox (115.62378pt too wide) in paragraph at lines 559--561
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (19.23303pt too wide) in paragraph at lines 567--568
+Overfull \hbox (19.23303pt too wide) in paragraph at lines 565--566
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[41] <immagini/carrello.png, id=874, 1026.83624pt x 545.03625pt>
+[41] <immagini/carrello.png, id=871, 1026.83624pt x 545.03625pt>
 File: immagini/carrello.png Graphic file (type png)
 
 <use immagini/carrello.png>
-Package pdftex.def Info: immagini/carrello.png used on input line 589.
+Package pdftex.def Info: immagini/carrello.png used on input line 587.
 (pdftex.def)             Requested size: 359.39807pt x 190.76555pt.
 ) (capitoli/capitolo-4.tex [42 <./immagini/carrello.png>]
 Capitolo 4.
@@ -1870,11 +1875,11 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25050 strings out of 493634
- 397602 string characters out of 3141317
- 973269 words of memory out of 3000000
- 27171 multiletter control sequences out of 15000+200000
- 134494 words of font info for 190 fonts, out of 3000000 for 9000
+ 25044 strings out of 493634
+ 397509 string characters out of 3141317
+ 972269 words of memory out of 3000000
+ 27165 multiletter control sequences out of 15000+200000
+ 134624 words of font info for 191 fonts, out of 3000000 for 9000
  1027 hyphenation exceptions out of 8191
  46i,10n,92p,1920b,2735s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{oc} has been referenced but does not exist, repla
@@ -1903,9 +1908,9 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files (x8
 .9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
 /lmtti10.pfb>
-Output written on tesi.pdf (65 pages, 8438115 bytes).
+Output written on tesi.pdf (65 pages, 8435768 bytes).
 PDF statistics:
- 1263 PDF objects out of 1440 (max. 8388607)
- 461 named destinations out of 1000 (max. 500000)
+ 1262 PDF objects out of 1440 (max. 8388607)
+ 459 named destinations out of 1000 (max. 500000)
  44035 words of extra memory for PDF output out of 51595 (max. 10000000)
 
