@@ -279,7 +279,7 @@ Ho creato dunque tre risorse e al loro interno le relative chiamate HTTP:
 \FloatBarrier
 
 Per quanto riguarda \textit{Unity}, invece, ho sfruttato la classe \texttt{WWW} che consente di effettuare chiamate GET per recuperare dati JSON o foto:
-\\
+
 \begin{lstlisting}[style=MyCStyle]
 // Endpoint GET creato tramite API Gateway che restituisce un file
 // JSON contenente le informazioni sui prodotti
@@ -295,7 +295,7 @@ string info = www.text;
 \end{lstlisting}
  
 e chiamate POST, potendo inviare \textit{headers} e corpo:
-\\
+
 \begin{lstlisting}[style=MyCStyle]
 // Endpoint POST creato tramite API Gateway che riceve i dati
 // di login e restituisce un token di autenticazione
@@ -328,7 +328,7 @@ Questa sezione descrive nel dettaglio il personale sviluppo delle più important
 
 \begin{itemize}
 	\item \textbf{3D Object:} oggetti sviluppati nelle tre dimensioni che possono contenere le informazioni di forma, colore, tangibilità, rigidità, comportamento eccetera. \\
-	Un esempio di questi oggetti è rappresentato dal cubo, dalla sfera o dal cilindro. Questi elementi possono essere modificati e assemblati per creare ambienti e oggetti sempre più complessi.
+	Un esempio di questi oggetti è rappresentato dal cubo, dalla sfera o dal cilindro. Questi elementi possono essere modificati e assemblati per creare ambienti e oggetti sempre più complessi;
 	\item \textbf{UI:} oggetti 2D che compongono l'interfaccia utente, ovvero pannelli dove è possibile scrivere e scorrere un testo, visualizzare un'immagine, selezionare pulsanti eccetera.
 \end{itemize}
 
@@ -354,14 +354,26 @@ Data la varietà di punti interattivi all'interno della stanza tridimensionale, 
 \end{figure}
 \FloatBarrier
 
+Per quanto riguarda il suo spostamento nello spazio tridimensionale, inizialmente avevo previsto come punto di partenza il centro della sfera, disattivando ovviamente la proprietà \textit{Mesh Renderer} che ne permette la visualizzazione. Alla selezione di un oggetto presente nella stanza, il pannello calcola il punto medio tra l'oggetto e l'osservatore e vi si posiziona, mostrando le informazioni. Purtroppo però, gli oggetti UI non possiedono tale proprietà e se si desidera renderli invisibili è necessario disattivarli del tutto tramite il metodo \texttt{SetActive()}. Questo pone un nuovo problema: non è possibile riferirsi ad un oggetto disattivato per riattivarlo a runtime. \\
+La soluzione finale trovata e discussa col \textit{team} di sviluppatori, non è sicuramente ottimale ma è funzionale. Tale problema rischiava di non farmi rispettare il piano di lavoro concordato e c'erano ancora molti punti che necessitavano di essere esplorati e sperimentati. Abbiamo quindi deciso che il punto d'origine e di ritorno del pannello sarebbe stato esterno alla sfera. In questo modo esso sarebbe rimasto sempre attivo fin dall'inizio ma invisibile poiché esterno alla stanza tridimensionale.
+
+\label{Pannello sfera}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{pannello-sfera}
+		\caption{Pannello informativo attivo all'esterno della sfera}
+	\end{center}
+\end{figure}
+\FloatBarrier
+
 \subsection{Creazione a runtime di oggetti interattivi}
 
 In questa sottosezione tratterò della creazione a runtime di oggetti interattivi in Unity.
 
 \subsection{Dati persistenti attraverso le scene}
 
-L'applicazione sviluppata possiede due scene: la prima offre una schermata di login dove l'utente può digitare la propria \textit{username} e \textit{password}; la seconda permette la visualizzazione dell'ambiente virtuale dopo aver indossato il visore. \textit{Unity} prevede la possibilità di creare più scene all'interno dello stesso progetto e il passaggio tra queste è gestibile attraverso script che caricano la scena successiva dopo aver catturato un particolare evento. Nel mio specifico caso, la prima scena è rappresentata dall'interfaccia di login. Dopo che l'utente ha digitato l'\textit{username} e la \textit{password} e selezionato il pulsante di login, viene effettuata la chiamata POST all'API contenete le due informazioni digitate. Se la chiamata va a buon fine, viene restituito un \textit{token} di autenticazione e viene così caricata la scena \textit{VR}\ped{\hyperlink{vr}{G}}. \\
-Il \textit{token} di autenticazione serve all'utente in fase di acquisto dei prodotti, il quale permette al sistema di riconoscere quest'ultimo associandogli i dati di pagamento immessi in fase di registrazione. Purtroppo però, di default, \textit{Unity} distrugge ogni oggetto presente all'interno di una scena prima di passare a quella successiva. Questo comportamento non era accettabile per il \textit{token} di autenticazione, il quale deve vivere fino alla fase di acquisto. Ho creato dunque un oggetto generico all'interno della prima scena di autenticazione e attraverso il metodo \texttt{DontDestroyOnLoad ()}, offerto da \textit{Unity}, l'ho reso persistente:
+L'applicazione sviluppata possiede due scene: la prima offre una schermata di login dove l'utente può digitare la propria \textit{username} e \textit{password}; la seconda permette la visualizzazione dell'ambiente virtuale dopo aver indossato il visore. \textit{Unity} prevede la possibilità di creare più scene all'interno dello stesso progetto e il passaggio tra queste è gestibile attraverso script che caricano la scena successiva dopo aver catturato un particolare evento. Nel mio specifico caso, dopo che l'utente ha digitato l'\textit{username} e la \textit{password} e selezionato il pulsante di login, viene effettuata la chiamata POST all'API contenete le due informazioni digitate. Se la chiamata va a buon fine, viene restituito un \textit{token} di autenticazione e viene così caricata la scena \textit{VR}\ped{\hyperlink{vr}{G}}. \\
+Il \textit{token} di autenticazione serve all'utente in fase di acquisto dei prodotti, il quale permette al sistema di riconoscere quest'ultimo associandogli i dati di pagamento immessi in fase di registrazione. Purtroppo però, di default, \textit{Unity} distrugge ogni oggetto presente all'interno di una scena prima di passare a quella successiva. Questo comportamento non è accettabile per il \textit{token} di autenticazione, il quale deve vivere fino alla fase di acquisto. Ho creato dunque un oggetto generico, o \textit{Empty Object}, all'interno della prima scena di autenticazione e attraverso il metodo \texttt{DontDestroyOnLoad ()}, offerto da \textit{Unity}, l'ho reso persistente:
 
 \begin{lstlisting}[style=MyCStyle]
 using UnityEngine;
@@ -369,15 +381,66 @@ using System.Collections;
 
 public class UserSessionScript : MonoBehaviour {
 
-	public string username;
+	private string token;
 
+	// Il metodo Awake() deriva dalla classe MonoBehaviour
+	// e al suo interno e' possibile impostare
+	// tutte le caratteristiche iniziali che l'oggetto
+	// deve avere prima che il gioco abbia inizio
 	void Awake () {
 	DontDestroyOnLoad (this);
+	}
+	
+	public string getToken() {
+		return token;
+	}
+	
+	public void setToken(string token) {
+		this.token = token
 	}
 }
 \end{lstlisting}
 
+In questo modo, l'oggetto \textit{UserSession} sarà presente nella scena successiva e si potrà così recuperare le informazioni che contiene. Questa operazione, però, necessita di un'altro script di \textit{utilities} per recuperare l'oggetto a runtime all'interno di una scena nella quale prima non era presente:
 
+\begin{lstlisting}[style=MyCStyle]
+using UnityEngine;
+using System.Collections;
+
+public class UserSessionUtils : MonoBehaviour {
+
+	// Il metodo Find() offerto da Unity permette 
+	// di recuperare il riferimento di un oggetto
+	// all'interno dell scena passandogli il nome
+	// come parametro
+	public string getUserToken() {
+	GameObject userSession = GameObject.Find("UserSession");
+	return userSession.GetComponent<UserSessionScript>().getToken();
+	}
+
+	public void setUserToken(string token) {
+	GameObject userSession = GameObject.Find("UserSession");
+	userSession.GetComponent<UserSessionScript>().setToken(token);
+	}
+}
+\end{lstlisting}
+
+Dunque, una volta recuperato il \textit{token} di autenticazione dalla chiamata POST, è possibile memorizzarlo all'interno dell'oggetto \textit{UserSession} tramite lo script \textit{UserSessionUtilities} e caricare così la scena successiva:
+
+\begin{lstlisting}[style=MyCStyle]
+	WWW www = new WWW(url, body, headers);
+	yield return www;
+	
+	// JsonData e' una classe che effettua il  
+	// parsing degli oggetti JSON in Unity. In questo  
+	// caso recupera il token di autenticazione
+	JsonData jsonvale = JsonMapper.ToObject(www.text);
+	string username = jsonvale ["token"].ToString ();
+	
+	UserSessionUtils usu = new UserSessionUtils ();
+	usu.setUserToken (token);
+	SceneManager.LoadScene (1);
+\end{lstlisting} 
 
 \subsection{Creazione e parsing di oggetti JSON in Unity}
 
