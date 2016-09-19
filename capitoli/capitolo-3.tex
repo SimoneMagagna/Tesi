@@ -323,52 +323,6 @@ yield return www;
 
 Questa sezione descrive nel dettaglio il personale sviluppo delle più importanti funzionalità dell'applicazione attraverso l'editor grafico e il linguaggio di scripting C\# offeri dal \textit{framework}\ped{\hyperlink{fw}{G}} \textit{Unity}.
 
-\subsection{Gestione del pannello informativo}
-\textit{Unity} permette la creazione di due principali tipologie di oggetti all'interno di una scena:
-
-\begin{itemize}
-	\item \textbf{3D Object:} oggetti sviluppati nelle tre dimensioni che possono contenere le informazioni di forma, colore, tangibilità, rigidità, comportamento eccetera. \\
-	Un esempio di questi oggetti è rappresentato dal cubo, dalla sfera o dal cilindro. Questi elementi possono essere modificati e assemblati per creare ambienti e oggetti sempre più complessi;
-	\item \textbf{UI:} oggetti 2D che compongono l'interfaccia utente, ovvero pannelli dove è possibile scrivere e scorrere un testo, visualizzare un'immagine, selezionare pulsanti eccetera.
-\end{itemize}
-
-Per la creazione del pannello informativo ho fatto ampio utilizzo di questa seconda tipologia di oggetti, trovandola adatta allo scopo. \\
-Per costruire un'interfaccia utente in \textit{Unity} è necessario innanzitutto la presenza dell'oggetto \textit{EventSystem} all'interno della scena. Tale oggetto permette la gestione degli eventi, catturando i vari input provenienti da qualsiasi terminale come mouse, tastiera, gamepad o, in questo caso, dispositivo VR. Sia Samsung che Google offrono una loro versione di tale oggetto, dato che i possibili input di \textit{Samsung Gear VR} sono più numerosi rispetto a quelli di \textit{Google Cardboard}. \\
-Per poter essere visibili e interattivi, ogni oggetto UI deve essere figlio di un oggetto \textit{Canvas}. Il \textit{Canvas}, di default, è visibile come un pannello trasparente all'interno della scena e serve sostanzialmente a raggruppare gli oggetti UI per farli comunicare con l'\textit{EventSystem}. \\
-Vi sono tre tipologie di \textit{Canvas}:
-
-\begin{itemize}
-	\item \textbf{Screen Space - Overlay:} questa modalità di \textit{rendering} pone gli elementi dell'interfaccia utente fissi all'interno della scena e davanti alla camera dell'utente. Se lo schermo viene ridimensionato o viene cambiata la risoluzione, il \textit{Canavs} cambierà automaticamente dimensioni per adattarsi;
-	\item \textbf{Screen Space - Camera:} questà modalità di \textit{rendering} è molto simile alla \textit{Screen Space - Overlay}, con l'unica differenza che è possibile scegliere la distanza e l'inclinazione degli oggetti UI rispetto alla camera;
-	\item \textbf{World Space:} questa modalità di \textit{rendering} è profondamente differente dalle prime due poiché premette di visualizzare gli oggetti UI in un qualsiasi punto dello spazio tridimensionale, potendoli riposizionare a runtime.
-\end{itemize}
-
-Data la varietà di punti interattivi all'interno della stanza tridimensionale, ho ritenuto necessario l'utilizzo della modalità \textit{World Space}, poiché desideravo che il pannello si potesse posizionare davanti ad ogni oggetto interattivo alla selezione di quest'ultimo.
-
-\label{Pannello informativo}
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics[scale=0.35]{pannello-stivali}
-		\caption{Pannello informativo attivato dopo la selezione di un particolare oggetto all'interno della scena}
-	\end{center}
-\end{figure}
-\FloatBarrier
-
-Per quanto riguarda il suo spostamento nello spazio tridimensionale, inizialmente avevo previsto come punto di partenza il centro della sfera, disattivando ovviamente la proprietà \textit{Mesh Renderer} che ne permette la visualizzazione. Alla selezione di un oggetto presente nella stanza, il pannello calcola il punto medio tra l'oggetto e l'osservatore e vi si posiziona, mostrando le informazioni. Purtroppo però, gli oggetti UI non possiedono tale proprietà e se si desidera renderli invisibili è necessario disattivarli del tutto tramite il metodo \texttt{SetActive()}. Questo pone un nuovo problema: non è possibile riferirsi ad un oggetto disattivato per riattivarlo a runtime. \\
-La soluzione finale trovata e discussa col \textit{team} di sviluppatori, non è sicuramente ottimale ma è funzionale. Tale problema rischiava di non farmi rispettare il piano di lavoro concordato e c'erano ancora molti punti che necessitavano di essere esplorati e sperimentati. Abbiamo quindi deciso che il punto d'origine e di ritorno del pannello sarebbe stato esterno alla sfera. In questo modo esso sarebbe rimasto sempre attivo fin dall'inizio ma invisibile poiché esterno alla stanza tridimensionale.
-
-\label{Pannello sfera}
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics[scale=0.35]{pannello-sfera}
-		\caption{Pannello informativo attivo all'esterno della sfera}
-	\end{center}
-\end{figure}
-\FloatBarrier
-
-\subsection{Creazione a runtime di oggetti interattivi}
-
-In questa sottosezione tratterò della creazione a runtime di oggetti interattivi in Unity.
 
 \subsection{Dati persistenti attraverso le scene}
 
@@ -440,8 +394,200 @@ Dunque, una volta recuperato il \textit{token} di autenticazione dalla chiamata 
 	UserSessionUtils usu = new UserSessionUtils ();
 	usu.setUserToken (token);
 	SceneManager.LoadScene (1);
-\end{lstlisting} 
+\end{lstlisting}
+
+\subsection{Il pannello informativo}
+\textit{Unity} permette la creazione di due principali tipologie di oggetti all'interno di una scena:
+
+\begin{itemize}
+	\item \textbf{3D Object:} oggetti sviluppati nelle tre dimensioni che possono contenere le informazioni di forma, colore, tangibilità, rigidità, comportamento eccetera. \\
+	Un esempio di questi oggetti è rappresentato dal cubo, dalla sfera o dal cilindro. Questi elementi possono essere modificati e assemblati per creare ambienti e oggetti sempre più complessi;
+	\item \textbf{UI:} oggetti 2D che compongono l'interfaccia utente, ovvero pannelli dove è possibile scrivere e scorrere un testo, visualizzare un'immagine, selezionare pulsanti eccetera.
+\end{itemize}
+
+Per la creazione del pannello informativo ho fatto ampio utilizzo di questa seconda tipologia di oggetti, trovandola adatta allo scopo. \\
+Per costruire un'interfaccia utente in \textit{Unity} è necessario innanzitutto la presenza dell'oggetto \textit{EventSystem} all'interno della scena. Tale oggetto permette la gestione degli eventi, catturando i vari input provenienti da qualsiasi terminale come mouse, tastiera, gamepad o, in questo caso, dispositivo VR. Sia Samsung che Google offrono una loro versione di tale oggetto, dato che i possibili input di \textit{Samsung Gear VR} sono più numerosi rispetto a quelli di \textit{Google Cardboard}. \\
+Per poter essere visibili e interattivi, ogni oggetto UI deve essere figlio di un oggetto \textit{Canvas}. Il \textit{Canvas}, di default, è visibile come un pannello trasparente all'interno della scena e serve sostanzialmente a raggruppare gli oggetti UI per farli comunicare con l'\textit{EventSystem}. \\
+Vi sono tre tipologie di \textit{Canvas}:
+
+\begin{itemize}
+	\item \textbf{Screen Space - Overlay:} questa modalità di \textit{rendering} pone gli elementi dell'interfaccia utente fissi all'interno della scena e davanti alla camera dell'utente. Se lo schermo viene ridimensionato o viene cambiata la risoluzione, il \textit{Canavs} cambierà automaticamente dimensioni per adattarsi;
+	\item \textbf{Screen Space - Camera:} questà modalità di \textit{rendering} è molto simile alla \textit{Screen Space - Overlay}, con l'unica differenza che è possibile scegliere la distanza e l'inclinazione degli oggetti UI rispetto alla camera;
+	\item \textbf{World Space:} questa modalità di \textit{rendering} è profondamente differente dalle prime due poiché premette di visualizzare gli oggetti UI in un qualsiasi punto dello spazio tridimensionale, potendoli riposizionare a runtime.
+\end{itemize}
+
+Data la varietà di punti interattivi all'interno della stanza tridimensionale, ho ritenuto necessario l'utilizzo della modalità \textit{World Space}, poiché desideravo che il pannello si potesse posizionare davanti ad ogni oggetto interattivo alla selezione di quest'ultimo.
+
+\label{Pannello informativo}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{pannello-stivali}
+		\caption{Pannello informativo attivato dopo la selezione di un particolare oggetto all'interno della scena}
+	\end{center}
+\end{figure}
+\FloatBarrier
+
+Per quanto riguarda il suo spostamento nello spazio tridimensionale, inizialmente avevo previsto come punto di partenza il centro della sfera, disattivando ovviamente la proprietà \textit{Mesh Renderer} che ne permette la visualizzazione. Alla selezione di un oggetto presente nella stanza, il pannello calcola il punto medio tra l'oggetto e l'osservatore e vi si posiziona, mostrando le informazioni. Purtroppo però, gli oggetti UI non possiedono tale proprietà e se si desidera renderli invisibili è necessario disattivarli del tutto tramite il metodo \texttt{SetActive()}. Questo pone un nuovo problema: non è possibile riferirsi ad un oggetto disattivato per riattivarlo a runtime. \\
+La soluzione finale trovata e discussa col \textit{team} di sviluppatori, non è sicuramente ottimale ma è funzionale. Tale problema rischiava di non farmi rispettare il piano di lavoro concordato e c'erano ancora molti punti che necessitavano di essere esplorati e sperimentati. Abbiamo quindi deciso che il punto d'origine e di ritorno del pannello sarebbe stato esterno alla sfera. In questo modo esso sarebbe rimasto sempre attivo fin dall'inizio ma invisibile poiché esterno alla stanza tridimensionale.
+
+\label{Pannello sfera}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{pannello-sfera}
+		\caption{Pannello informativo attivo all'esterno della sfera}
+	\end{center}
+\end{figure}
+\FloatBarrier 
 
 \subsection{Creazione e parsing di oggetti JSON in Unity}
 
-In questa sottosezione parlerò di come si creino e si manipolino oggetti JSON in Unity.
+\textit{Unity} offre al programmatore la classe \texttt{JsonUtility} che permette la trasformazione di un oggetto in una stringa JSON:
+
+\begin{lstlisting}[style=MyCStyle]
+MyClass myObject = new MyClass();
+myObject.level = 1;
+myObject.timeElapsed = 47.5f;
+myObject.playerName = "Dr Charles Francis";
+
+string json = JsonUtility.ToJson(myObject);
+// la stringa json e' uguale a: 
+// {"level":1,"timeElapsed":47.5,"playerName":"Dr Charles Francis"}
+\end{lstlisting}
+
+e viceversa:
+
+\begin{lstlisting}[style=MyCStyle]
+string json = {"level":1,"timeElapsed":47.5,
+	"playerName":"Dr Charles Francis"};
+MyClass myObject = JsonUtility.FromJson<MyClass>(json);
+\end{lstlisting}
+
+Purtroppo però, non viene offerta alcuna funzionalità di parsing di file JSON, a me necessaria per leggere le informazioni dei prodotti recuperate tramite la chiamata GET all'API. Dopo alcune ricerche, ho scoperto l'esistenza della libreria LitJSON, libreria scritta in C\# e compatibile con tutti i linguaggi .Net. Essa, dopo aver importato il file \textit{LitJSON.dll} all'interno del progetto Unity, permette di leggere il file JSON scaricato come se fosse un semplice array, accedendo direttamente ai vari campi tramite le doppie parentesi quadre:
+
+\begin{lstlisting}[style=MyCStyle]
+// Chiamata GET per il recupero delle infomrazioni di un prodotto
+www = new WWW (url);
+yield return www;
+
+// Crea un parser per il file JSON scaricato
+jsonvale = JsonMapper.ToObject(www.text);
+
+id = jsonvale ["id"].ToString ();
+
+name = jsonvale ["name"].ToString ();
+
+description = jsonvale ["description"].ToString ();
+
+price = jsonvale ["price"].ToString ();
+
+text = name + "\n" + description + "\n" + "Prezzo: " + price;
+
+// Il file JSON contiene link per sacricare le immagini
+www_img1 = new WWW (jsonvale ["img1"].ToString ());
+yield return www_img1;
+imageArray [0] = www_img1.texture;
+
+www_img2 = new WWW (jsonvale ["img2"].ToString ());
+yield return www_img2;
+imageArray [1] = www_img2.texture;
+
+www_img3 = new WWW (jsonvale ["img3"].ToString ());
+yield return www_img3;
+imageArray [2] = www_img3.texture;
+\end{lstlisting}
+
+\subsection{Creazione a runtime di oggetti interattivi}
+
+Per la realizzazione del carrello interattivo è stato necessario uno studio approfondito sulla creazione di oggetti scenici a runtime in \textit{Unity}. Questo perché inizialmente il carrello deve risultare vuoto e riempirsi a mano a mano che l'utente decide di aggiungere un prodotto, ovvero mentre la scena è in \textit{play mode}. \\ 
+La soluzione adottata prevede la creazione, tramite l'editor grafico, di un pannello UI generico contenente i componenti per la foto, per il nome e per il prezzo dell'ipotetico prodotto che sarà aggiunto al carrello. All'oggetto grafico così creato, viene agganciato lo script \texttt{ListItemController} contenente i campi logici del pannello che verranno riempiti con le informazioni dello specifico prodotto: 
+
+\begin{lstlisting}[style=MyCStyle]
+public class ListItemController : MonoBehaviour {
+	private string id;
+
+	private Text description;
+
+	private Image icon;
+
+	public string getId() {
+		return id;
+	}
+
+	public void setId(string id) {
+		this.id = id;
+	}
+	
+	public Text getDescription() {
+		return description;
+	}
+	
+	public void setDescription(Text description){
+		this.description = description;
+	}
+	
+	public Image getIcon() {
+		return icon;
+	}
+		
+	public void setIcon(Image icon){
+		this.icon = icon;
+	}
+}
+\end{lstlisting}
+
+Il pannello grafico e lo script agganciato vengono uniti in un unico pacchetto per formare un \textit{prefab} di nome \textit{ListItem}, ovvero un oggetto prefabbricato pronto per essere istanziato all'interno della scena. Così, lo script incaricato alla gestione del carrello grafico, ovvero \texttt{ListController}, dopo aver controllato tutti i prodotti presenti nel carrello logico, gestito dallo script \texttt{ShoppingBagScript}, instanzia tanti \textit{ListItem} quanti sono i prodotti presenti nel carrello logico e li posizione in lista all'interno del pannello del carrello:
+
+\begin{lstlisting}[style=MyCStyle]
+public void printItem(Item[] items) {
+	// Per ogni oggetto presente nel pannello logico
+	// che non e' stato ancora stampato nel carrello
+	while (alreadyItemPrint < 
+		shoppingBag.GetComponent<ShoppingBagScript> ().getCounter ()) {
+
+	// Istanzia l'oggetto prefab all'interno della scena
+	GameObject newItem = 
+		Instantiate (ListItemPrefab) as GameObject;
+	ListItemController controller = 
+		newItem.GetComponent<ListItemController> ();
+
+	// Recupera le informazioni del prodotto logico per 
+	// inizializzare il pannello grafico del prodotto
+	controller.setId(items [alreadyItemPrint].getId ());
+	controller.Description.text = 
+		items [alreadyItemPrint].getInfo ();
+	controller.Icon.sprite = 
+		Sprite.Create (items [alreadyItemPrint].getImg (), 
+		new Rect (0, 0, items [alreadyItemPrint].getImg ().width, 
+		items [alreadyItemPrint].getImg ().height), new Vector2 (0.5f, 0.5f));
+
+	// Posiziona ogni prodotto in lista all'interno
+	// del pannello del carrello
+	newItem.transform.SetParent (ContentPanel.transform);
+	newItem.transform.position += new Vector3 (0, 0, 32);
+	newItem.transform.rotation = ContentPanel.transform.rotation;
+	newItem.transform.localScale = Vector3.one;
+
+	// Se l'array dei prodotti e' pieno
+	// effettua il resize
+	if (alreadyItemPrint == ItemPrefabs.Length) {
+		GameObject[] newItemPrefabs = 
+			new GameObject [ItemPrefabs.Length * 2];
+		for (int i = 0; i < ItemPrefabs.Length; i++) {
+			newItemPrefabs [i] = ItemPrefabs [i];
+		}
+		ItemPrefabs = newItemPrefabs;
+	}
+	ItemPrefabs [alreadyItemPrint] = newItem;
+	alreadyItemPrint++;
+	}
+}
+\end{lstlisting}
+
+\label{Carrello}
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{carrello}
+		\caption{Carrello riempito dei prodotti presenti nella stanza}
+	\end{center}
+\end{figure}
+\FloatBarrier 

@@ -86,24 +86,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Sviluppo}{35}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Gestione del pannello informativo}{35}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Dati persistenti attraverso le scene}{35}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Creazione a runtime di oggetti interattivi}{37}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Il pannello informativo}{37}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Dati persistenti attraverso le scene}{37}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.3}Creazione e parsing di oggetti JSON in Unity}{39}{subsection.3.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.4}Creazione e parsing di oggetti JSON in Unity}{39}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.4}Creazione a runtime di oggetti interattivi}{40}{subsection.3.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Analisi retrospettiva}{41}{chapter.4}
+\contentsline {chapter}{\numberline {4}Analisi retrospettiva}{43}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Bilancio dei risultati rispetto agli obiettivi prefissati}{41}{section.4.1}
+\contentsline {section}{\numberline {4.1}Bilancio dei risultati rispetto agli obiettivi prefissati}{43}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Bilancio formativo}{41}{section.4.2}
+\contentsline {section}{\numberline {4.2}Bilancio formativo}{43}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Analisi critica del rapporto formativo tra stage e corso di laurea}{41}{section.4.3}
+\contentsline {section}{\numberline {4.3}Analisi critica del rapporto formativo tra stage e corso di laurea}{43}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Valutazioni personali}{41}{section.4.4}
+\contentsline {section}{\numberline {4.4}Valutazioni personali}{43}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Glossario}{43}{appendix*.48}
+\contentsline {chapter}{Glossario}{45}{appendix*.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{47}{appendix*.75}
+\contentsline {chapter}{Bibliografia}{49}{appendix*.76}
