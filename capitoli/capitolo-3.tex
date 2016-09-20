@@ -1,8 +1,6 @@
-\newpage
 %**************************************************************
 % CAPITOLO 3
 %**************************************************************
-
 \chapter{Il progetto di e-commerce VR}
 \label{cap:ilprogettoe-commercevr}
 
@@ -134,12 +132,12 @@ Non vengono considerati i casi d'uso relativi alla registrazione al sito/e-comme
 
 \subsection{Requisiti}
 
-Vengono di seguito elencati tutti i requisiti funzionali che l'applicazione deve soddisfare in base ai casi d'uso trovati. Un requisito funzionale rappresenta una \textit{feature} che l'applicazione deve mettere a disposizione all'utente per garantirgli un'esperienza completa. \\
+Di seguito sono elencati tutti i requisiti funzionali che l'applicazione deve soddisfare in base ai casi d'uso trovati. Un requisito funzionale rappresenta una \textit{feature} che l'applicazione deve mettere a disposizione all'utente per garantirgli un'esperienza completa. \\
 Ogni requisito funzionale è rappresentato da un codice identificativo RFx e da una descrizione che ne illustra lo scopo.
 
 \begin{table}
 	\centering
-	\label{my-label}
+	\label{tabella-requisiti}
 	\begin{tabular}{| l | p{10cm} |}
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} \\ \hline
@@ -195,7 +193,7 @@ Questa differenza di implementazione degli oggetti interattivi rende davvero dif
 
 \subsection{Usabilità dell'applicazione}
 
-La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login attraverso la normale tastiera del telefono, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. L'implementazione di tale sito esce dagli obbiettivi di questo progetto, dunque non mi sono occupato dello sviluppo di quest'ultimo. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza virtuale. \\
+La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login attraverso la normale tastiera del telefono, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. L'implementazione di tale sito esce dagli obiettivi di questo progetto, dunque non mi sono occupato dello sviluppo di quest'ultimo. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza virtuale. \\
 Questa soluzione però ha mostrato al \textit{team} la profonda differenza tra le piattaforme \textit{Samsung Gear VR} e \textit{Google Cardboard}. Ogni applicazione \textit{Samsung Gear VR}, una volta avviata, richiede all'utente di inserire lo \textit{smartphone} all'interno del visore prima di poter effettivamente essere utilizzata. Questo obbliga lo sviluppatore a prevedere tutte scene di tipo \textit{VR}\ped{\hyperlink{vr}{G}} durante lo sviluppo dell'applicazione, contrariamente a \textit{Google Cardboard} che permette la coesistenza di tutte le tipologie scenografiche: 2D, 3D e \textit{VR}\ped{\hyperlink{vr}{G}}. Dunque, non è stato possibile inserire una scena 2D iniziale di login per la piattaforma Samsung e, a causa dei tempi ridotti di stage, non ho potuto sviluppare una soluzione a tale problema.
 
 \label{Login}
@@ -216,7 +214,7 @@ Dopo un'attenta fase di ricerca iniziale sulla tecnologia \textit{Unity} e \text
 	\item \textbf{Tramite l'applicazione di una foto a 360 gradi di una stanza ad una sfera o cubo inversi}.
 \end{itemize}
 
-La prima soluzione permette una vera esperienza 3D, dando la possibilità all'utente di spostarsi nelle tre dimensioni, prevedendo l'utilizzo di un gamepad. Ogni oggetto è ben definito in un punto dello spazio tridimensionale e osservabile da tutte le angolazioni. Purtroppo però per costruire un ambiente 3D di qualità accettabile sono necessarie profonde conoscenze di modellazione, conoscenze che fuoriescono dall'obbiettivo di questo stage. \\
+La prima soluzione permette una vera esperienza 3D, dando la possibilità all'utente di spostarsi nelle tre dimensioni, prevedendo l'utilizzo di un gamepad. Ogni oggetto è ben definito in un punto dello spazio tridimensionale e osservabile da tutte le angolazioni. Purtroppo però per costruire un ambiente 3D di qualità accettabile sono necessarie profonde conoscenze di modellazione, conoscenze che fuoriescono dall'obiettivo di questo stage. \\
 La seconda soluzione non permette una totale esperienza 3D, poiché applica una foto 2D a 360 gradi ad una sfera o un cubo inversi creati in \textit{Unity}. L'effetto così creato simula la tridimensionalità, non permettendo all'utente lo spostamento tra gli oggetti ma solo una visione stereoscopica della stanza. Il livello qualitativo raggiunto però è ottimo, se la foto viene realizzata con le giuste apparecchiature. Abbiamo deciso dunque di utilizzare la seconda metodologia per la creazione dell'ambiente. \\
 Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotografica di alta qualità presente nell'azienda seguendo la guida presente nel sito lightspacewater\footnote[2]{\url{http://www.lightspacewater.net/Tutorials/PhotoPano2/paper/}}. \\
 Posizionata la macchinetta fotografica sul cavalletto al centro di una stanza, appositamente arredata allo scopo nell'azienda Diana Corp., abbiamo effettuato 3 foto, una sovraesposta, una sottoesposta e una ad esposizione normale, ogni 45 gradi orizzontalmente. Abbiamo poi ripetuto l'operazione inclinando la macchinetta 45 gradi verso il basso ed infine 45 gradi verso l'alto. \\ 
@@ -551,10 +549,8 @@ public void printItem(Item[] items) {
 	// Recupera le informazioni del prodotto logico per 
 	// inizializzare il pannello grafico del prodotto
 	controller.setId(items [alreadyItemPrint].getId ());
-	controller.Description.text = 
-		items [alreadyItemPrint].getInfo ();
-	controller.Icon.sprite = 
-		Sprite.Create (items [alreadyItemPrint].getImg (), 
+	controller.setDescrtiption(items [alreadyItemPrint].getInfo ());
+	controller.setIcon(Sprite.Create (items [alreadyItemPrint].getImg (), 
 		new Rect (0, 0, items [alreadyItemPrint].getImg ().width, 
 		items [alreadyItemPrint].getImg ().height), new Vector2 (0.5f, 0.5f));
 
@@ -589,3 +585,7 @@ public void printItem(Item[] items) {
 	\end{center}
 \end{figure}
 \FloatBarrier 
+
+\section{Verifica e validazione}
+
+La natura di questo progetto di stage è di pura sperimentazione. Fin dalla prima riunione, assieme al tutor aziendale, mi è stato esplicitamente confermato che l'azienda non pretendeva un prodotto finito, dato che nemmeno il \textit{team} di ricerca e sviluppo sapeva se fosse realizzabile, ma solo uno studio sulle tecnologie \textit{VR}\ped{\hyperlink{vr}{G}} disponibili e se queste potessero essere utilizzate nel mondo \textit{e-commerce}. Molto tempo perciò è stato dedicato alla sperimentazione delle tecnologie \textit{VR}\ped{\hyperlink{vr}{G}} presenti in azienda, sia nell'utilizzo dell'harware che del software, per decidere quale tra queste fosse la più adatta per lo scopo. Oltretutto, la mia conoscenza iniziale sulla computer grafica era praticamente nullo e ho trascorso molto tempo a studiare il \textit{framework}\ped{\hyperlink{fw}{G}} \textit{Unity} per riuscire a costruire manualmente, tramite l'editor, tutti gli oggetti grafici presenti nella scena. Questo mi ha portato a sviluppare non un'applicazione completa, da poter un giorno completare e rilasciare nei maggiori \textit{store} per le applicazioni, ma un insieme di funzionalità che testano fino a dove la tecnologia per la realtà virtuale è integrabile con il mondo \textit{e-commerce}. Per questi motivi le attività di verifica e validazione non sono state pianificate nel piano di lavoro e a causa sia dell'obbiettivo di stage che dei tempi ristretti, non sono state nemmeno effettuate. 
