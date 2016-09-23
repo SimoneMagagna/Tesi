@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  22 SEP 2016 11:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  23 SEP 2016 11:26
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -1858,9 +1858,8 @@ Capitolo 4.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [49])
-[50] [51] [52
+[50] [51] [52] (glossario.tex [53
 
-] (glossario.tex [53
 
 ] [54] [55]) (inizio-fine/bibliografia.tex
 [56]) [57
@@ -1918,9 +1917,9 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files (x8
 .9/fonts/type1/public/lm/lmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm
 /lmtti10.pfb>
-Output written on tesi.pdf (71 pages, 8459553 bytes).
+Output written on tesi.pdf (71 pages, 8475459 bytes).
 PDF statistics:
- 1310 PDF objects out of 1440 (max. 8388607)
+ 1313 PDF objects out of 1440 (max. 8388607)
  466 named destinations out of 1000 (max. 500000)
  44043 words of extra memory for PDF output out of 51595 (max. 10000000)
 
