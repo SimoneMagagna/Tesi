@@ -108,6 +108,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Glossario}{51}{appendix*.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{55}{appendix*.77}
+\contentsline {chapter}{Bibliografia}{55}{appendix*.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Siti web consultati}{55}{section*.78}
+\contentsline {subsubsection}{Siti web consultati}{55}{section*.64}

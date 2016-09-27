@@ -6,7 +6,7 @@
 
 \section{Analisi dei requisiti}
 
-Questa sezione tratta dei casi d'uso e dei requisiti che il \textit{team} ha ricavato durante la discussione nella prima riunione di stage. Tale analisi ha subito un sostanzioso cambiamento durante la settimana 6, settimana dedicata alla prototipazione del possibile processo d'acquisto all'interno dell'ambiente virtuale. A causa della sua scarsa usabilità, abbiamo deciso di non utilizzare una tastiera virtuale all'interno dell'ambiente tridimensionale per dare la possibilità all'utente di immettere i propri dati e gli estremi di pagamento. Ciò ha portato il \textit{team} a prevedere una registrazione ad un normale sito di \textit{e-commerce} prima di effettuare l'autenticazione all'app, dove dar la possibilità all'utente di immettere i propri dati di pagamento. La sezione 3.2.2 spiega in maniera approfondita le sperimentazioni e le discussioni effettuate che hanno portato a questa importante decisione. 
+Questa sezione tratta dei casi d'uso e dei requisiti che il \textit{team} ha ricavato durante la discussione nella prima riunione di stage. Tale analisi ha subito un sostanzioso cambiamento durante la settimana 6, settimana dedicata alla prototipazione del possibile processo d'acquisto all'interno dell'ambiente virtuale. A causa della sua scarsa usabilità, abbiamo deciso di non utilizzare una tastiera virtuale all'interno dell'ambiente tridimensionale per dare la possibilità all'utente di immettere i propri dati e gli estremi di pagamento. Ciò ha portato il \textit{team} a prevedere una registrazione ad un normale sito di \textit{e-commerce} prima di effettuare l'autenticazione all'app, dove dar la possibilità all'utente di immettere i propri dati di pagamento. La sezione \hyperlink{3.2.2}{3.2.2} spiega in maniera approfondita le sperimentazioni e le discussioni effettuate che hanno portato a questa importante decisione. 
 
 
 \subsection{Caratteristiche degli utenti}
@@ -61,7 +61,7 @@ Non vengono considerati i casi d'uso relativi alla registrazione al sito/e-comme
 
 \begin{itemize}
 	\item \textbf{Attori:} utente registrato visitatore, utente registrato acquirente;
-	\item \textbf{Descrizione:} l'utente, dopo l'autenticazione e collegato il telefono al visore, si ritrova ad osservare un ambiente virtuale. L'ambiente è formato da una stanza, la quale è visibile a 360 gradi se l'utente muove la testa mentre indossa il visore. Vi sono alcuni prodotti, segnalati da appositi marcatori, con i quali l'utente può interagire attivando un pannello informativo dove vengono visualizzati il nome, una descrizione, il prezzo e alcune foto. E' possibile aggiungere tali prodotti nel carrello, attivabile selezionando un'area segnalata da un'apposita scritta. I prodotti all'interno del carrello sonno acquistabili;
+	\item \textbf{Descrizione:} l'utente, dopo l'autenticazione e collegato il telefono al visore, si ritrova ad osservare un ambiente virtuale. L'ambiente è formato da una stanza, la quale è visibile a 360 gradi se l'utente muove la testa mentre indossa il visore. Vi sono alcuni prodotti, segnalati da appositi marcatori, con i quali l'utente può interagire attivando un pannello informativo dove vengono visualizzati il nome, una descrizione, il prezzo e alcune foto. E' possibile aggiungere tali prodotti nel carrello, attivabile selezionando un'area segnalata da un'apposita scritta. I prodotti all'interno del carrello sono acquistabili;
 	\item \textbf{Precondizione:} l'utente ha effettuato con successo l'autenticazione;
 	\item \textbf{Postcondizione:} l'utente interagisce con gli oggetti presenti nell'ambiente virtuale e se è acquirente può comprare gli oggetti presenti nel carrello;
 	\item \textbf{Scenario principale:}
@@ -146,7 +146,7 @@ Ogni requisito funzionale è rappresentato da un codice identificativo RFx e da 
 		RF1.2 & L'applicazione deve permettere all'utente di inserire la \textit{password}. \\ \hline
 		RF1.3 & L'applicazione deve permettere all'utente di confermare i dati di autenticazione ed effettuare così il login. \\ \hline
 		RF2 & L'applicazione deve permettere all'utente di visualizzare l'ambiente virtuale una volta indossato il visore e di interagire con esso. \\ \hline
-		RF2.1 & L'applicazione deve permettere all'utente di interagire con un oggetto presente nella scena attraverso l'interfaccia fisica presente nel visore. \\ \hline
+		RF2.1 & L'applicazione deve permettere all'utente di interagire con un oggetto presente nella scena attraverso l'interfaccia fisica del visore. \\ \hline
 		RF2.1.1 & L'applicazione deve visualizzare le informazioni relative all'oggetto selezionato all'interno di un panello informativo posto davanti all'utente. \\ \hline
 		RF2.1.2 & L'applicazione deve permettere la visualizzazione e lo scorrimento delle foto dell'oggetto selezionato all'interno del pannello informativo. \\ \hline
 		RF2.1.3 & L'applicazione deve permettere l'aggiunta al carrello dell'oggetto selezionato. \\ \hline
@@ -183,7 +183,7 @@ La seconda importante differenza è l'implementazione degli \textbf{oggetti inte
 
 \begin{itemize}
 	\item \textbf{Mesh Collider:} è necessario aggiungere tale proprietà all'oggetto che si vuole rendere interattivo. Tale proprietà rende un oggetto "tangibile", ovvero può essere colliso da un altro oggetto presente nella scena. Questo permette alla \textit{Camera VR} di interagire con l'oggetto inviando un "raggio virtuale" verso quest'ultimo che, scontrandovisi, potrà attivare gli eventi che si desidera;
-	\item \textbf{InteractiveScriptVR:} script, da agganciare all'oggetto, che cattura l'evento di selezione attraverso i metodi esposti dall'\textit{api} della particolare piattaforma. All'interno di questi metodi si può implementare il vero comportamento dell'oggetto interattivo.  
+	\item \textbf{InteractiveScriptVR:} script, da agganciare all'oggetto, che cattura l'evento di selezione attraverso i metodi esposti dall'\textit{API} della particolare piattaforma. All'interno di questi metodi si può implementare il vero comportamento dell'oggetto interattivo.  
 \end{itemize}
 
 L'\texttt{InteractiveScriptVR} differisce profondamente da una piattaforma all'altra. \\
@@ -191,7 +191,7 @@ Per quanto riguarda \textit{Google Cardboard}, lo script implementa la classe \t
 In \textit{Samsung Gear VR} invece, l'\texttt{InteractiveScriptVR} non implementa alcuna interfaccia ma necessita l'utilizzo del namespace \texttt{VRStandardAsset.Utils} per richiamare i metodi esposti dallo script \texttt{VRInteractiveItem}, script che va agganciato all'oggetto assieme all'\texttt{InteractiveScriptVR}. \\
 Questa differenza di implementazione degli oggetti interattivi rende davvero difficoltosa la loro portabilità da una piattaforma all'altra. Dunque, dopo una lunga discussione avvenuta nell'ufficio R\&D, abbiamo deciso di abbandonare la totale portabilità dell'applicazione, raggiungendo però un compromesso: la separazione della cattura dell'evento di selezione dall'effettivo comportamento dell'oggetto, implementandoli in due script differenti. Il primo, che cambia da piattaforma a piattaforma, richiama il secondo dopo aver catturato l'evento di selezione, il quale rappresenta il vero comportamento dell'oggetto ed è indipendente dalla piattaforma in uso. In questo modo è stato possibile creare dei \textit{prefabs} (oggetti portabili all'interno dell'ambiente \textit{Unity} contenenti le informazioni di forma, colore, script agganciati eccetera) che contenessero solo le informazioni del comportamento dell'oggetto dopo la cattura della selezione.    
 
-\subsection{Usabilità dell'applicazione}
+\hypertarget{3.2.2}{\subsection{Usabilità dell'applicazione}}
 
 La fase di acquisto inizialmente prevista comprendeva l'immissione dei propri dati di pagamento all'interno dell'ambiente \textit{VR}\ped{\hyperlink{vr}{G}} tramite una tastiera tridimensionale posta davanti all'utente, dove ogni tasto era selezionabile attraverso l'interfaccia fisica del visore. Dopo la sperimentazione di tale tastiera, abbiamo constatato la sua scarsa usabilità, causando un processo d'acquisto lungo e tedioso. Abbiamo dunque optato per una soluzione più semplice: l'utente prima di entrare nella scena \textit{VR}\ped{\hyperlink{vr}{G}} viene invitato a immettere i propri dati di login attraverso la normale tastiera del telefono, così da accedere al proprio account personale. Tale account deve essere precedentemente creato nel sito/e-commerce dedicato, dove possono essere immessi anche i dati di pagamento. L'implementazione di tale sito esce dagli obiettivi di questo progetto, dunque non mi sono occupato dello sviluppo di quest'ultimo. Una volta autenticato, lo \textit{smartphone} passa in modalità \textit{VR}\ped{\hyperlink{vr}{G}}, invitando l'utente ad indossare il visore. All'interno dell'ambiente, all'utente non viene più richiesto di immettere dati, così da poter sperimentare in tutta serenità l'esperienza virtuale. \\
 Questa soluzione però ha mostrato al \textit{team} la profonda differenza tra le piattaforme \textit{Samsung Gear VR} e \textit{Google Cardboard}. Ogni applicazione \textit{Samsung Gear VR}, una volta avviata, richiede all'utente di inserire lo \textit{smartphone} all'interno del visore prima di poter effettivamente essere utilizzata. Questo obbliga lo sviluppatore a prevedere tutte scene di tipo \textit{VR}\ped{\hyperlink{vr}{G}} durante lo sviluppo dell'applicazione, contrariamente a \textit{Google Cardboard} che permette la coesistenza di tutte le tipologie scenografiche: 2D, 3D e \textit{VR}\ped{\hyperlink{vr}{G}}. Dunque, non è stato possibile inserire una scena 2D iniziale di login per la piattaforma Samsung e, a causa dei tempi ridotti di stage, non ho potuto sviluppare una soluzione a tale problema.
@@ -205,7 +205,7 @@ Questa soluzione però ha mostrato al \textit{team} la profonda differenza tra l
 \end{figure}
 \FloatBarrier
 
-\subsection{Costruzione della scena 3D}
+\hypertarget{3.2.3}{\subsection{Costruzione della scena 3D}}
 
 Dopo un'attenta fase di ricerca iniziale sulla tecnologia \textit{Unity} e \textit{VR}\ped{\hyperlink{vr}{G}}, ho potuto constatare che vi sono due modi principali per costruire una scena 3D:
 
@@ -216,7 +216,7 @@ Dopo un'attenta fase di ricerca iniziale sulla tecnologia \textit{Unity} e \text
 
 La prima soluzione permette una vera esperienza 3D, dando la possibilità all'utente di spostarsi nelle tre dimensioni, prevedendo l'utilizzo di un gamepad. Ogni oggetto è ben definito in un punto dello spazio tridimensionale e osservabile da tutte le angolazioni. Purtroppo però per costruire un ambiente 3D di qualità accettabile sono necessarie profonde conoscenze di modellazione, conoscenze che fuoriescono dall'obiettivo di questo stage. \\
 La seconda soluzione non permette una totale esperienza 3D, poiché applica una foto 2D a 360 gradi ad una sfera o un cubo inversi creati in \textit{Unity}. L'effetto così creato simula la tridimensionalità, non permettendo all'utente lo spostamento tra gli oggetti ma solo una visione stereoscopica della stanza. Il livello qualitativo raggiunto però è ottimo, se la foto viene realizzata con le giuste apparecchiature. Abbiamo deciso dunque di utilizzare la seconda metodologia per la creazione dell'ambiente. \\
-Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotografica di alta qualità presente nell'azienda seguendo la guida presente nel sito lightspacewater\footnote[2]{\url{http://www.lightspacewater.net/Tutorials/PhotoPano2/paper/}}. \\
+Abbiamo così realizzato la foto a 360 gradi utilizzando una macchinetta fotografica di alta qualità aziendale seguendo la guida presente nel sito lightspacewater\footnote[2]{\url{http://www.lightspacewater.net/Tutorials/PhotoPano2/paper/}}. \\
 Posizionata la macchinetta fotografica sul cavalletto al centro di una stanza, appositamente arredata allo scopo nell'azienda Diana Corp., abbiamo effettuato 3 foto, una sovraesposta, una sottoesposta e una ad esposizione normale, ogni 45 gradi orizzontalmente. Abbiamo poi ripetuto l'operazione inclinando la macchinetta 45 gradi verso il basso ed infine 45 gradi verso l'alto. \\ 
 Le foto così ottenute, ci hanno permesso di creare la foto a 360 gradi tramite il software Autopano\footnote[3]{\url{http://www.kolor.com/autopano/}}, che l'ha creata automaticamente a meno di qualche punto di agganciamento inserito manualmente. Infine abbiamo applicato la foto come texture di una sfera inversa creata tramite l'editor di \textit{Unity}.
 
@@ -231,8 +231,8 @@ Le foto così ottenute, ci hanno permesso di creare la foto a 360 gradi tramite 
 
 \hypertarget{3.2.4}{\subsection{Interazione con gli oggetti all'interno della scena}} 
 
-All'interno della scena creata tramite la foto a 360 gradi, gli oggetti presenti nella stanza non sono veri oggetti tridimensionali modellati in \textit{Unity}. A quest'ultimi, come descritto nella sezione 3.5.1, è possibile applicare la proprietà \textit{Mesh Collider}, per renderli tangibili, e lo script che cattura l'evento di selezione. Purtroppo nella soluzione da noi adottata gli oggetti fanno parte della foto che crea lo sfondo, perciò non è possibile applicargli queste due proprietà. \\
-Abbiamo così deciso di porre davanti ad ogni oggetto un pannello tridimensionale creato tramite l'editor di \textit{Unity} e ad esso agganciargli le caratteristiche citate. In più al pannello viene disabilitata la proprietà \textit{Mesh Renderer}, proprietà che lo rende visibile. \\ 
+All'interno della scena creata tramite la foto a 360 gradi, gli oggetti presenti nella stanza non sono veri oggetti tridimensionali modellati in \textit{Unity}. A quest'ultimi, come descritto nella sezione \hyperlink{3.2.1}{3.2.1}, è possibile applicare la proprietà \textit{Mesh Collider}, per renderli tangibili, e lo script che cattura l'evento di selezione. Purtroppo nella soluzione da noi adottata gli oggetti fanno parte della foto che crea lo sfondo, perciò non è possibile applicargli queste due proprietà. \\
+Abbiamo così deciso di porre davanti ad ogni oggetto un pannello tridimensionale creato tramite l'editor di \textit{Unity} e ad esso agganciargli le caratteristiche citate. In più, al pannello viene disabilitata la proprietà \textit{Mesh Renderer}, proprietà che lo rende visibile. \\ 
 In questo modo viene simulata l'interattività dell'oggetto che, alla selezione tramite l'interfaccia fisica del visore, attiva il pannello informativo relativo all'oggetto selezionato.
 
 \label{Oggetto Interattivo}
@@ -244,7 +244,7 @@ In questo modo viene simulata l'interattività dell'oggetto che, alla selezione 
 \end{figure}
 \FloatBarrier  
 
-\subsection{Progettazione e integrazione con AWS API Gateway}
+\hypertarget{3.2.5}{\subsection{Progettazione e integrazione con AWS API Gateway}}
 
 Uno degli obiettivi dello stage era sperimentare la comunicazione tra l'applicazione creata con \textit{Unity} e sistemi esterni tramite protocollo HTTP, come ad esempio un \textit{e-commerce}. Per testare tali funzionalità in sicurezza, senza dover creare o modificare gli \textit{e-commerce} aziendali, il tutor mi ha suggerito di utilizzare il servizio \textit{API Gateway} di \textit{Amazon Web Service}. \\ 
 Amazon API Gateway è un servizio completamente gestito che semplifica agli sviluppatori la creazione, la pubblicazione, la manutenzione, il monitoraggio e la protezione delle API su qualsiasi scala. Essa agisce come porta d'entrata attraverso la quale le applicazioni possono accedere a dati, logica di business o funzionalità dei servizi di back-end. Gestisce tutte le attività di accettazione ed elaborazione relative alle chiamate API simultanee, inclusi gestione del traffico, controllo di accessi e autorizzazioni, monitoraggio e gestione delle versioni delle API. Infine permette la creazione di \textit{API Mock}, ovvero API che non si agganciano ad alcun back-end ma che rispondono messaggi prefissati ad ogni chiamata HTTP. Quest'ultima funzionalità ci ha spinto ad utilizzare questo servizio, dato che lo sviluppo di un vero back-end non rientrava all'interno degli obiettivi di stage. \\
@@ -320,7 +320,7 @@ yield return www;
 
 \section{Sviluppo}
 
-Questa sezione descrive nel dettaglio il personale sviluppo delle più importanti funzionalità dell'applicazione attraverso l'editor grafico e il linguaggio di scripting C\# offeri dal \textit{framework}\ped{\hyperlink{fw}{G}} \textit{Unity}.
+Questa sezione descrive nel dettaglio il personale sviluppo delle più importanti funzionalità dell'applicazione attraverso l'editor grafico e il linguaggio di \textit{scripting} C\# offerti dal \textit{framework}\ped{\hyperlink{fw}{G}} \textit{Unity}.
 
 
 \subsection{Dati persistenti attraverso le scene}
@@ -338,7 +338,7 @@ public class UserSessionScript : MonoBehaviour {
 	// tutte le caratteristiche iniziali che l'oggetto
 	// deve avere prima che la scena abbia inizio
 	void Awake () {
-	DontDestroyOnLoad (this);
+		DontDestroyOnLoad (this);
 	}
 	
 	public string getToken() {
@@ -392,7 +392,7 @@ Dunque, una volta recuperato il \textit{token} di autenticazione dalla chiamata 
 	SceneManager.LoadScene (1);
 \end{lstlisting}
 
-\subsection{Il pannello informativo}
+\hypertarget{3.3.2}{\subsection{Il pannello informativo}}
 \textit{Unity} permette la creazione di due principali tipologie di oggetti all'interno di una scena:
 
 \begin{itemize}
@@ -458,7 +458,7 @@ string json = {"level":1,"timeElapsed":47.5,
 MyClass myObject = JsonUtility.FromJson<MyClass>(json);
 \end{lstlisting}
 
-Purtroppo però, non viene offerta alcuna funzionalità di parsing di file JSON, a me necessaria per leggere le informazioni dei prodotti recuperate tramite la chiamata GET all'API. Dopo alcune ricerche, ho scoperto l'esistenza della libreria LitJSON\footnote[4]{\url{https://lbv.github.io/litjson/}}, libreria scritta in C\# e compatibile con tutti i linguaggi .Net. Essa, dopo aver importato il file \textit{LitJSON.dll} all'interno del progetto Unity, permette di leggere il file JSON scaricato come se fosse un semplice array, accedendo direttamente ai vari campi tramite le doppie parentesi quadre:
+Purtroppo però, non viene offerta alcuna funzionalità di parsing di file JSON, a me necessaria per leggere le informazioni dei prodotti recuperate tramite la chiamata GET all'API. Dopo alcune ricerche, ho scoperto l'esistenza della libreria LitJSON\footnote[4]{\url{https://lbv.github.io/litjson/}}, libreria scritta in C\# e compatibile con tutti i linguaggi \textit{.Net}. Essa, dopo aver importato il file \textit{LitJSON.dll} all'interno del progetto \textit{Unity}, permette di leggere il file JSON scaricato come se fosse un semplice array, accedendo direttamente ai vari campi tramite le doppie parentesi quadre:
 
 \begin{lstlisting}[style=MyCStyle]
 // Chiamata GET per il recupero delle infomrazioni di un prodotto
@@ -492,7 +492,7 @@ yield return www_img3;
 imageArray [2] = www_img3.texture;
 \end{lstlisting}
 
-\subsection{Creazione a runtime di oggetti interattivi}
+\hypertarget{3.3.4}{\subsection{Creazione a runtime di oggetti interattivi}}
 
 Per la realizzazione del carrello interattivo è stato necessario uno studio approfondito sulla creazione di oggetti scenici a runtime in \textit{Unity}. Questo perché inizialmente il carrello deve risultare vuoto e riempirsi a mano a mano che l'utente decide di aggiungere un prodotto, ovvero mentre la scena è in \textit{play mode}. \\ 
 La soluzione adottata prevede la creazione, tramite l'editor grafico, di un pannello UI generico contenente i componenti per la foto, per il nome e per il prezzo dell'ipotetico prodotto che sarà aggiunto al carrello. All'oggetto grafico così creato, viene agganciato lo script \texttt{ListItemController} contenente i campi logici del pannello che verranno riempiti con le informazioni dello specifico prodotto: 
@@ -531,14 +531,14 @@ public class ListItemController : MonoBehaviour {
 }
 \end{lstlisting}
 
-Il pannello grafico e lo script agganciato vengono uniti in un unico pacchetto per formare un \textit{prefab} di nome \textit{ListItem}, ovvero un oggetto prefabbricato pronto per essere istanziato all'interno della scena. Così, lo script incaricato alla gestione del carrello grafico, ovvero \texttt{ListController}, dopo aver controllato tutti i prodotti presenti nel carrello logico, gestito dallo script \texttt{ShoppingBagScript}, instanzia tanti \textit{ListItem} quanti sono i prodotti presenti nel carrello logico e li posizione in lista all'interno del pannello del carrello:
+Il pannello grafico e lo script agganciato vengono uniti in un unico pacchetto per formare un \textit{prefab} di nome \textit{ListItem}, ovvero un oggetto prefabbricato pronto per essere istanziato all'interno della scena. Così, lo script incaricato alla gestione del carrello grafico, ovvero \texttt{ListController}, dopo aver controllato tutti i prodotti presenti nel carrello logico, gestito dallo script \texttt{ShoppingBagScript}, instanzia tanti \textit{ListItem} quanti sono i prodotti presenti nel carrello logico e li posiziona in lista all'interno del pannello del carrello:
 
 \begin{lstlisting}[style=MyCStyle]
 public void printItem(Item[] items) {
 	// Per ogni oggetto presente nel pannello logico
 	// che non e' stato ancora stampato nel carrello
 	while (alreadyItemPrint < 
-		shoppingBag.GetComponent<ShoppingBagScript> ().getCounter ()) {
+	shoppingBag.GetComponent<ShoppingBagScript> ().getCounter ()) {
 
 	// Istanzia l'oggetto prefab all'interno della scena
 	GameObject newItem = 
@@ -551,8 +551,9 @@ public void printItem(Item[] items) {
 	controller.setId(items [alreadyItemPrint].getId ());
 	controller.setDescrtiption(items [alreadyItemPrint].getInfo ());
 	controller.setIcon(Sprite.Create (items [alreadyItemPrint].getImg (), 
-		new Rect (0, 0, items [alreadyItemPrint].getImg ().width, 
-		items [alreadyItemPrint].getImg ().height), new Vector2 (0.5f, 0.5f));
+	new Rect (0, 0, items [alreadyItemPrint].getImg ().width, 
+	items [alreadyItemPrint].getImg ().height), 
+	new Vector2 (0.5f, 0.5f));
 
 	// Posiziona ogni prodotto in lista all'interno
 	// del pannello del carrello
